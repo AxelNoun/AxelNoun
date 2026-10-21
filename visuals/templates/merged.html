@@ -1,0 +1,51 @@
+<!doctype html>
+<html data-theme="__THEME__"><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=block">
+<style>
+/*TOKENS*/
+/* Frise des PR fusionnées pour le README de profil : une ligne par projet, un point par PR, x = date de fusion.
+   Fond transparent : l'image se pose sur le fond clair ou sombre de GitHub. */
+body { background: transparent; width: 880px; padding: 14px 4px 6px; }
+.head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px; }
+.tl { --lw: 190px; position: relative; }
+.grid { position: absolute; top: 0; bottom: 24px; left: var(--lw); right: 0; }
+.grid span { position: absolute; top: 0; bottom: 0; border-left: 1px dashed var(--rule-strong); opacity: .55; }
+.lane { display: grid; grid-template-columns: var(--lw) 1fr; align-items: center; height: 26px; }
+.lane + .lane { border-top: 1px solid var(--rule); }
+.name { font-family: var(--font-mono); font-size: 13px; color: var(--ink-2); }
+.track { position: relative; height: 100%; }
+.dot { position: absolute; width: 12px; height: 12px; margin: -6px 0 0 -6px; border-radius: 50%; background: var(--pass); }
+.axis { position: relative; height: 24px; margin-left: var(--lw); border-top: 1.5px solid var(--rule-strong); }
+.axis span { position: absolute; top: 5px; font-family: var(--font-mono); font-size: 12px; color: var(--ink-2); transform: translateX(-50%); }
+.axis span:first-child { transform: none; }
+</style></head>
+<body>
+<div class="head"><span class="label" id="range"></span><span class="label">● one merged pull request</span></div>
+<div class="tl" id="tl"></div>
+<script>
+/*DATA*/
+// Fenêtre calculée par build.py : du mois de la première fusion au mois qui suit la dernière.
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const [y0, m0] = DATA.window.start.split("-").map(Number), [y1, m1] = DATA.window.end.split("-").map(Number);
+const T0 = Date.UTC(y0, m0 - 1, 1), T1 = Date.UTC(y1, m1 - 1, 1);
+const x = iso => { const [y, m, d] = iso.split("-").map(Number); return 100 * (Date.UTC(y, m - 1, d) - T0) / (T1 - T0); };
+const starts = [];
+for (let i = 0; Date.UTC(y0, m0 - 1 + i, 1) < T1; i++) starts.push(Date.UTC(y0, m0 - 1 + i, 1));
+document.getElementById("range").textContent = `Merged upstream · ${DATA.window.en}`;
+const pct = t => (100 * (t - T0) / (T1 - T0)).toFixed(3);
+const grid = starts.slice(1).map(t => `<span style="left:${pct(t)}%"></span>`).join("");
+const lanes = DATA.lanes.map(l => {
+  const items = DATA.merged.filter(m => m.lane === l.key).sort((a, b) => a.date.localeCompare(b.date));
+  let prev = null, flip = false;
+  const dots = items.map(m => {
+    const px = x(m.date); let dy = 0;
+    if (prev !== null && px - prev < 3) { flip = !flip; dy = flip ? 5 : -5; } else { flip = false; }
+    prev = px;
+    return `<span class="dot" style="left:${px.toFixed(3)}%;top:calc(50% + ${dy}px)"></span>`;
+  }).join("");
+  return `<div class="lane"><span class="name">${l.label}</span><span class="track">${dots}</span></div>`;
+}).join("");
+const axis = starts.map(t => `<span style="left:${pct(t)}%">${MONTHS[new Date(t).getUTCMonth()]}</span>`).join("");
+document.getElementById("tl").innerHTML = `<div class="grid">${grid}</div>${lanes}<div class="axis">${axis}</div>`;
+</script>
+</body></html>

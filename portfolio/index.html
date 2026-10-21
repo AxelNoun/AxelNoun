@@ -1,0 +1,622 @@
+<title>Axel Coiffard-Donaty</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column like an audit report. The hero carries the proof (facts, then a merge timeline drawn from the record); case studies are numbered dossiers with a facts rail; then the full record, the offers, the registry drawer and a closing contact block.
+   Tokens follow the AxelNoun design system (claude.ai/design): same names and values as the Silent Failures Registry page. */
+:root {
+  --ground: #f5f6f2;
+  --surface: #fdfdfb;
+  --ink: #161b1f;
+  --ink-2: #4f5a63;
+  --rule: #d3d9d2;
+  --rule-strong: #7f8a91;
+  --accent: #0f5c6e;
+  --accent-soft: #e1eef0;
+  --on-accent: #fdfdfb;
+  --fault: #a3372a;
+  --fault-soft: #f5e4e0;
+  --pass: #1d6a43;
+  --pass-soft: #e1efe6;
+  --pending: #7d5410;
+  --pending-soft: #f4ead6;
+  --font-display: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", Consolas, "Courier New", monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --ground: #121618; --surface: #1a1f22; --ink: #e7eae9; --ink-2: #a3adb3; --rule: #2e363a; --rule-strong: #6a767d; --accent: #7fc4d3; --accent-soft: #173237; --on-accent: #121618; --fault: #f08f7d; --fault-soft: #3a2320; --pass: #72c79b; --pass-soft: #173022; --pending: #e2b866; --pending-soft: #33291a; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --ground: #121618; --surface: #1a1f22; --ink: #e7eae9; --ink-2: #a3adb3; --rule: #2e363a; --rule-strong: #6a767d; --accent: #7fc4d3; --accent-soft: #173237; --on-accent: #121618; --fault: #f08f7d; --fault-soft: #3a2320; --pass: #72c79b; --pass-soft: #173022; --pending: #e2b866; --pending-soft: #33291a; color-scheme: dark; }
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--ground); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.55; }
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+.wrap { max-width: 880px; margin: 0 auto; padding-block: 28px 72px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 600; text-wrap: balance; margin: 0; line-height: 1.15; }
+h1 { font-size: clamp(34px, 6vw, 52px); line-height: 1.04; letter-spacing: -0.01em; }
+h2 { font-size: 27px; margin-top: 56px; padding-top: 22px; border-top: 1px solid var(--ink); scroll-margin-top: 16px; }
+h3 { font-size: 21px; }
+p { margin: 10px 0; max-width: 68ch; }
+code { font-family: var(--font-mono); font-size: .9em; background: var(--accent-soft); padding: 1px 5px; border-radius: 3px; }
+.mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+.label { font-family: var(--font-mono); font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); }
+.section-intro { color: var(--ink-2); }
+
+/* Top line and language switch */
+.topline { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; font-size: 13px; color: var(--ink-2); padding-bottom: 12px; border-bottom: 1px solid var(--rule); }
+.seg { display: inline-flex; border: 1px solid var(--rule-strong); border-radius: 4px; overflow: hidden; }
+.seg button { background: none; border: 0; padding: 4px 11px; color: var(--ink-2); cursor: pointer; font: 500 12px/1.4 var(--font-mono); letter-spacing: .06em; }
+.seg button + button { border-left: 1px solid var(--rule-strong); }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--on-accent); }
+
+/* Hero */
+header.hero { margin-top: 36px; display: grid; gap: 14px; }
+.lede { font-size: 19px; line-height: 1.5; max-width: 62ch; margin: 0; }
+.contact { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; font-size: 14px; }
+.email { display: inline-flex; align-items: center; gap: 8px; }
+.email .addr { font-family: var(--font-mono); font-size: 13.5px; user-select: all; }
+button.copy { font: 500 11.5px/1 var(--font-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--accent); background: var(--surface); border: 1px solid var(--rule-strong); border-radius: 4px; padding: 5px 8px; cursor: pointer; }
+button.copy:hover { border-color: var(--accent); }
+.contact .where { color: var(--ink-2); }
+.facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; margin-top: 14px; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+@media (max-width: 640px) { .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.fact { padding: 14px 16px 14px 0; min-width: 0; }
+.fact + .fact { padding-left: 16px; border-left: 1px solid var(--rule); }
+@media (max-width: 640px) { .fact:nth-child(3) { padding-left: 0; border-left: 0; } .fact:nth-child(n+3) { border-top: 1px solid var(--rule); } }
+.fact .n { font-family: var(--font-mono); font-size: 30px; font-weight: 500; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.fact .l { font-size: 13px; color: var(--ink-2); margin-top: 4px; }
+
+/* Merge timeline: one lane per project, one dot per merged PR, x = merge date */
+figure.timeline { margin: 8px 0 0; background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; padding: 16px 18px 12px; }
+figure.timeline figcaption { display: flex; justify-content: space-between; gap: 8px 16px; flex-wrap: wrap; margin-bottom: 10px; }
+.tl { --lw: 128px; position: relative; }
+@media (max-width: 520px) { .tl { --lw: 92px; } }
+.tl-grid { position: absolute; top: 0; bottom: 22px; left: var(--lw); right: 0; pointer-events: none; }
+.tl-grid span { position: absolute; top: 0; bottom: 0; border-left: 1px dashed var(--rule); }
+.tl-lane { display: grid; grid-template-columns: var(--lw) minmax(0, 1fr); align-items: center; height: 24px; }
+.tl-lane + .tl-lane { border-top: 1px solid var(--rule); }
+.tl-name { font-family: var(--font-mono); font-size: 12px; color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding-right: 8px; }
+.tl-track { position: relative; height: 100%; }
+.tl-dot { position: absolute; top: 50%; width: 11px; height: 11px; margin: -5.5px 0 0 -5.5px; border-radius: 50%; background: var(--pass); box-shadow: 0 0 0 2px var(--surface); transition: transform .12s ease; }
+.tl-dot:hover, .tl-dot:focus-visible { transform: scale(1.35); }
+.tl-axis { position: relative; height: 22px; margin-left: var(--lw); border-top: 1px solid var(--rule-strong); }
+.tl-axis span { position: absolute; top: 4px; font-family: var(--font-mono); font-size: 11px; color: var(--ink-2); transform: translateX(-50%); white-space: nowrap; }
+.tl-axis span:first-child { transform: none; }
+@media (prefers-reduced-motion: reduce) { .tl-dot { transition: none; } }
+
+nav.toc { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 14px; margin-top: 4px; }
+nav.toc a { text-decoration: none; }
+nav.toc a:hover { text-decoration: underline; }
+
+/* Case dossiers */
+.dossier { background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; padding: 22px 24px; margin-top: 20px; display: grid; grid-template-columns: minmax(0, 1fr) 210px; gap: 16px 28px; scroll-margin-top: 16px; }
+@media (max-width: 680px) { .dossier { grid-template-columns: 1fr; padding: 18px 16px; } }
+.dossier .head { grid-column: 1 / -1; display: grid; gap: 6px; }
+.dossier .where { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+.dossier .num { font-family: var(--font-mono); font-size: 12px; font-weight: 500; color: var(--on-accent); background: var(--accent); border-radius: 3px; padding: 1px 6px; letter-spacing: .04em; }
+.dossier .body { min-width: 0; }
+.dossier .body p { max-width: none; }
+.dossier .body > p:first-child { margin-top: 0; }
+.lbl { font-weight: 600; }
+.rail { font-size: 13px; display: grid; gap: 2px; align-content: start; margin: 0; border-left: 1px solid var(--rule); padding-left: 18px; }
+@media (max-width: 680px) { .rail { border-left: 0; padding-left: 0; border-top: 1px solid var(--rule); padding-top: 12px; grid-template-columns: max-content minmax(0, 1fr); gap: 6px 14px; } .rail dd { margin: 0; } }
+.rail dt { font-family: var(--font-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); }
+.rail dd { margin: 0 0 10px; min-width: 0; }
+.quote { margin: 16px 0 0; padding: 14px 18px 14px 46px; position: relative; background: var(--accent-soft); border-radius: 6px; }
+.quote::before { content: "\201C"; position: absolute; left: 14px; top: 4px; font-family: var(--font-display); font-size: 46px; line-height: 1; color: var(--accent); }
+.quote q { quotes: none; font-family: var(--font-display); font-style: italic; font-size: 17.5px; line-height: 1.45; }
+.quote cite { display: block; font-style: normal; font-size: 13px; color: var(--ink-2); margin-top: 6px; }
+
+/* Status and registry chips: the word carries the meaning, the colour repeats it */
+.chip { display: inline-block; font-family: var(--font-mono); font-size: 11px; font-weight: 500; letter-spacing: .05em; text-transform: uppercase; padding: 1px 7px; border-radius: 3px; border: 1px solid transparent; vertical-align: 1px; white-space: nowrap; }
+.chip.pass { background: var(--pass-soft); color: var(--pass); }
+.chip.pending { background: var(--pending-soft); color: var(--pending); }
+.chip.closed { background: transparent; color: var(--ink-2); border-color: var(--rule-strong); }
+a.chip.sf { background: var(--surface); color: var(--accent); border-color: var(--rule-strong); text-decoration: none; text-transform: none; letter-spacing: .02em; }
+a.chip.sf:hover { border-color: var(--accent); }
+.chips { display: flex; flex-wrap: wrap; gap: 4px; }
+
+/* Record table */
+.tablewrap { overflow-x: auto; margin-top: 14px; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font-family: var(--font-mono); color: var(--ink-2); font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: .08em; border-bottom-color: var(--rule-strong); }
+td.date { font-family: var(--font-mono); font-variant-numeric: tabular-nums; white-space: nowrap; color: var(--ink-2); }
+td.proj { white-space: nowrap; }
+.note { font-size: 14px; color: var(--ink-2); }
+
+/* Offers */
+.offers { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 18px; }
+@media (max-width: 640px) { .offers { grid-template-columns: 1fr; } }
+.offer { background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; padding: 16px 18px; min-width: 0; display: grid; gap: 6px; align-content: start; }
+.offer h3 { font-size: 18px; }
+.offer .price { font-family: var(--font-mono); color: var(--accent); font-size: 13px; }
+.offer p { font-size: 14.5px; margin: 0; }
+
+.method { padding-left: 1.2em; }
+.method li { margin: 8px 0; max-width: 72ch; }
+.method li::marker { color: var(--accent); }
+
+/* Registry drawer: twenty classes, the mark shape encodes detectability */
+.drawer { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; margin-top: 18px; }
+@media (max-width: 720px) { .drawer { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.cell { display: grid; grid-template-columns: auto 1fr; gap: 2px 7px; align-content: start; background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 9px 10px 10px; text-decoration: none; color: var(--ink); min-width: 0; }
+.cell:hover { border-color: var(--accent); }
+.cell .id { font-family: var(--font-mono); font-size: 12px; font-weight: 500; color: var(--accent); }
+.cell .nm { grid-column: 1 / -1; font-size: 12.5px; line-height: 1.35; }
+.mk { display: inline-block; width: 10px; height: 10px; border: 1.5px solid var(--accent); border-radius: 2px; align-self: center; }
+.mk.static { background: var(--accent); }
+.mk.heuristic { background: linear-gradient(135deg, var(--accent) 50%, transparent 50%); }
+.mk.manual { border-color: var(--rule-strong); background: transparent; }
+.drawer-legend { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 13px; color: var(--ink-2); margin-top: 10px; }
+.drawer-legend span { display: inline-flex; align-items: center; gap: 6px; }
+
+/* Closing contact */
+.cta { margin-top: 56px; background: var(--surface); border: 1px solid var(--rule-strong); border-radius: 8px; padding: 22px 24px; display: grid; gap: 10px; scroll-margin-top: 16px; }
+.cta h2 { margin: 0; padding: 0; border: 0; }
+.cta p { margin: 0; }
+
+footer { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--ink-2); }
+[lang-block] { display: none; }
+[lang-block].on { display: block; }
+</style>
+
+<div class="wrap">
+  <div class="topline">
+    <span class="mono">github.com/AxelNoun · updated 2026-10-19</span>
+    <span class="seg" role="group" aria-label="Language"><button id="btn-en" aria-pressed="true">EN</button><button id="btn-fr" aria-pressed="false">FR</button></span>
+  </div>
+
+  <div lang-block="en" class="on" lang="en">
+    <header class="hero">
+      <div class="label">Portfolio · ML reliability &amp; evaluation</div>
+      <h1>Axel Coiffard-Donaty</h1>
+      <p class="lede">I find the bugs that don't crash but falsify results: data leakage, biased samplers, GPU races, numerical drift, CI that stays green on failure. Every fix below is public, tested, and was merged by the project's maintainers. I keep the public <a href="https://github.com/AxelNoun/silent-failures" target="_blank" rel="noopener">Silent Failures Registry</a>: twenty classes of such bugs, each with a real specimen and the test that would have caught it.</p>
+      <div class="contact">
+        <span class="email"><span class="addr">axel.cffrd.dnty@icloud.com</span><button class="copy" type="button" data-copy="axel.cffrd.dnty@icloud.com" data-done="Copied">Copy</button></span>
+        <a href="https://github.com/AxelNoun" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/axel-coiffard-donaty-208a9a183/" target="_blank" rel="noopener">LinkedIn</a>
+        <span class="where">France (CET) · remote · EN / FR</span>
+      </div>
+      <div class="facts">
+        <div class="fact"><div class="n"><!--merged-count:start-->17<!--merged-count:end--></div><div class="l">merged pull requests, <!--range-en-dash:start-->June–October 2026<!--range-en-dash:end--></div></div>
+        <div class="fact"><div class="n"><!--project-count:start-->8<!--project-count:end--></div><div class="l">projects with a merged pull request (Meta, UIUC, Brown, EPFL…)</div></div>
+        <div class="fact"><div class="n">14</div><div class="l">issues filed; 4 with explicit maintainer agreement</div></div>
+        <div class="fact"><div class="n">344</div><div class="l">tests in discoursekit, mypy and ruff clean</div></div>
+      </div>
+      <figure class="timeline">
+        <figcaption><span class="label">Merge dates upstream, <!--range-en:start-->June → October 2026<!--range-en:end--></span><span class="label">● one merged pull request · <a href="#en-merged">full record</a></span></figcaption>
+        <div class="tl" data-timeline="en"></div>
+      </figure>
+      <nav class="toc" aria-label="Sections">
+        <a href="#en-cases">Case studies</a><a href="#en-merged">Everything merged</a><a href="#en-offers">What I offer</a><a href="#en-method">How I work</a><a href="#en-registry">The Registry</a><a href="#en-projects">Own projects</a><a href="#en-contact">Contact</a>
+      </nav>
+    </header>
+
+    <h2 id="en-cases">Case studies</h2>
+    <p class="section-intro">Each one follows the same four questions: what was wrong, what I did, why it was hard, what came out. Links go to the public record.</p>
+
+    <article class="dossier">
+      <div class="head"><div class="where"><span class="num">01</span><span class="label">lnccbrown/HSSM · Brown University</span></div><h3>Fit correct, predictions silently wrong</h3></div>
+      <div class="body">
+        <p><span class="lbl">Problem.</span> HSSM's <code>racing_diffusion_3</code> likelihood listed its parameters as (A, b, v0, v1, v2, t); the simulator registry it delegates to expected (v0, v1, v2, A, b, t). Model fitting worked. Prior and posterior predictive draws were permuted: mean reaction time 0.88 s instead of 0.337 s, with no error anywhere.</p>
+        <p><span class="lbl">What I did.</span> Aligned the order with the simulator, documented the breaking change for positional callers, and added a test that checks all 21 model/likelihood pairs against the registry so the class of bug cannot return. Log-probabilities match the previous code to 1 ulp.</p>
+        <p><span class="lbl">Result.</span> Merged in two days.</p>
+        <blockquote class="quote"><q>Looks good, and thanks for catching the issue.</q><cite>Alexander Fengler, maintainer — <a href="https://github.com/lnccbrown/HSSM/pull/1371" target="_blank" rel="noopener">PR #1371</a>, <a href="https://github.com/lnccbrown/HSSM/issues/1370" target="_blank" rel="noopener">issue #1370</a></cite></blockquote>
+      </div>
+      <dl class="rail">
+        <dt>Kind</dt><dd>silent correctness bug, statistics</dd>
+        <dt>Stack</dt><dd>Python, PyMC, ssm-simulators</dd>
+        <dt>Size</dt><dd class="mono">+121 / −4, 3 files</dd>
+        <dt>Status</dt><dd><span class="chip pass">merged</span> <span class="mono">2026-10-13</span></dd>
+        <dt>Registry</dt><dd class="chips" data-sf="SF-11"></dd>
+      </dl>
+    </article>
+
+    <article class="dossier">
+      <div class="head"><div class="where"><span class="num">02</span><span class="label">pytorch/executorch · Meta</span></div><h3>One <code>.pte</code> for prefill and decode</h3></div>
+      <div class="body">
+        <p><span class="lbl">Problem.</span> In ExecuTorch's MLX backend, whether MoE expert indices were sorted was fixed at export time. Prefill wants sorted indices (coalesced <code>gather_mm</code>); decode wants them unsorted (no argsort). Teams needed two exported models or accepted the overhead.</p>
+        <p><span class="lbl">What I did.</span> Two custom ops decide at runtime. A new optional FlatBuffer field was appended last so existing <code>.pte</code> files still load; the C++ interpreter prefers it and falls back to the static flag. I also fixed a serialization failure and, with the maintainer, traced a wrong result to a stride bug in Apple's MLX <code>matmul.cpp</code>, patched locally and upstream.</p>
+        <p><span class="lbl">Why it was hard.</span> Three layers (Python builder, schema, C++ runtime), binary compatibility, a bug in a dependency — and no Mac: the macOS CI was my only Metal test bench. The linter and MLX tests went red mid-review; I fixed them. One early hypothesis of mine was wrong and I said so.</p>
+        <blockquote class="quote"><q>Tested locally. Improves Qwen3.5 perf from 73 tok/sec to 80 tok/sec. Great job!</q><cite>Scott Roy (Meta), maintainer — <a href="https://github.com/pytorch/executorch/pull/20685" target="_blank" rel="noopener">PR #20685</a></cite></blockquote>
+      </div>
+      <dl class="rail">
+        <dt>Kind</dt><dd>feature + serialization fix + upstream diagnosis</dd>
+        <dt>Stack</dt><dd>Python, C++, FlatBuffers, MLX</dd>
+        <dt>Size</dt><dd class="mono">+890 / −54, 13 files</dd>
+        <dt>Status</dt><dd><span class="chip pass">merged</span> <span class="mono">2026-08-01</span></dd>
+      </dl>
+    </article>
+
+    <article class="dossier">
+      <div class="head"><div class="where"><span class="num">03</span><span class="label">sunlabuiuc/PyHealth · UIUC</span></div><h3>The test that could not catch its own regression</h3></div>
+      <div class="body">
+        <p><span class="lbl">Problem.</span> A contributor's OMOP drug-recommendation task fixed a self-leakage bug (the current visit's drugs were in the history fed to the model). The accompanying test mocked exactly the path it was meant to exercise, so it would have stayed green if the leak came back. Empty and "0" concept IDs slipped through; history lists were aliased between samples.</p>
+        <p><span class="lbl">What I did.</span> An external review that said what was right first ("the gap is real, your diagnosis checks out"), then the gaps, each with a reproduction. I prepared fixups; the author integrated two of my commits (hardening + a Windows-only cleanup rule) and the PR merged.</p>
+        <p><span class="lbl">Also in PyHealth.</span> <a href="https://github.com/sunlabuiuc/PyHealth/pull/1179" target="_blank" rel="noopener">#1179</a>: support for the MEDS standard (typed Parquet scan path, schema guard, 587 lines of tests, MIMIC-IV demo), merged. Open: PTB-XL ECG dataset with patient-disjoint splits, knowledge-graph embeddings with negatives drawn from training triples only, deterministic cache keys.</p>
+        <blockquote class="quote"><q>The gap is real… The test never exercises set_task()… The fixture can't detect the regression it targets.</q><cite>my review on <a href="https://github.com/sunlabuiuc/PyHealth/pull/1203" target="_blank" rel="noopener">PR #1203</a>, commits integrated by the author</cite></blockquote>
+      </div>
+      <dl class="rail">
+        <dt>Kind</dt><dd>data leakage, test validity, code review</dd>
+        <dt>Stack</dt><dd>Python, Polars, OMOP, MEDS</dd>
+        <dt>Size</dt><dd>#1203: 2 of 3 commits; #1179: +1,526 lines</dd>
+        <dt>Status</dt><dd><span class="chip pass">merged</span> <span class="mono">2026-09-02</span> and <span class="mono">2026-08-09</span></dd>
+        <dt>Registry</dt><dd class="chips" data-sf="SF-02 SF-19 SF-20"></dd>
+      </dl>
+    </article>
+
+    <article class="dossier">
+      <div class="head"><div class="where"><span class="num">04</span><span class="label">brian-team/brian2</span></div><h3>A sampler wrong for p &gt; 0.5, for years</h3></div>
+      <div class="body">
+        <p><span class="lbl">Problem.</span> Brian2 generates Cython from templates. The <code>BinomialFunction</code> template substituted <code>p</code> where the inversion algorithm needs <code>P = min(p, 1−p)</code>: wrong distribution for p &gt; 0.5 (mean 9.11 instead of 8 for n = 10, p = 0.8), a defect dating back years. Constants written with 15 decimals rounded <code>(1−P)^n</code> to zero, so the generated loop never terminated.</p>
+        <p><span class="lbl">What I did.</span> Filed the issue with three quantified defects, then a PR: correct symbol, constants via <code>repr(float(x))</code>, a code-generation-time check that refuses subnormal <code>(1−P)^n</code> with a clear error, a test comparing the sampled distribution against the exact pmf, and a test for the guard. Separately, I found a dangling pointer in the Cython RNG buffer (<a href="https://github.com/brian-team/brian2/issues/1893" target="_blank" rel="noopener">#1893</a>); my fix, <a href="https://github.com/brian-team/brian2/pull/1896" target="_blank" rel="noopener">#1896</a>, was merged on 2026-10-20.</p>
+        <blockquote class="quote"><q>I agree with the analysis and the proposed solution… Please do open the PR.</q><cite>Marcel Stimberg, maintainer, on #1893 — sampler PR <a href="https://github.com/brian-team/brian2/pull/1891" target="_blank" rel="noopener">#1891</a> under review: "this issue deserves a thorough look"</cite></blockquote>
+      </div>
+      <dl class="rail">
+        <dt>Kind</dt><dd>statistical bug, numerical robustness, code generation</dd>
+        <dt>Stack</dt><dd>Python, Cython, IEEE-754</dd>
+        <dt>Size</dt><dd class="mono">+128 / −8</dd>
+        <dt>Status</dt><dd><span class="chip pending">open</span> sampler PR #1891 under review; three other PRs merged (#1861, #1885, #1896)</dd>
+        <dt>Registry</dt><dd class="chips" data-sf="SF-14 SF-15 SF-16"></dd>
+      </dl>
+    </article>
+
+    <article class="dossier">
+      <div class="head"><div class="where"><span class="num">05</span><span class="label">ml-explore/mlx-lm · Apple</span></div><h3>A GPU race diagnosed without a GPU</h3></div>
+      <div class="body">
+        <p><span class="lbl">Problem.</span> Fused Metal KL/JS-divergence kernels used in distillation overflowed to −3.39e38 in the backward pass for models above ~1B parameters. The reporter suspected a sentinel value and fast-math.</p>
+        <p><span class="lbl">What I did.</span> Read the kernels: one threadgroup buffer was reused for the max exchange and the sum exchange with no barrier between them. Fixed the barriers (<code>mem_none</code> → <code>mem_threadgroup</code>, one added), masked the tail, guarded <code>fast::exp</code>, replaced an overflowing <code>log(1+exp(x))</code> with a stable softplus, and wrote regression tests that run the kernel many times. On GitHub's macOS runners: 50/50 nondeterministic runs before, 0/50 after.</p>
+        <p><span class="lbl">Result.</span> Another user reproduced the fix on an M5 Max: 26/50 → 0/50 mismatches, training completes, perplexity 9.21 vs 9.45 on the reference path. The maintainers closed the PR citing review capacity, not its content; I list it because the diagnosis was independently confirmed.</p>
+        <blockquote class="quote"><q>KL fp32 backward mismatch: 26/50 on stock, 0/50 on the fix branch.</q><cite>independent reproduction on <a href="https://github.com/ml-explore/mlx-lm/issues/1700" target="_blank" rel="noopener">issue #1700</a> — <a href="https://github.com/ml-explore/mlx-lm/pull/1719" target="_blank" rel="noopener">PR #1719</a></cite></blockquote>
+      </div>
+      <dl class="rail">
+        <dt>Kind</dt><dd>concurrency, numerical stability</dd>
+        <dt>Stack</dt><dd>Metal, MLX, Python</dd>
+        <dt>Size</dt><dd class="mono">+186 / −54</dd>
+        <dt>Status</dt><dd><span class="chip closed">closed</span> for capacity; fix confirmed by a third party</dd>
+        <dt>Registry</dt><dd class="chips" data-sf="SF-12 SF-13"></dd>
+      </dl>
+    </article>
+
+    <article class="dossier">
+      <div class="head"><div class="where"><span class="num">06</span><span class="label">NeuralEnsemble/python-neo</span></div><h3>CI that stayed green when the command failed</h3></div>
+      <div class="body">
+        <p><span class="lbl">Problem.</span> A workflow step computed a dataset cache key with <code>echo "hash=$(git ls-remote … | cut -f1)"</code>. When the remote returned HTTP 403, the step's exit status was <code>echo</code>'s, the key degraded to <code>Linux-datasets-</code>, and the step stayed green. I counted it in the logs: 9 io-test runs and 12 cron runs with empty keys.</p>
+        <p><span class="lbl">What I did.</span> <code>set -euo pipefail</code>, an emptiness check, an <code>::error::</code> annotation, same step ids so downstream references keep working. Earlier in the same project: <code>CedRawIO</code> broken by a dependency that changed its import layout three ways across versions and platforms, fixed with tests re-enabled; a CI matrix that had failed weekly since February.</p>
+        <blockquote class="quote"><q>Looks great. Thanks.</q> — added to the neo 0.14.6 author list<cite>Zach McKenzie, maintainer — <a href="https://github.com/NeuralEnsemble/python-neo/pull/1912" target="_blank" rel="noopener">#1912</a>, <a href="https://github.com/NeuralEnsemble/python-neo/pull/1891" target="_blank" rel="noopener">#1891</a>, <a href="https://github.com/NeuralEnsemble/python-neo/pull/1911" target="_blank" rel="noopener">#1911</a></cite></blockquote>
+      </div>
+      <dl class="rail">
+        <dt>Kind</dt><dd>CI correctness, compatibility, packaging</dd>
+        <dt>Stack</dt><dd>GitHub Actions, Python, PEP 508</dd>
+        <dt>Size</dt><dd>3 PRs; related fix in neuroconv <a href="https://github.com/catalystneuro/neuroconv/pull/1855" target="_blank" rel="noopener">#1855</a></dd>
+        <dt>Status</dt><dd><span class="chip pass">merged</span> all three, Aug–Oct 2026</dd>
+        <dt>Registry</dt><dd class="chips" data-sf="SF-07"></dd>
+      </dl>
+    </article>
+
+    <h2 id="en-merged">Everything merged</h2>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Merged</th><th>Project</th><th>Change</th><th>Registry</th></tr></thead>
+      <tbody data-record="en"></tbody>
+    </table></div>
+    <p class="note"><!--open-en:start-->Open and under review: brian2 #1891, ComputationalPsychiatry/pyhgf #448, executorch #23798 (approved), HSSM #1414, huggingface/course #1328, PyHealth #1187, #1202, #1207, python-neo #1913.<!--open-en:end--> Filed: pytorch/pytorch #200949 (<code>grid_sample</code> int16 offset overflow for fp16/bf16, labelled "correctness (silent)"), PCNtoolkit #600, pyhgf #446/#447.</p>
+
+    <h2 id="en-offers">What I offer</h2>
+    <div class="offers">
+      <div class="offer"><h3>Evaluation Integrity Review</h3><div class="price">5 days · fixed price</div><p>Do your metrics measure what you think? Leakage at every level, temporal leakage, seed reproducibility, cache validity. Report, reproduction script, tests added to your CI.</p></div>
+      <div class="offer"><h3>Evaluation &amp; test engineering</h3><div class="price">contract · 20–40 h/week</div><p>Seed-reproducible metrics, contamination checks, tests that fail on an injected regression, weekly one-page report of what was and was not measured.</p></div>
+      <div class="offer"><h3>Targeted correctness fix</h3><div class="price">3–8 days · fixed price</div><p>A result that is wrong, nondeterministic or machine-dependent: root cause, minimal fix, a test that failed before and passes after, a note on what was not verified.</p></div>
+      <div class="offer"><h3>Scientific-stack migration</h3><div class="price">1–3 weeks · fixed price</div><p>pandas 3, NumPy 2, Python 3.14, Cython 3, broken extras and wheels. Green CI at the end; every behaviour change listed with its effect on results.</p></div>
+    </div>
+
+    <h2 id="en-method">How I work</h2>
+    <ul class="method">
+      <li>Test plans state what they did <em>not</em> exercise, with negative controls — see <a href="https://github.com/pytorch/executorch/pull/22372" target="_blank" rel="noopener">#22372</a> and <a href="https://github.com/pytorch/executorch/pull/22373" target="_blank" rel="noopener">#22373</a>.</li>
+      <li>I follow the host project's conventions: Buck targets beside the existing ones, FlatBuffer fields appended for wire compatibility, design reversed when a maintainer asks.</li>
+      <li>I correct myself in public: a wrong hypothesis acknowledged in #20685, a PR withdrawn eight minutes after opening when two of its claims did not hold.</li>
+      <li>I use AI coding assistants and disclose it in every commit. What you pay for is the diagnosis, the direction and the verification.</li>
+      <li>Windows workstation, no Apple or NVIDIA hardware: GPU work is validated through upstream CI and third-party reproduction, and I say so before taking a job that needs more.</li>
+    </ul>
+
+    <h2 id="en-registry">The Registry</h2>
+    <p class="section-intro">The fixes above belong to a small number of recurring classes: the assertion that cannot fail, the parameter order permuted between two libraries, the CI step that stays green on failure, the write into a DataFrame view, the barrier that guards nothing. Each entry gives the code shape, the public specimen with the maintainer's words, the test that would have caught it, and how to prevent it. It is how I audit a codebase.</p>
+    <div class="drawer" data-drawer="en"></div>
+    <div class="drawer-legend"><span><i class="mk static"></i>static detector in sfradar</span><span><i class="mk heuristic"></i>heuristic, a person confirms</span><span><i class="mk manual"></i>manual review only</span></div>
+    <div class="offers">
+      <div class="offer"><h3>Silent Failures Registry</h3><div class="price">EN / FR · 20 entries · open</div><p>One page, one plate per class: where it hides, the symptom, the mechanism, how to detect it, the test to add, and the public specimen. <a href="https://github.com/AxelNoun/silent-failures" target="_blank" rel="noopener">github.com/AxelNoun/silent-failures</a></p></div>
+      <div class="offer"><h3>sfradar</h3><div class="price">static radar · no dependencies · validated</div><p>Thirteen of the twenty classes have a reliable static pattern; sfradar implements them (AST, regex, taint tracking for pandas views). Validated on the seven ground-truth bug sites at the commit before each fix — 7/7 detected, 6/6 cleared on the fixed version — and on a 344-test control repository, 0 findings. A radar, not a judge: it ranks where a reviewer should look first.</p></div>
+    </div>
+
+    <h2 id="en-projects">Own projects</h2>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Project</th><th>What it is</th><th>Quality evidence</th></tr></thead>
+      <tbody><!--projects-en:start-->
+        <tr><td><a href="https://github.com/AxelNoun/discoursekit" target="_blank" rel="noopener">discoursekit</a></td><td>linguistic measures for discourse research: UAX #29 tokenizer, MATTR, embedding coherence, permutation-test segmentation</td><td class="mono">344 tests · ruff · mypy clean</td></tr>
+        <tr><td><a href="https://github.com/AxelNoun/kinoscope" target="_blank" rel="noopener">kinoscope</a></td><td>kinase–inhibitor affinity under a leakage-free four-regime protocol with a leakage audit in CI</td><td class="mono">Hypothesis tests · mypy --strict · no model trained yet</td></tr>
+        <tr><td><a href="https://github.com/AxelNoun/tpl-lab" target="_blank" rel="noopener">tpl-lab</a></td><td>pre-registered falsification test of a cortical-geometry conjecture on Allen Neuropixels data</td><td class="mono">decision rule frozen before data · 12/12 refuted · v0.1.0</td></tr>
+        <tr><td><a href="https://github.com/AxelNoun/neurovis3d" target="_blank" rel="noopener">neurovis3d</a></td><td>diagnostics for spiking neural networks (snnTorch)</td><td class="mono">WIP · not validated · says so</td></tr>
+      <!--projects-en:end--></tbody>
+    </table></div>
+
+    <section class="cta" id="en-contact">
+      <div class="label">Contact</div>
+      <h2>Start with a 20-minute call</h2>
+      <p>Send the result you doubt or the pipeline you want checked. A 20-minute call is enough to see whether a review applies.</p>
+      <div class="contact">
+        <span class="email"><span class="addr">axel.cffrd.dnty@icloud.com</span><button class="copy" type="button" data-copy="axel.cffrd.dnty@icloud.com" data-done="Copied">Copy</button></span>
+        <a href="https://www.linkedin.com/in/axel-coiffard-donaty-208a9a183/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/AxelNoun" target="_blank" rel="noopener">GitHub</a>
+        <span class="where">France (CET) · remote · EN / FR</span>
+      </div>
+    </section>
+  </div>
+
+  <div lang-block="fr" lang="fr">
+    <header class="hero">
+      <div class="label">Portfolio · fiabilité et évaluation ML</div>
+      <h1>Axel Coiffard-Donaty</h1>
+      <p class="lede">Je trouve les bugs qui ne plantent pas mais faussent des résultats : fuites de données, échantillonneurs biaisés, races GPU, dérives numériques, CI qui reste verte sur échec. Chaque correctif ci-dessous est public, testé, et a été fusionné par les mainteneurs du projet. Je tiens le <a href="https://github.com/AxelNoun/silent-failures" target="_blank" rel="noopener">Registre des défauts silencieux</a> : vingt classes de ces bugs, chacune avec son spécimen réel et le test qui l'aurait attrapé.</p>
+      <div class="contact">
+        <span class="email"><span class="addr">axel.cffrd.dnty@icloud.com</span><button class="copy" type="button" data-copy="axel.cffrd.dnty@icloud.com" data-done="Copié">Copier</button></span>
+        <a href="https://github.com/AxelNoun" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/axel-coiffard-donaty-208a9a183/" target="_blank" rel="noopener">LinkedIn</a>
+        <span class="where">France · à distance · FR / EN</span>
+      </div>
+      <div class="facts">
+        <div class="fact"><div class="n"><!--merged-count:start-->17<!--merged-count:end--></div><div class="l">pull requests fusionnées, <!--range-fr-dash:start-->juin–octobre 2026<!--range-fr-dash:end--></div></div>
+        <div class="fact"><div class="n"><!--project-count:start-->8<!--project-count:end--></div><div class="l">projets avec une pull request fusionnée (Meta, UIUC, Brown, EPFL…)</div></div>
+        <div class="fact"><div class="n">14</div><div class="l">issues ouvertes ; 4 avec accord explicite du mainteneur</div></div>
+        <div class="fact"><div class="n">344</div><div class="l">tests dans discoursekit, mypy et ruff propres</div></div>
+      </div>
+      <figure class="timeline">
+        <figcaption><span class="label">Dates de fusion en amont, <!--range-fr:start-->juin → octobre 2026<!--range-fr:end--></span><span class="label">● une pull request fusionnée · <a href="#fr-merged">liste complète</a></span></figcaption>
+        <div class="tl" data-timeline="fr"></div>
+      </figure>
+      <nav class="toc" aria-label="Sections">
+        <a href="#fr-cases">Études de cas</a><a href="#fr-merged">Tout ce qui a été fusionné</a><a href="#fr-offers">Ce que je propose</a><a href="#fr-method">Méthode</a><a href="#fr-registry">Le Registre</a><a href="#fr-projects">Projets personnels</a><a href="#fr-contact">Contact</a>
+      </nav>
+    </header>
+
+    <h2 id="fr-cases">Études de cas</h2>
+    <p class="section-intro">Quatre questions à chaque fois : ce qui était faux, ce que j'ai fait, pourquoi c'était difficile, ce qui en est sorti. Les liens mènent au dossier public.</p>
+
+    <article class="dossier">
+      <div class="head"><div class="where"><span class="num">01</span><span class="label">lnccbrown/HSSM · Brown</span></div><h3>Ajustement correct, prédictions silencieusement fausses</h3></div>
+      <div class="body">
+        <p><span class="lbl">Problème.</span> La vraisemblance <code>racing_diffusion_3</code> listait ses paramètres dans l'ordre (A, b, v0, v1, v2, t) ; le registre de simulateurs attendait (v0, v1, v2, A, b, t). L'ajustement fonctionnait ; les tirages prédictifs étaient permutés : temps de réaction moyen 0,88 s au lieu de 0,337 s, sans aucune erreur.</p>
+        <p><span class="lbl">Intervention.</span> Alignement de l'ordre, rupture documentée pour les appels positionnels, et un test qui compare les 21 paires modèle/vraisemblance au registre. Les log-vraisemblances restent identiques à 1 ulp.</p>
+        <p><span class="lbl">Résultat.</span> Fusionné en deux jours.</p>
+        <blockquote class="quote"><q>Looks good, and thanks for catching the issue.</q><cite>Alexander Fengler, mainteneur — <a href="https://github.com/lnccbrown/HSSM/pull/1371" target="_blank" rel="noopener">PR #1371</a></cite></blockquote>
+      </div>
+      <dl class="rail"><dt>Nature</dt><dd>bug de correction silencieux, statistiques</dd><dt>Pile</dt><dd>Python, PyMC, ssm-simulators</dd><dt>Taille</dt><dd class="mono">+121 / −4, 3 fichiers</dd><dt>Statut</dt><dd><span class="chip pass">fusionné</span> le 13/10/2026</dd><dt>Registre</dt><dd class="chips" data-sf="SF-11"></dd></dl>
+    </article>
+
+    <article class="dossier">
+      <div class="head"><div class="where"><span class="num">02</span><span class="label">pytorch/executorch · Meta</span></div><h3>Un seul <code>.pte</code> pour prefill et decode</h3></div>
+      <div class="body">
+        <p><span class="lbl">Problème.</span> Dans le backend MLX d'ExecuTorch, le tri des indices d'experts MoE était figé à l'export. Le prefill veut des indices triés ; le decode non. Il fallait deux modèles exportés ou accepter le surcoût.</p>
+        <p><span class="lbl">Intervention.</span> Deux custom ops décident à l'exécution. Un champ FlatBuffer optionnel ajouté en fin de table pour que les fichiers existants se chargent toujours ; l'interpréteur C++ le préfère et se replie sur le drapeau statique. J'ai aussi corrigé une erreur de sérialisation et, avec le mainteneur, remonté un mauvais résultat jusqu'à un bug de stride dans <code>matmul.cpp</code> de MLX, corrigé localement et en amont.</p>
+        <p><span class="lbl">Difficulté.</span> Trois couches, compatibilité binaire, un bug dans une dépendance, et pas de Mac : la CI macOS était mon seul banc Metal. Lint et tests MLX passés au rouge en cours de review ; corrigés. Une première hypothèse fausse, reconnue publiquement.</p>
+        <blockquote class="quote"><q>Tested locally. Improves Qwen3.5 perf from 73 tok/sec to 80 tok/sec. Great job!</q><cite>Scott Roy (Meta), mainteneur — <a href="https://github.com/pytorch/executorch/pull/20685" target="_blank" rel="noopener">PR #20685</a></cite></blockquote>
+      </div>
+      <dl class="rail"><dt>Nature</dt><dd>fonctionnalité + correctif de sérialisation + diagnostic amont</dd><dt>Pile</dt><dd>Python, C++, FlatBuffers, MLX</dd><dt>Taille</dt><dd class="mono">+890 / −54, 13 fichiers</dd><dt>Statut</dt><dd><span class="chip pass">fusionné</span> le 01/08/2026</dd></dl>
+    </article>
+
+    <article class="dossier">
+      <div class="head"><div class="where"><span class="num">03</span><span class="label">sunlabuiuc/PyHealth · UIUC</span></div><h3>Le test qui ne pouvait pas détecter sa régression</h3></div>
+      <div class="body">
+        <p><span class="lbl">Problème.</span> Une tâche OMOP de recommandation de médicaments corrigeait une auto-fuite (les médicaments de la visite courante figuraient dans l'historique). Le test qui l'accompagnait mockait exactement le chemin qu'il devait exercer : il serait resté vert si la fuite revenait. Des IDs de concept vides ou à 0 passaient ; des listes d'historique étaient aliasées entre échantillons.</p>
+        <p><span class="lbl">Intervention.</span> Review externe : ce qui était juste d'abord, puis les manques, chacun reproduit. L'auteur a intégré deux de mes commits ; la PR a été fusionnée.</p>
+        <p><span class="lbl">Aussi dans PyHealth.</span> <a href="https://github.com/sunlabuiuc/PyHealth/pull/1179" target="_blank" rel="noopener">#1179</a> : support du standard MEDS (chemin Parquet typé, garde de schéma, 587 lignes de tests, démo MIMIC-IV), fusionné. En cours : dataset PTB-XL avec splits patient-disjoints, embeddings de graphe de connaissances avec négatifs tirés du seul train, clés de cache déterministes.</p>
+        <blockquote class="quote"><q>The gap is real… The fixture can't detect the regression it targets.</q><cite>ma review sur <a href="https://github.com/sunlabuiuc/PyHealth/pull/1203" target="_blank" rel="noopener">PR #1203</a>, commits intégrés par l'auteur</cite></blockquote>
+      </div>
+      <dl class="rail"><dt>Nature</dt><dd>fuite de données, validité des tests, revue de code</dd><dt>Pile</dt><dd>Python, Polars, OMOP, MEDS</dd><dt>Taille</dt><dd>#1203 : 2 commits sur 3 ; #1179 : +1 526 lignes</dd><dt>Statut</dt><dd><span class="chip pass">fusionnés</span> le 02/09 et le 09/08/2026</dd><dt>Registre</dt><dd class="chips" data-sf="SF-02 SF-19 SF-20"></dd></dl>
+    </article>
+
+    <article class="dossier">
+      <div class="head"><div class="where"><span class="num">04</span><span class="label">brian-team/brian2</span></div><h3>Un échantillonneur faux pour p &gt; 0,5, depuis des années</h3></div>
+      <div class="body">
+        <p><span class="lbl">Problème.</span> Brian2 génère du Cython depuis des templates. Celui de <code>BinomialFunction</code> substituait <code>p</code> là où l'algorithme d'inversion exige <code>P = min(p, 1−p)</code> : distribution fausse pour p &gt; 0,5 (moyenne 9,11 au lieu de 8 pour n = 10, p = 0,8). Des constantes à 15 décimales arrondissaient <code>(1−P)^n</code> à zéro : la boucle générée ne terminait jamais.</p>
+        <p><span class="lbl">Intervention.</span> Issue avec trois défauts quantifiés, puis PR : bon symbole, constantes via <code>repr(float(x))</code>, garde à la génération refusant les valeurs sous-normales avec une erreur claire, test comparant la distribution échantillonnée à la pmf exacte, test du garde. À part : un pointeur pendant dans le tampon RNG Cython (<a href="https://github.com/brian-team/brian2/issues/1893" target="_blank" rel="noopener">#1893</a>) ; mon correctif, <a href="https://github.com/brian-team/brian2/pull/1896" target="_blank" rel="noopener">#1896</a>, a été fusionné le 20/10/2026.</p>
+        <blockquote class="quote"><q>I agree with the analysis and the proposed solution… Please do open the PR.</q><cite>Marcel Stimberg, mainteneur, sur #1893 — PR <a href="https://github.com/brian-team/brian2/pull/1891" target="_blank" rel="noopener">#1891</a> en review</cite></blockquote>
+      </div>
+      <dl class="rail"><dt>Nature</dt><dd>bug statistique, robustesse numérique, génération de code</dd><dt>Pile</dt><dd>Python, Cython, IEEE-754</dd><dt>Taille</dt><dd class="mono">+128 / −8</dd><dt>Statut</dt><dd><span class="chip pending">ouverte</span> PR #1891 de l'échantillonneur en review ; trois autres PR fusionnées (#1861, #1885, #1896)</dd><dt>Registre</dt><dd class="chips" data-sf="SF-14 SF-15 SF-16"></dd></dl>
+    </article>
+
+    <article class="dossier">
+      <div class="head"><div class="where"><span class="num">05</span><span class="label">ml-explore/mlx-lm · Apple</span></div><h3>Une race GPU diagnostiquée sans GPU</h3></div>
+      <div class="body">
+        <p><span class="lbl">Problème.</span> Les kernels Metal fusionnés de divergence KL/JS utilisés en distillation débordaient à −3,39e38 en passe arrière au-delà d'environ 1 milliard de paramètres. Le rapporteur soupçonnait une valeur sentinelle.</p>
+        <p><span class="lbl">Intervention.</span> Lecture des kernels : un même tampon threadgroup servait à l'échange du max puis de la somme, sans barrière entre les deux. Barrières corrigées, queue masquée, <code>fast::exp</code> gardé, softplus stable, tests de régression exécutant le kernel de nombreuses fois. Sur les runners macOS de GitHub : 50/50 exécutions non déterministes avant, 0/50 après.</p>
+        <p><span class="lbl">Résultat.</span> Un autre utilisateur a reproduit le correctif sur M5 Max : 26/50 → 0/50, entraînement complet, perplexité 9,21 contre 9,45. Les mainteneurs ont fermé la PR en invoquant leur capacité de review, pas son contenu.</p>
+        <blockquote class="quote"><q>KL fp32 backward mismatch: 26/50 on stock, 0/50 on the fix branch.</q><cite>reproduction indépendante sur <a href="https://github.com/ml-explore/mlx-lm/issues/1700" target="_blank" rel="noopener">issue #1700</a> — <a href="https://github.com/ml-explore/mlx-lm/pull/1719" target="_blank" rel="noopener">PR #1719</a></cite></blockquote>
+      </div>
+      <dl class="rail"><dt>Nature</dt><dd>concurrence, stabilité numérique</dd><dt>Pile</dt><dd>Metal, MLX, Python</dd><dt>Taille</dt><dd class="mono">+186 / −54</dd><dt>Statut</dt><dd><span class="chip closed">fermée</span> pour capacité ; correctif confirmé par un tiers</dd><dt>Registre</dt><dd class="chips" data-sf="SF-12 SF-13"></dd></dl>
+    </article>
+
+    <article class="dossier">
+      <div class="head"><div class="where"><span class="num">06</span><span class="label">NeuralEnsemble/python-neo</span></div><h3>Une CI qui restait verte quand la commande échouait</h3></div>
+      <div class="body">
+        <p><span class="lbl">Problème.</span> Une étape calculait une clé de cache avec <code>echo "hash=$(git ls-remote … | cut -f1)"</code>. Quand le dépôt distant renvoyait 403, le statut de sortie était celui d'<code>echo</code>, la clé dégénérait en <code>Linux-datasets-</code> et l'étape restait verte. Compté dans les logs : 9 runs de tests et 12 runs cron avec une clé vide.</p>
+        <p><span class="lbl">Intervention.</span> <code>set -euo pipefail</code>, contrôle de vide, annotation d'erreur, mêmes identifiants d'étape. Plus tôt dans le même projet : <code>CedRawIO</code> cassé par une dépendance qui avait changé trois fois son layout d'import selon version et plateforme ; une matrice CI qui échouait chaque semaine depuis février.</p>
+        <blockquote class="quote"><q>Looks great. Thanks.</q> — ajouté à la liste des auteurs de neo 0.14.6<cite>Zach McKenzie, mainteneur — <a href="https://github.com/NeuralEnsemble/python-neo/pull/1912" target="_blank" rel="noopener">#1912</a>, <a href="https://github.com/NeuralEnsemble/python-neo/pull/1891" target="_blank" rel="noopener">#1891</a>, <a href="https://github.com/NeuralEnsemble/python-neo/pull/1911" target="_blank" rel="noopener">#1911</a></cite></blockquote>
+      </div>
+      <dl class="rail"><dt>Nature</dt><dd>correction de CI, compatibilité, packaging</dd><dt>Pile</dt><dd>GitHub Actions, Python, PEP 508</dd><dt>Taille</dt><dd>3 PR ; correctif lié dans neuroconv <a href="https://github.com/catalystneuro/neuroconv/pull/1855" target="_blank" rel="noopener">#1855</a></dd><dt>Statut</dt><dd><span class="chip pass">fusionnés</span> tous, août–oct. 2026</dd><dt>Registre</dt><dd class="chips" data-sf="SF-07"></dd></dl>
+    </article>
+
+    <h2 id="fr-merged">Tout ce qui a été fusionné</h2>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Fusion</th><th>Projet</th><th>Changement</th><th>Registre</th></tr></thead>
+      <tbody data-record="fr"></tbody>
+    </table></div>
+    <p class="note"><!--open-fr:start-->En cours de revue : brian2 #1891, ComputationalPsychiatry/pyhgf #448, executorch #23798 (approuvée), HSSM #1414, huggingface/course #1328, PyHealth #1187, #1202, #1207, python-neo #1913.<!--open-fr:end--> Signalés : pytorch/pytorch #200949 (dépassement d'offset int16 dans <code>grid_sample</code> pour fp16/bf16, étiqueté « correctness (silent) »), PCNtoolkit #600, pyhgf #446/#447.</p>
+
+    <h2 id="fr-offers">Ce que je propose</h2>
+    <div class="offers">
+      <div class="offer"><h3>Diagnostic d'intégrité d'évaluation</h3><div class="price">5 jours · forfait</div><p>Vos métriques mesurent-elles ce que vous croyez ? Fuites à chaque niveau, fuite temporelle, reproductibilité à la graine, validité des caches. Rapport, script de reproduction, tests ajoutés à votre CI.</p></div>
+      <div class="offer"><h3>Ingénierie d'évaluation et de tests</h3><div class="price">régie · 20–40 h/semaine</div><p>Métriques reproductibles, contrôles de contamination, tests qui échouent sur une régression injectée, rapport hebdomadaire d'une page.</p></div>
+      <div class="offer"><h3>Correctif ciblé</h3><div class="price">3–8 jours · forfait</div><p>Un résultat faux, non déterministe ou dépendant de la machine : cause racine, correctif minimal, test qui échouait avant et passe après, note de ce qui n'a pas été vérifié.</p></div>
+      <div class="offer"><h3>Migration de pile scientifique</h3><div class="price">1–3 semaines · forfait</div><p>pandas 3, NumPy 2, Python 3.14, Cython 3, extras et wheels cassés. CI verte à la fin ; chaque changement de comportement listé avec son effet.</p></div>
+    </div>
+
+    <h2 id="fr-method">Méthode</h2>
+    <ul class="method">
+      <li>Mes plans de test disent ce qu'ils n'ont <em>pas</em> exercé, avec des contrôles négatifs — voir <a href="https://github.com/pytorch/executorch/pull/22372" target="_blank" rel="noopener">#22372</a> et <a href="https://github.com/pytorch/executorch/pull/22373" target="_blank" rel="noopener">#22373</a>.</li>
+      <li>Je suis les conventions du projet hôte : cibles Buck à côté des existantes, champs FlatBuffer ajoutés pour la compatibilité, design inversé quand un mainteneur le demande.</li>
+      <li>Je me corrige en public : hypothèse fausse reconnue dans #20685, PR retirée huit minutes après ouverture quand deux affirmations ne tenaient pas.</li>
+      <li>J'utilise des assistants IA et je le déclare dans chaque commit. Ce que vous achetez est le diagnostic, la direction et la vérification.</li>
+      <li>Poste Windows, sans matériel Apple ni NVIDIA : le travail GPU est validé par les CI des projets et par reproduction tierce, et je le dis avant d'accepter une mission qui exige plus.</li>
+    </ul>
+
+    <h2 id="fr-registry">Le Registre</h2>
+    <p class="section-intro">Les correctifs ci-dessus appartiennent à un petit nombre de classes récurrentes : l'assertion qui ne peut pas échouer, l'ordre des paramètres permuté entre deux bibliothèques, l'étape de CI qui reste verte sur échec, l'écriture dans une vue de DataFrame, la barrière qui ne protège rien. Chaque entrée donne la forme du code, le spécimen public avec les mots du mainteneur, le test qui l'aurait attrapé, la prévention. C'est ma méthode d'audit, écrite.</p>
+    <div class="drawer" data-drawer="fr"></div>
+    <div class="drawer-legend"><span><i class="mk static"></i>détecteur statique dans sfradar</span><span><i class="mk heuristic"></i>heuristique, confirmée par une personne</span><span><i class="mk manual"></i>revue manuelle seulement</span></div>
+    <div class="offers">
+      <div class="offer"><h3>Registre des défauts silencieux</h3><div class="price">FR / EN · 20 entrées · ouvert</div><p>Une page, une plaque par classe : où le défaut se cache, le symptôme, le mécanisme, la détection, le test à ajouter et le spécimen public. <a href="https://github.com/AxelNoun/silent-failures" target="_blank" rel="noopener">github.com/AxelNoun/silent-failures</a></p></div>
+      <div class="offer"><h3>sfradar</h3><div class="price">radar statique · sans dépendance · validé</div><p>Treize des vingt classes ont un motif statique fiable ; sfradar les implémente (AST, regex, suivi de teinte pour les vues pandas). Validé sur les sept sites de bugs réels au commit précédant chaque correctif — 7/7 détectés, 6/6 effacés sur la version corrigée — et sur un dépôt témoin de 344 tests, 0 signalement. Un radar, pas un juge : il classe où un relecteur doit regarder d'abord.</p></div>
+    </div>
+
+    <h2 id="fr-projects">Projets personnels</h2>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Projet</th><th>Objet</th><th>Preuve de qualité</th></tr></thead>
+      <tbody><!--projects-fr:start-->
+        <tr><td><a href="https://github.com/AxelNoun/discoursekit" target="_blank" rel="noopener">discoursekit</a></td><td>mesures linguistiques : tokenisation UAX #29, MATTR, cohérence sémantique, segmentation par permutation</td><td class="mono">344 tests · ruff · mypy propres</td></tr>
+        <tr><td><a href="https://github.com/AxelNoun/kinoscope" target="_blank" rel="noopener">kinoscope</a></td><td>affinité kinase–inhibiteur sous protocole à quatre régimes sans fuite, audit de fuite en CI</td><td class="mono">tests Hypothesis · mypy --strict · modèle non entraîné</td></tr>
+        <tr><td><a href="https://github.com/AxelNoun/tpl-lab" target="_blank" rel="noopener">tpl-lab</a></td><td>test pré-enregistré d'une conjecture géométrique sur Allen Neuropixels</td><td class="mono">règle gelée avant les données · 12/12 réfutés · v0.1.0</td></tr>
+        <tr><td><a href="https://github.com/AxelNoun/neurovis3d" target="_blank" rel="noopener">neurovis3d</a></td><td>diagnostics de réseaux de neurones à impulsions (snnTorch)</td><td class="mono">en cours · non validé · déclaré</td></tr>
+      <!--projects-fr:end--></tbody>
+    </table></div>
+
+    <section class="cta" id="fr-contact">
+      <div class="label">Contact</div>
+      <h2>Commencer par un appel de 20 minutes</h2>
+      <p>Envoyez le résultat dont vous doutez ou le pipeline à vérifier. Vingt minutes suffisent pour savoir si un diagnostic s'applique.</p>
+      <div class="contact">
+        <span class="email"><span class="addr">axel.cffrd.dnty@icloud.com</span><button class="copy" type="button" data-copy="axel.cffrd.dnty@icloud.com" data-done="Copié">Copier</button></span>
+        <a href="https://www.linkedin.com/in/axel-coiffard-donaty-208a9a183/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/AxelNoun" target="_blank" rel="noopener">GitHub</a>
+        <span class="where">France · à distance · FR / EN</span>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <span id="foot-en">All claims link to public GitHub records; maintainers' quotes are verbatim from the linked pages. No client engagement is listed because none has been invoiced yet.</span>
+    <span id="foot-fr" hidden>Toutes les affirmations renvoient à des pages GitHub publiques ; les citations des mainteneurs sont reprises mot pour mot. Aucune mission client n'est listée parce qu'aucune n'a encore été facturée.</span>
+  </footer>
+</div>
+
+<!-- Données générées par visuals/build.py à partir de visuals/data/merged.json et de silent-failures/registry/entries.js : ne pas éditer à la main. -->
+<!--data:start-->
+<script type="application/json" id="merged-data">{"lanes":[{"key":"executorch","label":"pytorch/executorch"},{"key":"pyhealth","label":"sunlabuiuc/PyHealth"},{"key":"hssm","label":"lnccbrown/HSSM"},{"key":"dlc","label":"DeepLabCut"},{"key":"brian2","label":"brian-team/brian2"},{"key":"neo","label":"python-neo"},{"key":"neuroconv","label":"catalystneuro/neuroconv"},{"key":"spikingjelly","label":"spikingjelly"}],"merged":[{"date":"2026-10-20","lane":"hssm","ref":"lnccbrown/HSSM #1415","url":"https://github.com/lnccbrown/HSSM/pull/1415","sf":[],"en":"follow-up to #1411: the test of the balanced-panel check now uses the stable sort it recommends","fr":"suite de #1411 : le test de la validation du panel utilise désormais le tri stable qu'elle recommande"},{"date":"2026-10-20","lane":"brian2","ref":"brian-team/brian2 #1896","url":"https://github.com/brian-team/brian2/pull/1896","sf":["SF-16"],"en":"Cython RNG buffers stored by value in the random state: restore() no longer reads freed memory after a refill; test","fr":"tampons RNG Cython stockés par valeur dans l'état aléatoire : restore() ne lit plus de mémoire libérée après un remplissage ; test"},{"date":"2026-10-19","lane":"hssm","ref":"lnccbrown/HSSM #1411","url":"https://github.com/lnccbrown/HSSM/pull/1411","sf":[],"en":"error message suggested an unstable sort that scrambles each participant's trial order; stable sort suggested, docstrings, tests","fr":"le message d'erreur suggérait un tri non stable qui mélange l'ordre des essais de chaque participant ; tri stable suggéré, docstrings, tests"},{"date":"2026-10-14","lane":"executorch","ref":"pytorch/executorch #22373","url":"https://github.com/pytorch/executorch/pull/22373","sf":["SF-05","SF-06"],"en":"four error guards that could never fire made to raise; tests","fr":"quatre gardes d'erreur qui ne pouvaient jamais se déclencher, rendues effectives ; tests"},{"date":"2026-10-13","lane":"hssm","ref":"lnccbrown/HSSM #1371","url":"https://github.com/lnccbrown/HSSM/pull/1371","sf":["SF-11"],"en":"parameter order permuted between libraries; test over 21 pairs","fr":"ordre des paramètres permuté entre bibliothèques ; test sur 21 paires"},{"date":"2026-10-09","lane":"brian2","ref":"brian-team/brian2 #1885","url":"https://github.com/brian-team/brian2/pull/1885","sf":[],"en":"developer guidelines refresh","fr":"mise à jour des consignes pour les développeurs"},{"date":"2026-10-09","lane":"neo","ref":"python-neo #1911","url":"https://github.com/NeuralEnsemble/python-neo/pull/1911","sf":[],"en":"CI matrix failing weekly since February","fr":"matrice CI en échec chaque semaine depuis février"},{"date":"2026-10-08","lane":"neo","ref":"python-neo #1912","url":"https://github.com/NeuralEnsemble/python-neo/pull/1912","sf":["SF-07"],"en":"CI step green on failure; pipefail + checks","fr":"étape de CI verte sur échec ; pipefail et contrôles"},{"date":"2026-09-21","lane":"brian2","ref":"brian-team/brian2 #1861","url":"https://github.com/brian-team/brian2/pull/1861","sf":[],"en":"conditional gc.collect() in Network.run(); regression test","fr":"gc.collect() conditionnel dans Network.run() ; test de régression"},{"date":"2026-09-14","lane":"executorch","ref":"pytorch/executorch #22372","url":"https://github.com/pytorch/executorch/pull/22372","sf":["SF-08"],"en":"Vulkan quantizer lifted ints as float32; fix + test","fr":"le quantificateur Vulkan promouvait des entiers en float32 ; correctif et test"},{"date":"2026-09-02","lane":"pyhealth","ref":"sunlabuiuc/PyHealth #1203","url":"https://github.com/sunlabuiuc/PyHealth/pull/1203","sf":["SF-02","SF-19","SF-20"],"en":"review + 2 hardening commits on an OMOP leakage fix","fr":"revue et 2 commits de durcissement sur un correctif de fuite OMOP"},{"date":"2026-08-31","lane":"dlc","ref":"DeepLabCut #3445","url":"https://github.com/DeepLabCut/DeepLabCut/pull/3445","sf":["SF-09"],"en":"pandas 3 Copy-on-Write: ten in-place mutations made safe","fr":"pandas 3 Copy-on-Write : dix mutations en place sécurisées"},{"date":"2026-08-11","lane":"neo","ref":"python-neo #1891","url":"https://github.com/NeuralEnsemble/python-neo/pull/1891","sf":[],"en":"CedRawIO vs sonpy ≥ 1.9.12; CED tests re-enabled","fr":"CedRawIO face à sonpy ≥ 1.9.12 ; tests CED réactivés"},{"date":"2026-08-11","lane":"neuroconv","ref":"catalystneuro/neuroconv #1855","url":"https://github.com/catalystneuro/neuroconv/pull/1855","sf":[],"en":"unsatisfiable PEP 508 marker on the spike2 extra","fr":"marqueur PEP 508 insatisfiable sur l'extra spike2"},{"date":"2026-08-09","lane":"pyhealth","ref":"sunlabuiuc/PyHealth #1179","url":"https://github.com/sunlabuiuc/PyHealth/pull/1179","sf":[],"en":"MEDS dataset support, typed Parquet path (+1,526 lines)","fr":"support du standard MEDS, chemin Parquet typé (+1 526 lignes)"},{"date":"2026-08-01","lane":"executorch","ref":"pytorch/executorch #20685","url":"https://github.com/pytorch/executorch/pull/20685","sf":[],"en":"runtime MoE expert-sort for the MLX backend","fr":"tri des experts MoE à l'exécution pour le backend MLX"},{"date":"2026-06-22","lane":"spikingjelly","ref":"spikingjelly #692","url":"https://github.com/fangwei123456/spikingjelly/pull/692","sf":[],"en":"dead assertion on a never-defined attribute","fr":"assertion morte sur un attribut jamais défini"}],"window":{"start":"2026-06","end":"2026-11","en":"June → October 2026","fr":"juin → octobre 2026"}}</script>
+<script type="application/json" id="registry-data">[{"id":"SF-01","family":"data","detect":"heuristic","en":"Grouped-entity leakage across splits","fr":"Fuite d'entité groupée entre splits"},{"id":"SF-02","family":"data","detect":"manual","en":"Target information inside the features","fr":"Information de la cible dans les variables"},{"id":"SF-03","family":"data","detect":"manual","en":"Negatives sampled from the evaluation set","fr":"Négatifs tirés du jeu d'évaluation"},{"id":"SF-04","family":"data","detect":"static","en":"Non-injective or unstable cache key","fr":"Clé de cache non injective ou instable"},{"id":"SF-05","family":"control-flow","detect":"static","en":"Assertion that cannot fail","fr":"Assertion qui ne peut pas échouer"},{"id":"SF-06","family":"control-flow","detect":"static","en":"Exception constructed but never raised","fr":"Exception construite mais jamais levée"},{"id":"SF-07","family":"build-ci","detect":"static","en":"CI step that stays green on failure","fr":"Étape de CI verte sur échec"},{"id":"SF-08","family":"numerics","detect":"static","en":"dtype dropped when lifting a scalar","fr":"dtype perdu en promouvant un scalaire"},{"id":"SF-09","family":"data","detect":"static","en":"In-place mutation of a view that may be read-only","fr":"Mutation en place d'une vue potentiellement en lecture seule"},{"id":"SF-10","family":"data","detect":"heuristic","en":"Unseeded randomness on the evaluation path","fr":"Aléa sans graine sur le chemin d'évaluation"},{"id":"SF-11","family":"data","detect":"manual","en":"Parameter order coupled across libraries","fr":"Ordre de paramètres couplé entre bibliothèques"},{"id":"SF-12","family":"concurrency","detect":"static","en":"Shared-memory exchange without a fencing barrier","fr":"Échange en mémoire partagée sans barrière"},{"id":"SF-13","family":"numerics","detect":"heuristic","en":"Fast-math transcendental on an unbounded argument","fr":"Fonction fast-math sur un argument non borné"},{"id":"SF-14","family":"codegen","detect":"manual","en":"Wrong symbol substituted in generated code","fr":"Mauvais symbole substitué dans du code généré"},{"id":"SF-15","family":"codegen","detect":"heuristic","en":"Constant rounded by its printed precision","fr":"Constante arrondie par sa précision d'impression"},{"id":"SF-16","family":"concurrency","detect":"manual","en":"Dangling pointer into a refilled buffer","fr":"Pointeur pendant vers un tampon rempli à nouveau"},{"id":"SF-17","family":"numerics","detect":"manual","en":"Narrow integer offset in a vectorized kernel","fr":"Offset entier étroit dans un kernel vectorisé"},{"id":"SF-18","family":"control-flow","detect":"static","en":"Exception swallowed","fr":"Exception avalée"},{"id":"SF-19","family":"data","detect":"static","en":"Aliased mutable state across samples","fr":"État mutable partagé entre échantillons"},{"id":"SF-20","family":"control-flow","detect":"manual","en":"Test that cannot detect its own regression","fr":"Test incapable de détecter sa régression"}]</script>
+<!--data:end-->
+
+<script>
+(() => {
+  const REGISTRY_URL = "https://axelnoun.github.io/silent-failures/";
+  const read = id => { try { return JSON.parse(document.getElementById(id).textContent); } catch (e) { return null; } };
+  const DATA = read("merged-data") || {};
+  const REG = read("registry-data") || [];
+  const MERGED = Array.isArray(DATA.merged) ? DATA.merged : [];
+  const LANES = Array.isArray(DATA.lanes) ? DATA.lanes : [];
+  const REG_BY_ID = Object.fromEntries(REG.map(e => [e.id, e]));
+  const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const MONTHS = { en: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                   fr: ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."] };
+  const T = { en: { merged: "merged" }, fr: { merged: "fusionnée le" } };
+
+  // Timeline scale: from the first day of the month of the first merge to the first day of the month after
+  // the last one, computed by visuals/build.py from the record.
+  const WIN = DATA.window || null;
+  const [y0, m0] = WIN ? WIN.start.split("-").map(Number) : [0, 0], [y1, m1] = WIN ? WIN.end.split("-").map(Number) : [0, 0];
+  const T0 = Date.UTC(y0, m0 - 1, 1), T1 = Date.UTC(y1, m1 - 1, 1);
+  const x = iso => { const [y, m, d] = iso.split("-").map(Number); return 100 * (Date.UTC(y, m - 1, d) - T0) / (T1 - T0); };
+  const monthStarts = [];
+  for (let i = 0; WIN && Date.UTC(y0, m0 - 1 + i, 1) < T1; i++) monthStarts.push(Date.UTC(y0, m0 - 1 + i, 1));
+
+  function sfChip(id, lang) {
+    const e = REG_BY_ID[id];
+    const title = e ? (lang === "fr" ? e.fr : e.en) : id;
+    return `<a class="chip sf" href="${REGISTRY_URL}#${esc(id)}" target="_blank" rel="noopener" title="${esc(title)}">${esc(id)}</a>`;
+  }
+
+  function renderTimeline(el, lang) {
+    if (!WIN) return;
+    const grid = monthStarts.slice(1).map(t => `<span style="left:${(100 * (t - T0) / (T1 - T0)).toFixed(3)}%"></span>`).join("");
+    const lanes = LANES.map(l => {
+      const items = MERGED.filter(m => m.lane === l.key).sort((a, b) => a.date.localeCompare(b.date));
+      // Two merges a few days apart in one lane would overlap: alternate them above and below the line.
+      let prev = null, flip = false;
+      const dots = items.map(m => {
+        const px = x(m.date);
+        let dy = 0;
+        if (prev !== null && px - prev < 3) { flip = !flip; dy = flip ? 5 : -5; } else { flip = false; }
+        prev = px;
+        const label = `${m.ref} — ${T[lang].merged} ${m.date}: ${lang === "fr" ? m.fr : m.en}`;
+        return `<a class="tl-dot" href="${esc(m.url)}" target="_blank" rel="noopener" style="left:${px.toFixed(3)}%;top:calc(50% + ${dy}px)" aria-label="${esc(label)}" title="${esc(label)}"></a>`;
+      }).join("");
+      return `<div class="tl-lane"><span class="tl-name" title="${esc(l.label)}">${esc(l.label.split("/").pop())}</span><span class="tl-track">${dots}</span></div>`;
+    }).join("");
+    const axis = monthStarts.map(t => `<span style="left:${(100 * (t - T0) / (T1 - T0)).toFixed(3)}%">${MONTHS[lang][new Date(t).getUTCMonth()]}</span>`).join("");
+    el.innerHTML = `<div class="tl-grid" aria-hidden="true">${grid}</div>${lanes}<div class="tl-axis" aria-hidden="true">${axis}</div>`;
+  }
+
+  function renderRecord(el, lang) {
+    el.innerHTML = MERGED.slice().sort((a, b) => b.date.localeCompare(a.date)).map(m =>
+      `<tr><td class="date">${esc(m.date)}</td><td class="proj"><a href="${esc(m.url)}" target="_blank" rel="noopener">${esc(m.ref)}</a></td><td>${esc(lang === "fr" ? m.fr : m.en)}</td><td><span class="chips">${(m.sf || []).map(id => sfChip(id, lang)).join("")}</span></td></tr>`
+    ).join("");
+  }
+
+  function renderDrawer(el, lang) {
+    el.innerHTML = REG.map(e =>
+      `<a class="cell" href="${REGISTRY_URL}#${esc(e.id)}" target="_blank" rel="noopener"><i class="mk ${esc(e.detect)}" aria-hidden="true"></i><span class="id">${esc(e.id)}</span><span class="nm">${esc(lang === "fr" ? e.fr : e.en)}</span></a>`
+    ).join("");
+  }
+
+  document.querySelectorAll("[data-timeline]").forEach(el => renderTimeline(el, el.dataset.timeline));
+  document.querySelectorAll("[data-record]").forEach(el => renderRecord(el, el.dataset.record));
+  document.querySelectorAll("[data-drawer]").forEach(el => renderDrawer(el, el.dataset.drawer));
+  document.querySelectorAll("[data-sf]").forEach(el => {
+    const lang = el.closest("[lang-block]")?.getAttribute("lang-block") || "en";
+    el.innerHTML = el.dataset.sf.split(/\s+/).filter(Boolean).map(id => sfChip(id, lang)).join("");
+  });
+
+  // Copy buttons: mailto links are unreliable here, so the address is shown as text and copied on request.
+  document.querySelectorAll("button.copy").forEach(btn => {
+    const idle = btn.textContent;
+    btn.addEventListener("click", () => {
+      const done = () => { btn.textContent = btn.dataset.done; setTimeout(() => { btn.textContent = idle; }, 1600); };
+      const fallback = () => {
+        const addr = btn.parentElement.querySelector(".addr");
+        const r = document.createRange(); r.selectNodeContents(addr);
+        const s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      };
+      try { navigator.clipboard.writeText(btn.dataset.copy).then(done, fallback); } catch (e) { fallback(); }
+    });
+  });
+
+  const key = "portfolio-lang";
+  const blocks = document.querySelectorAll("[lang-block]");
+  const btnEn = document.getElementById("btn-en"), btnFr = document.getElementById("btn-fr");
+  function setLang(l) {
+    blocks.forEach(b => b.classList.toggle("on", b.getAttribute("lang-block") === l));
+    btnEn.setAttribute("aria-pressed", String(l === "en")); btnFr.setAttribute("aria-pressed", String(l === "fr"));
+    document.getElementById("foot-en").hidden = l !== "en"; document.getElementById("foot-fr").hidden = l !== "fr";
+    document.documentElement.lang = l;
+    try { localStorage.setItem(key, l); } catch (e) {}
+  }
+  btnEn.addEventListener("click", () => setLang("en"));
+  btnFr.addEventListener("click", () => setLang("fr"));
+  let initial = "en";
+  try { initial = localStorage.getItem(key) || initial; } catch (e) {}
+  if (location.hash === "#fr" || location.hash.startsWith("#fr-")) initial = "fr";
+  else if (location.hash === "#en" || location.hash.startsWith("#en-")) initial = "en";
+  setLang(initial);
+})();
+</script>

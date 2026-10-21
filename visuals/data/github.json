@@ -1,0 +1,468 @@
+{
+ "login": "AxelNoun",
+ "pulls": [
+  {
+   "url": "https://github.com/ComputationalPsychiatry/pyhgf/pull/448",
+   "repo": "ComputationalPsychiatry/pyhgf",
+   "number": 448,
+   "title": "Use all volatility and value children in the unbounded volatility update",
+   "state": "OPEN",
+   "draft": false,
+   "merged": null,
+   "review": null,
+   "by_author": true
+  },
+  {
+   "url": "https://github.com/DeepLabCut/DeepLabCut/pull/3416",
+   "repo": "DeepLabCut/DeepLabCut",
+   "number": 3416,
+   "title": "Guard CoW read-only .to_numpy()/.values mutations under pandas 3",
+   "state": "CLOSED",
+   "draft": false,
+   "merged": null,
+   "review": "APPROVED",
+   "by_author": true
+  },
+  {
+   "url": "https://github.com/DeepLabCut/DeepLabCut/pull/3445",
+   "repo": "DeepLabCut/DeepLabCut",
+   "number": 3445,
+   "title": "Guard CoW read-only .to_numpy()/.values mutations under pandas 3",
+   "state": "MERGED",
+   "draft": false,
+   "merged": "2026-08-31",
+   "review": "APPROVED",
+   "by_author": true
+  },
+  {
+   "url": "https://github.com/NeuralEnsemble/python-neo/pull/1891",
+   "repo": "NeuralEnsemble/python-neo",
+   "number": 1891,
+   "title": "Fix CedRawIO with sonpy >= 1.9.12 and re-enable the CED tests",
+   "state": "MERGED",
+   "draft": false,
+   "merged": "2026-08-11",
+   "review": "APPROVED",
+   "by_author": true
+  },
+  {
+   "url": "https://github.com/NeuralEnsemble/python-neo/pull/1911",
+   "repo": "NeuralEnsemble/python-neo",
+   "number": 1911,
+   "title": "CI: drop Python 3.9 from the NeoPlexon2Test matrix",
+   "state": "MERGED",
+   "draft": false,
+   "merged": "2026-10-09",
+   "review": "APPROVED",
+   "by_author": true
+  },
+  {
+   "url": "https://github.com/NeuralEnsemble/python-neo/pull/1912",
+   "repo": "NeuralEnsemble/python-neo",
+   "number": 1912,
+   "title": "CI: fail when the ephy_testing_data HEAD hash cannot be resolved",
+   "state": "MERGED",
+   "draft": false,
+   "merged": "2026-10-08",
+   "review": "APPROVED",
+   "by_author": true
+  },
+  {
+   "url": "https://github.com/NeuralEnsemble/python-neo/pull/1913",
+   "repo": "NeuralEnsemble/python-neo",
+   "number": 1913,
+   "title": "Apply the sonpy platform marker to the ced and all extras",
+   "state": "OPEN",
+   "draft": false,
+   "merged": null,
+   "review": null,
+   "by_author": true
+  },
+  {
+   "url": "https://github.com/brian-team/brian2/pull/1843",
+   "repo": "brian-team/brian2",
+   "number": 1843,
+   "title": "Optimize Network.run(): Make gc.collect() conditional (Step 1 for #1823)",
+   "state": "CLOSED",
+   "draft": false,
+   "merged": null,
+   "review": "REVIEW_REQUIRED",
+   "by_author": true
+  },
+  {
+   "url": "https://github.com/brian-team/brian2/pull/1860",
+   "repo": "brian-team/brian2",
+   "number": 1860,
+   "title": "Skip gc.collect() in Network.run() when unused-object warnings are disabled",
+   "state": "CLOSED",
+   "draft": false,
+   "merged": null,
+   "review": "REVIEW_REQUIRED",
+   "by_author": true
+  },
+  {
+   "url": "https://github.com/brian-team/brian2/pull/1861",
+   "repo": "brian-team/brian2",
+   "number": 1861,
+   "title": "Skip gc.collect() in Network.run() when unused-object warnings are disabled",
+   "state": "MERGED",
+   "draft": false,
+   "merged": "2026-09-21",
+   "review": "APPROVED",
+   "by_author": true
+  },
+  {
+   "url": "https://github.com/brian-team/brian2/pull/1885",
+   "repo": "brian-team/brian2",
+   "number": 1885,
+   "title": "Remove ruff-enforced style rules and fix stale references in developer guidelines",
+   "state": "MERGED",
+   "draft": false,
+   "merged": "2026-10-09",
+   "review": "APPROVED",
+   "by_author": true
+  },
+  {
+   "url": "https://github.com/brian-team/brian2/pull/1891",
+   "repo": "brian-team/brian2",
+   "number": 1891,
+   "title": "Fix BinomialFunction sampling in generated code (Cython bias for p > 0.5, exact constants, underflow check)",
+   "state": "OPEN",
+   "draft": false,
+   "merged": null,
+   "review": "REVIEW_REQUIRED",
+   "by_author": true
+  },
+  {
+   "url": "https://github.com/brian-team/brian2/pull/1896",
+   "repo": "brian-team/brian2",
+   "number": 1896,
+   "title": "Store the Cython random number buffers by value in the random state (fixes restore after a buffer refill)",
+   "state": "MERGED",
+   "draft": false,
+   "merged": "2026-10-20",
+   "review": "APPROVED",
+   "by_author": true
+  },
+  {
+   "url": "https://github.com/catalystneuro/neuroconv/pull/1855",
+   "repo": "catalystneuro/neuroconv",
+   "number": 1855,
+   "title": "Fix the spike2 extra: the sonpy marker can never be satisfied",
+   "state": "MERGED",
+   "draft": false,
+   "merged": "2026-08-11",
+   "review": "APPROVED",
+   "by_author": true
+  },
+  {
+   "url": "https://github.com/catalystneuro/neuroconv/pull/1886",
+   "repo": "catalystneuro/neuroconv",
+   "number": 1886,
+   "title": "Re-enable Spike2 real-data tests on platforms with sonpy wheels",
+   "state": "CLOSED",
+   "draft": true,
+   "merged": null,
+   "review": "REVIEW_REQUIRED",
+   "by_author": true
+  },
+  {
+   "url": "https://github.com/catalystneuro/neuroconv/pull/1914",
+   "repo": "catalystneuro/neuroconv",
+   "number": 1914,
+   "title": "Re-enable Spike2 real-data tests on platforms with sonpy wheels",
+   "state": "OPEN",
+   "draft": true,
+   "merged": null,
+   "review": "REVIEW_REQUIRED",
+   "by_author": true
+  },
+  {
+   "url": "https://github.com/fangwei123456/spikingjelly/pull/692",
+   "repo": "fangwei123456/spikingjelly",
+   "number": 692,
+   "title": "Fix AttributeError in LIAFNode.__init__: remove dead assertion (closes #655)",
+   "state": "MERGED",
+   "draft": false,
+   "merged": "2026-06-22",
+   "review": null,
+   "by_author": true
+  },
+  {
+   "url": "https://github.com/huggingface/course/pull/1328",
+   "repo": "huggingface/course",
+   "number": 1328,
+   "title": "[FR] Fix malformed AutoTrain link and untranslated heading in chapter2 quiz",
+   "state": "OPEN",
+   "draft": false,
+   "merged": null,
+   "review": null,
+   "by_author": true
+  },
+  {
+   "url": "https://github.com/huggingface/datasets/pull/8514",
+   "repo": "huggingface/datasets",
+   "number": 8514,
+   "title": "fix(tsfile): guard optional Apache TsFile SDK import",
+   "state": "CLOSED",
+   "draft": false,
+   "merged": null,
+   "review": null,
+   "by_author": true
+  },
+  {
+   "url": "https://github.com/huggingface/datasets/pull/8517",
+   "repo": "huggingface/datasets",
+   "number": 8517,
+   "title": "fix(tsfile): version-aware guard for the optional Apache TsFile SDK",
+   "state": "OPEN",
+   "draft": true,
+   "merged": null,
+   "review": null,
+   "by_author": true
+  },
+  {
+   "url": "https://github.com/lehendo/PyHealth/pull/1",
+   "repo": "lehendo/PyHealth",
+   "number": 1,
+   "title": "fix: harden DrugRecommendationOMOP history, codes, and tests",
+   "state": "CLOSED",
+   "draft": false,
+   "merged": null,
+   "review": null,
+   "by_author": true
+  },
+  {
+   "url": "https://github.com/lnccbrown/HSSM/pull/1371",
+   "repo": "lnccbrown/HSSM",
+   "number": 1371,
+   "title": "fix(likelihoods): align racing_diffusion_3 parameter order with ssm-simulators",
+   "state": "MERGED",
+   "draft": false,
+   "merged": "2026-10-13",
+   "review": "REVIEW_REQUIRED",
+   "by_author": true
+  },
+  {
+   "url": "https://github.com/lnccbrown/HSSM/pull/1411",
+   "repo": "lnccbrown/HSSM",
+   "number": 1411,
+   "title": "fix(rl): suggest a stable sort in the balanced-panel error message",
+   "state": "MERGED",
+   "draft": false,
+   "merged": "2026-10-19",
+   "review": "APPROVED",
+   "by_author": true
+  },
+  {
+   "url": "https://github.com/lnccbrown/HSSM/pull/1414",
+   "repo": "lnccbrown/HSSM",
+   "number": 1414,
+   "title": "fix(plotting): simulate cartoon predicted RTs at the simulator's default step",
+   "state": "OPEN",
+   "draft": false,
+   "merged": null,
+   "review": "REVIEW_REQUIRED",
+   "by_author": true
+  },
+  {
+   "url": "https://github.com/lnccbrown/HSSM/pull/1415",
+   "repo": "lnccbrown/HSSM",
+   "number": 1415,
+   "title": "test(rl): use a stable sort in test_sorted_data_passes",
+   "state": "MERGED",
+   "draft": false,
+   "merged": "2026-10-20",
+   "review": "APPROVED",
+   "by_author": true
+  },
+  {
+   "url": "https://github.com/ml-explore/mlx-lm/pull/1714",
+   "repo": "ml-explore/mlx-lm",
+   "number": 1714,
+   "title": "Fix threadgroup memory race in fused KL and JS Metal kernels (fixes #1700)",
+   "state": "CLOSED",
+   "draft": false,
+   "merged": null,
+   "review": "REVIEW_REQUIRED",
+   "by_author": true
+  },
+  {
+   "url": "https://github.com/ml-explore/mlx-lm/pull/1719",
+   "repo": "ml-explore/mlx-lm",
+   "number": 1719,
+   "title": "Fix threadgroup memory race in fused KL and JS Metal kernels (fixes #1700)",
+   "state": "CLOSED",
+   "draft": false,
+   "merged": null,
+   "review": "REVIEW_REQUIRED",
+   "by_author": true
+  },
+  {
+   "url": "https://github.com/ml-explore/mlx/pull/4187",
+   "repo": "ml-explore/mlx",
+   "number": 4187,
+   "title": "Fix elementwise unary ops giving different results for strided vs contiguous inputs (CPU) (#4163)",
+   "state": "CLOSED",
+   "draft": false,
+   "merged": null,
+   "review": "REVIEW_REQUIRED",
+   "by_author": true
+  },
+  {
+   "url": "https://github.com/nileshpatil6/mlx/pull/1",
+   "repo": "nileshpatil6/mlx",
+   "number": 1,
+   "title": "Pin pad fill-value overflow and extend float64 scalar coverage",
+   "state": "CLOSED",
+   "draft": false,
+   "merged": null,
+   "review": null,
+   "by_author": true
+  },
+  {
+   "url": "https://github.com/pytorch/executorch/pull/20685",
+   "repo": "pytorch/executorch",
+   "number": 20685,
+   "title": "backends/mlx: runtime MoE expert-sort for decode (issue #20554)",
+   "state": "MERGED",
+   "draft": false,
+   "merged": "2026-08-01",
+   "review": "APPROVED",
+   "by_author": true
+  },
+  {
+   "url": "https://github.com/pytorch/executorch/pull/22372",
+   "repo": "pytorch/executorch",
+   "number": 22372,
+   "title": "Preserve node output dtype when lifting scalars to attrs in Vulkan quantizer",
+   "state": "MERGED",
+   "draft": false,
+   "merged": "2026-09-14",
+   "review": "APPROVED",
+   "by_author": true
+  },
+  {
+   "url": "https://github.com/pytorch/executorch/pull/22373",
+   "repo": "pytorch/executorch",
+   "number": 22373,
+   "title": "Raise inoperative error guards in ExportSession, XNNPACK node_visitor, and Samsung conv1d",
+   "state": "MERGED",
+   "draft": false,
+   "merged": "2026-10-14",
+   "review": "APPROVED",
+   "by_author": true
+  },
+  {
+   "url": "https://github.com/pytorch/executorch/pull/23798",
+   "repo": "pytorch/executorch",
+   "number": 23798,
+   "title": "[muse-glimmer] Fix bf16 positional embedding interpolation on CPU",
+   "state": "OPEN",
+   "draft": false,
+   "merged": null,
+   "review": "APPROVED",
+   "by_author": true
+  },
+  {
+   "url": "https://github.com/sunlabuiuc/PyHealth/pull/1179",
+   "repo": "sunlabuiuc/PyHealth",
+   "number": 1179,
+   "title": "Add MEDS dataset support (MEDSDataset + typed Parquet scan path)",
+   "state": "MERGED",
+   "draft": false,
+   "merged": "2026-08-09",
+   "review": "REVIEW_REQUIRED",
+   "by_author": true
+  },
+  {
+   "url": "https://github.com/sunlabuiuc/PyHealth/pull/1186",
+   "repo": "sunlabuiuc/PyHealth",
+   "number": 1186,
+   "title": "Add PTB-XL dataset support (ECG)",
+   "state": "CLOSED",
+   "draft": false,
+   "merged": null,
+   "review": "REVIEW_REQUIRED",
+   "by_author": true
+  },
+  {
+   "url": "https://github.com/sunlabuiuc/PyHealth/pull/1187",
+   "repo": "sunlabuiuc/PyHealth",
+   "number": 1187,
+   "title": "Add PTB-XL dataset support (ECG)",
+   "state": "OPEN",
+   "draft": false,
+   "merged": null,
+   "review": "REVIEW_REQUIRED",
+   "by_author": true
+  },
+  {
+   "url": "https://github.com/sunlabuiuc/PyHealth/pull/1202",
+   "repo": "sunlabuiuc/PyHealth",
+   "number": 1202,
+   "title": "fix(kg_emb): migrate SampleKGDataset off the removed 1.x dataset API",
+   "state": "OPEN",
+   "draft": false,
+   "merged": null,
+   "review": "CHANGES_REQUESTED",
+   "by_author": true
+  },
+  {
+   "url": "https://github.com/sunlabuiuc/PyHealth/pull/1203",
+   "repo": "sunlabuiuc/PyHealth",
+   "number": 1203,
+   "title": "Add DrugRecommendationOMOP task",
+   "state": "MERGED",
+   "draft": false,
+   "merged": "2026-09-02",
+   "review": "APPROVED",
+   "by_author": false
+  },
+  {
+   "url": "https://github.com/sunlabuiuc/PyHealth/pull/1207",
+   "repo": "sunlabuiuc/PyHealth",
+   "number": 1207,
+   "title": "fix(cache): make task fingerprints deterministic and collision-free",
+   "state": "OPEN",
+   "draft": false,
+   "merged": null,
+   "review": "REVIEW_REQUIRED",
+   "by_author": true
+  }
+ ],
+ "repos": [
+  {
+   "name": "discoursekit",
+   "url": "https://github.com/AxelNoun/discoursekit",
+   "description": "Linguistic measures for discourse research",
+   "archived": false,
+   "release": null
+  },
+  {
+   "name": "kinoscope",
+   "url": "https://github.com/AxelNoun/kinoscope",
+   "description": "Modèle hybride GNN + ESM-2 pour la prédiction d'affinité kinase-inhibiteur, sous protocole d'évaluation sans fuite de données.",
+   "archived": false,
+   "release": null
+  },
+  {
+   "name": "neurovis3d",
+   "url": "https://github.com/AxelNoun/neurovis3d",
+   "description": "NeuroVis3D — SNN visualization and pathology indicators (D1/D2/D3)",
+   "archived": false,
+   "release": null
+  },
+  {
+   "name": "tpl-lab",
+   "url": "https://github.com/AxelNoun/tpl-lab",
+   "description": "Falsification lab for a G2/SU(3) ≅ S⁶ conjecture about cortical dynamics. H1-spontaneous refuted 12/12 on Allen Neuropixels.",
+   "archived": false,
+   "release": {
+    "tag": "v0.1.0",
+    "url": "https://github.com/AxelNoun/tpl-lab/releases/tag/v0.1.0",
+    "date": "2026-08-21"
+   }
+  }
+ ]
+}

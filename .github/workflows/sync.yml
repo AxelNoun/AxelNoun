@@ -1,0 +1,100 @@
+name: sync
+
+# Met à jour le README de profil, sa frise et le portfolio à partir de l'état GitHub des PR et des projets.
+#
+# Une fusion dans un dépôt tiers ne peut pas déclencher ce dépôt (GitHub n'envoie pas d'événement inter-dépôts) :
+# l'état est relevé chaque jour, une fusion apparaît donc au plus tard le lendemain. Lancement manuel possible
+# depuis l'onglet Actions (« Run workflow »).
+#
+# Disposition attendue de ce dépôt (AxelNoun/AxelNoun) : README.md et assets/ à la racine, visuals/ et
+# portfolio/ copiés depuis le dossier de livrables. Le Registre est lu dans AxelNoun/silent-failures (public).
+#
+# Le workflow ne publie que ce que build.py génère entre marqueurs ; il n'écrit jamais dans merged.json ni dans
+# projects.json. Ce qui demande du texte rédigé ouvre une issue « À relire » (vous êtes notifié par e-mail).
+
+on:
+  schedule:
+    - cron: "17 5 * * *"   # chaque jour, 05:17 UTC
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths: ["visuals/**", "portfolio/**"]   # après une curation de merged.json ou projects.json
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      PROFILE_DIR: "."
+      PYTHONIOENCODING: utf-8
+    steps:
+      # Tant que le Registre n'est pas publié, build.py ne peut pas lire entries.js : le run s'arrête
+      # proprement (notice, pas d'échec ni d'e-mail quotidien) et reprendra seul après la publication.
+      - name: Le Registre est-il publié ?
+        id: registry
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh api repos/AxelNoun/silent-failures --silent; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::notice::AxelNoun/silent-failures n'est pas encore publié : rien n'est mis à jour."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/checkout@v4
+        if: steps.registry.outputs.ready == 'true'
+      - name: Registre (source des classes SF-xx)
+        if: steps.registry.outputs.ready == 'true'
+        uses: actions/checkout@v4
+        with:
+          repository: AxelNoun/silent-failures
+          path: silent-failures
+      - uses: actions/setup-python@v5
+        if: steps.registry.outputs.ready == 'true'
+        with:
+          python-version: "3.12"
+
+      - name: Relever l'état GitHub
+        if: steps.registry.outputs.ready == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python visuals/fetch_github.py --changes "$RUNNER_TEMP/changes.json"
+
+      - name: Régénérer README, portfolio et frise
+        if: steps.registry.outputs.ready == 'true'
+        run: >
+          python visuals/build.py --images merged
+          --report "$RUNNER_TEMP/a-relire.md" --changes "$RUNNER_TEMP/changes.json"
+
+      - name: Résumé du run
+        if: steps.registry.outputs.ready == 'true'
+        run: cat "$RUNNER_TEMP/a-relire.md" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Commiter si quelque chose a changé
+        if: steps.registry.outputs.ready == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md assets visuals/data portfolio
+          if git diff --cached --quiet; then
+            echo "rien à commiter"
+            exit 0
+          fi
+          git commit -m "Mettre à jour le profil depuis l'état GitHub"
+          git push
+
+      - name: Ouvrir une issue s'il y a du nouveau à relire
+        if: steps.registry.outputs.ready == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ "$(python -c 'import json,sys; print(len(json.load(open(sys.argv[1]))))' "$RUNNER_TEMP/changes.json")" != "0" ]; then
+            gh issue create --title "À relire — $(date -u +%F)" --body-file "$RUNNER_TEMP/a-relire.md"
+          fi
