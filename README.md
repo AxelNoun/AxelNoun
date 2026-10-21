@@ -63,6 +63,7 @@ It is a radar, not a judge: it ranks where a reviewer should look first. The reg
 - [kinoscope](https://github.com/AxelNoun/kinoscope) — kinase–inhibitor affinity prediction under a leakage-free, four-regime evaluation protocol (random, cold-drug, cold-target, temporal) with an automated leakage audit in CI and Hypothesis property tests. No model trained yet; the README says so.
 - [tpl-lab](https://github.com/AxelNoun/tpl-lab) — a pre-registered falsification test of a geometric conjecture on Allen Neuropixels recordings; decision rule frozen before the data; 12/12 refuted. Latest release: [v0.1.0](https://github.com/AxelNoun/tpl-lab/releases/tag/v0.1.0).
 - [neurovis3d](https://github.com/AxelNoun/neurovis3d) — diagnostics for spiking neural networks (snnTorch): dead-neuron ratio, sparsity, temporal gradient signature. Work in progress; indicators not yet validated against analytical ground truth.
+- [silent-failures](https://github.com/AxelNoun/silent-failures) — A field guide to the bugs that pass the tests and falsify the results in scientific and ML code — 20 classes, each with a public specimen, plus sfradar, a static radar
 <!-- projects:end -->
 
 ## How I work

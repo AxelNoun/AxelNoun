@@ -454,6 +454,13 @@
    "release": null
   },
   {
+   "name": "silent-failures",
+   "url": "https://github.com/AxelNoun/silent-failures",
+   "description": "A field guide to the bugs that pass the tests and falsify the results in scientific and ML code — 20 classes, each with a public specimen, plus sfradar, a static radar",
+   "archived": false,
+   "release": null
+  },
+  {
    "name": "tpl-lab",
    "url": "https://github.com/AxelNoun/tpl-lab",
    "description": "Falsification lab for a G2/SU(3) ≅ S⁶ conjecture about cortical dynamics. H1-spontaneous refuted 12/12 on Allen Neuropixels.",
