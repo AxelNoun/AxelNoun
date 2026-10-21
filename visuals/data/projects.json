@@ -1,5 +1,5 @@
 {
-  "_source": "Recopié mot pour mot de github/README.md (section Own projects) et des tableaux « Own projects » / « Projets personnels » de portfolio/index.html, le 2026-10-20. Les faits (dernière release, archivage) sont ajoutés par visuals/build.py depuis GitHub ; un nouveau dépôt public apparaît avec sa description GitHub jusqu'à ce qu'il soit ajouté ici, ou listé dans exclude.",
+  "_source": "Recopié mot pour mot de github/README.md (section Own projects) et des tableaux « Own projects » / « Projets personnels » de portfolio/index.html, le 2026-10-20. Les faits (dernière release, archivage) sont ajoutés par visuals/build.py depuis GitHub ; un nouveau dépôt public apparaît avec sa description GitHub jusqu'à ce qu'il soit ajouté ici, ou listé dans exclude. Exclu le 2026-10-21 : silent-failures, qui a sa propre section dans le README et le portfolio.",
   "projects": [
     {"repo": "discoursekit",
      "readme": "linguistic measures for discourse research; UAX #29 tokenizer that passes the official conformance test, MATTR, embedding-based coherence, permutation-test segmentation. 344 tests, `ruff` and `mypy` clean, doctests run as tests.",
@@ -18,5 +18,5 @@
      "en": ["diagnostics for spiking neural networks (snnTorch)", "WIP · not validated · says so"],
      "fr": ["diagnostics de réseaux de neurones à impulsions (snnTorch)", "en cours · non validé · déclaré"]}
   ],
-  "exclude": []
+  "exclude": ["silent-failures"]
 }
