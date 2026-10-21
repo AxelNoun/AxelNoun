@@ -1,9 +1,10 @@
 <title>Axel Coiffard-Donaty</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: one reading column like an audit report. The hero carries the proof (facts, then a merge timeline drawn from the record); case studies are numbered dossiers with a facts rail; then the full record, the offers, the registry drawer and a closing contact block.
-   Tokens follow the AxelNoun design system (claude.ai/design): same names and values as the Silent Failures Registry page. */
+/* Layout: a contributor's page. The hero says who I am in open source and shows the merge timeline; then one card per project
+   I contribute to (every merged PR listed), six contributions told in full, how to work with me, the notes I keep, and contact.
+   Tokens follow the AxelNoun design system (claude.ai/design): same colour names and values as the Silent Failures Registry page. */
 :root {
   --ground: #f5f6f2;
   --surface: #fdfdfb;
@@ -20,7 +21,7 @@
   --pass-soft: #e1efe6;
   --pending: #7d5410;
   --pending-soft: #f4ead6;
-  --font-display: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-display: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
   --font-body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", Consolas, "Courier New", monospace;
 }
@@ -35,8 +36,8 @@ a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset:
 a:hover { text-decoration-thickness: 2px; }
 a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
 .wrap { max-width: 880px; margin: 0 auto; padding-block: 28px 72px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
-h1, h2, h3 { font-family: var(--font-display); font-weight: 600; text-wrap: balance; margin: 0; line-height: 1.15; }
-h1 { font-size: clamp(34px, 6vw, 52px); line-height: 1.04; letter-spacing: -0.01em; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing: -0.01em; text-wrap: balance; margin: 0; line-height: 1.15; }
+h1 { font-size: clamp(34px, 6vw, 50px); line-height: 1.04; font-weight: 700; letter-spacing: -0.025em; }
 h2 { font-size: 27px; margin-top: 56px; padding-top: 22px; border-top: 1px solid var(--ink); scroll-margin-top: 16px; }
 h3 { font-size: 21px; }
 p { margin: 10px 0; max-width: 68ch; }
@@ -107,7 +108,7 @@ nav.toc a:hover { text-decoration: underline; }
 .rail dd { margin: 0 0 10px; min-width: 0; }
 .quote { margin: 16px 0 0; padding: 14px 18px 14px 46px; position: relative; background: var(--accent-soft); border-radius: 6px; }
 .quote::before { content: "\201C"; position: absolute; left: 14px; top: 4px; font-family: var(--font-display); font-size: 46px; line-height: 1; color: var(--accent); }
-.quote q { quotes: none; font-family: var(--font-display); font-style: italic; font-size: 17.5px; line-height: 1.45; }
+.quote q { quotes: none; font-style: italic; font-size: 16.5px; line-height: 1.5; }
 .quote cite { display: block; font-style: normal; font-size: 13px; color: var(--ink-2); margin-top: 6px; }
 
 /* Status and registry chips: the word carries the meaning, the colour repeats it */
@@ -127,6 +128,19 @@ th { font-family: var(--font-mono); color: var(--ink-2); font-size: 11px; font-w
 td.date { font-family: var(--font-mono); font-variant-numeric: tabular-nums; white-space: nowrap; color: var(--ink-2); }
 td.proj { white-space: nowrap; }
 .note { font-size: 14px; color: var(--ink-2); }
+
+/* Project cards: one per repository I contribute to, every merged PR listed, newest first */
+.projects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 18px; }
+@media (max-width: 680px) { .projects { grid-template-columns: 1fr; } }
+.proj { background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; padding: 14px 16px 15px; display: grid; gap: 10px; align-content: start; min-width: 0; }
+.proj-head { display: flex; justify-content: space-between; align-items: baseline; gap: 6px 10px; flex-wrap: wrap; }
+.proj-name { font-family: var(--font-mono); font-size: 14.5px; font-weight: 500; color: var(--ink); text-decoration: none; overflow-wrap: anywhere; }
+.proj-name .owner { color: var(--ink-2); font-weight: 400; }
+.proj-name:hover { color: var(--accent); }
+.proj ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.proj li { display: grid; grid-template-columns: 4.6em minmax(0, 1fr); gap: 1px 8px; font-size: 13.5px; line-height: 1.45; }
+.proj li .pr { font-family: var(--font-mono); font-size: 12.5px; }
+.proj li .when { grid-column: 2; font-family: var(--font-mono); font-size: 11.5px; color: var(--ink-2); }
 
 /* Offers */
 .offers { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 18px; }
@@ -166,15 +180,15 @@ footer { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--rule);
 
 <div class="wrap">
   <div class="topline">
-    <span class="mono">github.com/AxelNoun · updated 2026-10-19</span>
+    <span class="mono">github.com/AxelNoun · updated 2026-10-21</span>
     <span class="seg" role="group" aria-label="Language"><button id="btn-en" aria-pressed="true">EN</button><button id="btn-fr" aria-pressed="false">FR</button></span>
   </div>
 
   <div lang-block="en" class="on" lang="en">
     <header class="hero">
-      <div class="label">Portfolio · ML reliability &amp; evaluation</div>
+      <div class="label">Open-source contributor · scientific &amp; ML Python</div>
       <h1>Axel Coiffard-Donaty</h1>
-      <p class="lede">I find the bugs that don't crash but falsify results: data leakage, biased samplers, GPU races, numerical drift, CI that stays green on failure. Every fix below is public, tested, and was merged by the project's maintainers. I keep the public <a href="https://github.com/AxelNoun/silent-failures" target="_blank" rel="noopener">Silent Failures Registry</a>: twenty classes of such bugs, each with a real specimen and the test that would have caught it.</p>
+      <p class="lede">I contribute to the open-source libraries that research and ML teams run on: PyTorch ExecuTorch, PyHealth, Brian2, python-neo, HSSM, DeepLabCut and others. Every pull request on this page was reviewed and merged by the project's maintainers; that public record is my CV. The bugs I end up fixing are often the quiet ones: they don't crash, they falsify results. If your project needs the same kind of work, write to me.</p>
       <div class="contact">
         <span class="email"><span class="addr">axel.cffrd.dnty@icloud.com</span><button class="copy" type="button" data-copy="axel.cffrd.dnty@icloud.com" data-done="Copied">Copy</button></span>
         <a href="https://github.com/AxelNoun" target="_blank" rel="noopener">GitHub</a>
@@ -188,16 +202,21 @@ footer { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--rule);
         <div class="fact"><div class="n">344</div><div class="l">tests in discoursekit, mypy and ruff clean</div></div>
       </div>
       <figure class="timeline">
-        <figcaption><span class="label">Merge dates upstream, <!--range-en:start-->June → October 2026<!--range-en:end--></span><span class="label">● one merged pull request · <a href="#en-merged">full record</a></span></figcaption>
+        <figcaption><span class="label">Merge dates upstream, <!--range-en:start-->June → October 2026<!--range-en:end--></span><span class="label">● one merged pull request · <a href="#en-where">by project</a></span></figcaption>
         <div class="tl" data-timeline="en"></div>
       </figure>
       <nav class="toc" aria-label="Sections">
-        <a href="#en-cases">Case studies</a><a href="#en-merged">Everything merged</a><a href="#en-offers">What I offer</a><a href="#en-method">How I work</a><a href="#en-registry">The Registry</a><a href="#en-projects">Own projects</a><a href="#en-contact">Contact</a>
+        <a href="#en-where">Where I contribute</a><a href="#en-cases">Contribution stories</a><a href="#en-offers">Work with me</a><a href="#en-method">How I work</a><a href="#en-registry">Notes I keep</a><a href="#en-projects">Own projects</a><a href="#en-contact">Contact</a>
       </nav>
     </header>
 
-    <h2 id="en-cases">Case studies</h2>
-    <p class="section-intro">Each one follows the same four questions: what was wrong, what I did, why it was hard, what came out. Links go to the public record.</p>
+    <h2 id="en-where">Where I contribute</h2>
+    <p class="section-intro">One card per project, newest merge first. Each line links to the pull request, where the review and the maintainers' words are.</p>
+    <div class="projects" data-projects="en"></div>
+    <p class="note"><!--open-en:start-->Open and under review: brian2 #1891, ComputationalPsychiatry/pyhgf #448, executorch #23798 (approved), HSSM #1414, huggingface/course #1328, PyHealth #1187, #1202, #1207, python-neo #1913.<!--open-en:end--> Filed: pytorch/pytorch #200949 (<code>grid_sample</code> int16 offset overflow for fp16/bf16, labelled "correctness (silent)"), PCNtoolkit #600, pyhgf #446/#447.</p>
+
+    <h2 id="en-cases">Contribution stories</h2>
+    <p class="section-intro">Six of these contributions told in full, each the same way: what was wrong, what I did, why it was hard, what came out. Links go to the public record.</p>
 
     <article class="dossier">
       <div class="head"><div class="where"><span class="num">01</span><span class="label">lnccbrown/HSSM · Brown University</span></div><h3>Fit correct, predictions silently wrong</h3></div>
@@ -298,14 +317,9 @@ footer { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--rule);
       </dl>
     </article>
 
-    <h2 id="en-merged">Everything merged</h2>
-    <div class="tablewrap"><table>
-      <thead><tr><th>Merged</th><th>Project</th><th>Change</th><th>Registry</th></tr></thead>
-      <tbody data-record="en"></tbody>
-    </table></div>
-    <p class="note"><!--open-en:start-->Open and under review: brian2 #1891, ComputationalPsychiatry/pyhgf #448, executorch #23798 (approved), HSSM #1414, huggingface/course #1328, PyHealth #1187, #1202, #1207, python-neo #1913.<!--open-en:end--> Filed: pytorch/pytorch #200949 (<code>grid_sample</code> int16 offset overflow for fp16/bf16, labelled "correctness (silent)"), PCNtoolkit #600, pyhgf #446/#447.</p>
 
-    <h2 id="en-offers">What I offer</h2>
+    <h2 id="en-offers">Work with me</h2>
+    <p class="section-intro">The same work, on your project. I come in the way I come into an open-source repository: I read your code and its conventions, find what is wrong, open a fix with its tests, and say what I did not verify. Four ways to start:</p>
     <div class="offers">
       <div class="offer"><h3>Evaluation Integrity Review</h3><div class="price">5 days · fixed price</div><p>Do your metrics measure what you think? Leakage at every level, temporal leakage, seed reproducibility, cache validity. Report, reproduction script, tests added to your CI.</p></div>
       <div class="offer"><h3>Evaluation &amp; test engineering</h3><div class="price">contract · 20–40 h/week</div><p>Seed-reproducible metrics, contamination checks, tests that fail on an injected regression, weekly one-page report of what was and was not measured.</p></div>
@@ -322,8 +336,8 @@ footer { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--rule);
       <li>Windows workstation, no Apple or NVIDIA hardware: GPU work is validated through upstream CI and third-party reproduction, and I say so before taking a job that needs more.</li>
     </ul>
 
-    <h2 id="en-registry">The Registry</h2>
-    <p class="section-intro">The fixes above belong to a small number of recurring classes: the assertion that cannot fail, the parameter order permuted between two libraries, the CI step that stays green on failure, the write into a DataFrame view, the barrier that guards nothing. Each entry gives the code shape, the public specimen with the maintainer's words, the test that would have caught it, and how to prevent it. It is how I audit a codebase.</p>
+    <h2 id="en-registry">Notes I keep</h2>
+    <p class="section-intro">Writing the contributions up showed a small number of recurring classes: the assertion that cannot fail, the parameter order permuted between two libraries, the CI step that stays green on failure, the write into a DataFrame view, the barrier that guards nothing. I keep them public as the Silent Failures Registry, each with its specimen from the pull requests above. It is the checklist I bring to a new repository.</p>
     <div class="drawer" data-drawer="en"></div>
     <div class="drawer-legend"><span><i class="mk static"></i>static detector in sfradar</span><span><i class="mk heuristic"></i>heuristic, a person confirms</span><span><i class="mk manual"></i>manual review only</span></div>
     <div class="offers">
@@ -344,8 +358,8 @@ footer { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--rule);
 
     <section class="cta" id="en-contact">
       <div class="label">Contact</div>
-      <h2>Start with a 20-minute call</h2>
-      <p>Send the result you doubt or the pipeline you want checked. A 20-minute call is enough to see whether a review applies.</p>
+      <h2>Bring me into your project</h2>
+      <p>A bug that falsifies results, a migration your maintainers cannot get to, a backlog of correctness issues, an outside review: send me the repository or the issue. A 20-minute call is enough to see whether I can help.</p>
       <div class="contact">
         <span class="email"><span class="addr">axel.cffrd.dnty@icloud.com</span><button class="copy" type="button" data-copy="axel.cffrd.dnty@icloud.com" data-done="Copied">Copy</button></span>
         <a href="https://www.linkedin.com/in/axel-coiffard-donaty-208a9a183/" target="_blank" rel="noopener">LinkedIn</a>
@@ -357,9 +371,9 @@ footer { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--rule);
 
   <div lang-block="fr" lang="fr">
     <header class="hero">
-      <div class="label">Portfolio · fiabilité et évaluation ML</div>
+      <div class="label">Contributeur open source · Python scientifique et ML</div>
       <h1>Axel Coiffard-Donaty</h1>
-      <p class="lede">Je trouve les bugs qui ne plantent pas mais faussent des résultats : fuites de données, échantillonneurs biaisés, races GPU, dérives numériques, CI qui reste verte sur échec. Chaque correctif ci-dessous est public, testé, et a été fusionné par les mainteneurs du projet. Je tiens le <a href="https://github.com/AxelNoun/silent-failures" target="_blank" rel="noopener">Registre des défauts silencieux</a> : vingt classes de ces bugs, chacune avec son spécimen réel et le test qui l'aurait attrapé.</p>
+      <p class="lede">Je contribue aux bibliothèques open source sur lesquelles tournent des équipes de recherche et de ML : PyTorch ExecuTorch, PyHealth, Brian2, python-neo, HSSM, DeepLabCut et d'autres. Chaque pull request de cette page a été relue et fusionnée par les mainteneurs du projet ; ce dossier public me tient lieu de CV. Les bugs que je finis par corriger sont souvent les plus discrets : ils ne plantent pas, ils faussent les résultats. Si votre projet a besoin du même travail, écrivez-moi.</p>
       <div class="contact">
         <span class="email"><span class="addr">axel.cffrd.dnty@icloud.com</span><button class="copy" type="button" data-copy="axel.cffrd.dnty@icloud.com" data-done="Copié">Copier</button></span>
         <a href="https://github.com/AxelNoun" target="_blank" rel="noopener">GitHub</a>
@@ -373,16 +387,21 @@ footer { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--rule);
         <div class="fact"><div class="n">344</div><div class="l">tests dans discoursekit, mypy et ruff propres</div></div>
       </div>
       <figure class="timeline">
-        <figcaption><span class="label">Dates de fusion en amont, <!--range-fr:start-->juin → octobre 2026<!--range-fr:end--></span><span class="label">● une pull request fusionnée · <a href="#fr-merged">liste complète</a></span></figcaption>
+        <figcaption><span class="label">Dates de fusion en amont, <!--range-fr:start-->juin → octobre 2026<!--range-fr:end--></span><span class="label">● une pull request fusionnée · <a href="#fr-where">par projet</a></span></figcaption>
         <div class="tl" data-timeline="fr"></div>
       </figure>
       <nav class="toc" aria-label="Sections">
-        <a href="#fr-cases">Études de cas</a><a href="#fr-merged">Tout ce qui a été fusionné</a><a href="#fr-offers">Ce que je propose</a><a href="#fr-method">Méthode</a><a href="#fr-registry">Le Registre</a><a href="#fr-projects">Projets personnels</a><a href="#fr-contact">Contact</a>
+        <a href="#fr-where">Où je contribue</a><a href="#fr-cases">Contributions racontées</a><a href="#fr-offers">Travailler ensemble</a><a href="#fr-method">Méthode</a><a href="#fr-registry">Mes notes</a><a href="#fr-projects">Projets personnels</a><a href="#fr-contact">Contact</a>
       </nav>
     </header>
 
-    <h2 id="fr-cases">Études de cas</h2>
-    <p class="section-intro">Quatre questions à chaque fois : ce qui était faux, ce que j'ai fait, pourquoi c'était difficile, ce qui en est sorti. Les liens mènent au dossier public.</p>
+    <h2 id="fr-where">Où je contribue</h2>
+    <p class="section-intro">Une carte par projet, la fusion la plus récente en premier. Chaque ligne mène à la pull request, où se trouvent la revue et les mots des mainteneurs.</p>
+    <div class="projects" data-projects="fr"></div>
+    <p class="note"><!--open-fr:start-->En cours de revue : brian2 #1891, ComputationalPsychiatry/pyhgf #448, executorch #23798 (approuvée), HSSM #1414, huggingface/course #1328, PyHealth #1187, #1202, #1207, python-neo #1913.<!--open-fr:end--> Signalés : pytorch/pytorch #200949 (dépassement d'offset int16 dans <code>grid_sample</code> pour fp16/bf16, étiqueté « correctness (silent) »), PCNtoolkit #600, pyhgf #446/#447.</p>
+
+    <h2 id="fr-cases">Contributions racontées</h2>
+    <p class="section-intro">Six de ces contributions racontées en entier, toujours de la même façon : ce qui était faux, ce que j'ai fait, pourquoi c'était difficile, ce qui en est sorti. Les liens mènent au dossier public.</p>
 
     <article class="dossier">
       <div class="head"><div class="where"><span class="num">01</span><span class="label">lnccbrown/HSSM · Brown</span></div><h3>Ajustement correct, prédictions silencieusement fausses</h3></div>
@@ -448,14 +467,9 @@ footer { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--rule);
       <dl class="rail"><dt>Nature</dt><dd>correction de CI, compatibilité, packaging</dd><dt>Pile</dt><dd>GitHub Actions, Python, PEP 508</dd><dt>Taille</dt><dd>3 PR ; correctif lié dans neuroconv <a href="https://github.com/catalystneuro/neuroconv/pull/1855" target="_blank" rel="noopener">#1855</a></dd><dt>Statut</dt><dd><span class="chip pass">fusionnés</span> tous, août–oct. 2026</dd><dt>Registre</dt><dd class="chips" data-sf="SF-07"></dd></dl>
     </article>
 
-    <h2 id="fr-merged">Tout ce qui a été fusionné</h2>
-    <div class="tablewrap"><table>
-      <thead><tr><th>Fusion</th><th>Projet</th><th>Changement</th><th>Registre</th></tr></thead>
-      <tbody data-record="fr"></tbody>
-    </table></div>
-    <p class="note"><!--open-fr:start-->En cours de revue : brian2 #1891, ComputationalPsychiatry/pyhgf #448, executorch #23798 (approuvée), HSSM #1414, huggingface/course #1328, PyHealth #1187, #1202, #1207, python-neo #1913.<!--open-fr:end--> Signalés : pytorch/pytorch #200949 (dépassement d'offset int16 dans <code>grid_sample</code> pour fp16/bf16, étiqueté « correctness (silent) »), PCNtoolkit #600, pyhgf #446/#447.</p>
 
-    <h2 id="fr-offers">Ce que je propose</h2>
+    <h2 id="fr-offers">Travailler ensemble</h2>
+    <p class="section-intro">Le même travail, sur votre projet. J'arrive comme j'arrive dans un dépôt open source : je lis votre code et ses conventions, je trouve ce qui est faux, j'ouvre un correctif avec ses tests, et je dis ce que je n'ai pas vérifié. Quatre façons de commencer :</p>
     <div class="offers">
       <div class="offer"><h3>Diagnostic d'intégrité d'évaluation</h3><div class="price">5 jours · forfait</div><p>Vos métriques mesurent-elles ce que vous croyez ? Fuites à chaque niveau, fuite temporelle, reproductibilité à la graine, validité des caches. Rapport, script de reproduction, tests ajoutés à votre CI.</p></div>
       <div class="offer"><h3>Ingénierie d'évaluation et de tests</h3><div class="price">régie · 20–40 h/semaine</div><p>Métriques reproductibles, contrôles de contamination, tests qui échouent sur une régression injectée, rapport hebdomadaire d'une page.</p></div>
@@ -472,8 +486,8 @@ footer { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--rule);
       <li>Poste Windows, sans matériel Apple ni NVIDIA : le travail GPU est validé par les CI des projets et par reproduction tierce, et je le dis avant d'accepter une mission qui exige plus.</li>
     </ul>
 
-    <h2 id="fr-registry">Le Registre</h2>
-    <p class="section-intro">Les correctifs ci-dessus appartiennent à un petit nombre de classes récurrentes : l'assertion qui ne peut pas échouer, l'ordre des paramètres permuté entre deux bibliothèques, l'étape de CI qui reste verte sur échec, l'écriture dans une vue de DataFrame, la barrière qui ne protège rien. Chaque entrée donne la forme du code, le spécimen public avec les mots du mainteneur, le test qui l'aurait attrapé, la prévention. C'est ma méthode d'audit, écrite.</p>
+    <h2 id="fr-registry">Mes notes</h2>
+    <p class="section-intro">En rédigeant ces contributions, un petit nombre de classes récurrentes est apparu : l'assertion qui ne peut pas échouer, l'ordre des paramètres permuté entre deux bibliothèques, l'étape de CI qui reste verte sur échec, l'écriture dans une vue de DataFrame, la barrière qui ne protège rien. Je les tiens publiques dans le Registre des défauts silencieux, chacune avec son spécimen tiré des pull requests ci-dessus. C'est la liste de contrôle que j'apporte dans un nouveau dépôt.</p>
     <div class="drawer" data-drawer="fr"></div>
     <div class="drawer-legend"><span><i class="mk static"></i>détecteur statique dans sfradar</span><span><i class="mk heuristic"></i>heuristique, confirmée par une personne</span><span><i class="mk manual"></i>revue manuelle seulement</span></div>
     <div class="offers">
@@ -494,8 +508,8 @@ footer { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--rule);
 
     <section class="cta" id="fr-contact">
       <div class="label">Contact</div>
-      <h2>Commencer par un appel de 20 minutes</h2>
-      <p>Envoyez le résultat dont vous doutez ou le pipeline à vérifier. Vingt minutes suffisent pour savoir si un diagnostic s'applique.</p>
+      <h2>Me faire entrer dans votre projet</h2>
+      <p>Un bug qui fausse des résultats, une migration que vos mainteneurs n'ont pas le temps de faire, une pile de problèmes de correction, une revue extérieure : envoyez-moi le dépôt ou l'issue. Vingt minutes d'appel suffisent pour savoir si je peux aider.</p>
       <div class="contact">
         <span class="email"><span class="addr">axel.cffrd.dnty@icloud.com</span><button class="copy" type="button" data-copy="axel.cffrd.dnty@icloud.com" data-done="Copié">Copier</button></span>
         <a href="https://www.linkedin.com/in/axel-coiffard-donaty-208a9a183/" target="_blank" rel="noopener">LinkedIn</a>
@@ -573,6 +587,18 @@ footer { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--rule);
     ).join("");
   }
 
+  function renderProjects(el, lang) {
+    // Un dépôt = un projet ; cartes triées par nombre de PR fusionnées, puis par fusion la plus récente.
+    const byRepo = new Map();
+    MERGED.forEach(m => { const [owner, name] = m.url.split("/").slice(3, 5); const k = owner + "/" + name;
+      if (!byRepo.has(k)) byRepo.set(k, {owner, name, url: `https://github.com/${owner}/${name}`, items: []}); byRepo.get(k).items.push(m); });
+    const cards = [...byRepo.values()].map(r => ({...r, items: r.items.slice().sort((a, b) => b.date.localeCompare(a.date))}))
+      .sort((a, b) => b.items.length - a.items.length || b.items[0].date.localeCompare(a.items[0].date));
+    const count = n => lang === "fr" ? `${n} fusionnée${n > 1 ? "s" : ""}` : `${n} merged`;
+    el.innerHTML = cards.map(r => `<article class="proj"><div class="proj-head"><a class="proj-name" href="${esc(r.url)}" target="_blank" rel="noopener"><span class="owner">${esc(r.owner)}/</span>${esc(r.name)}</a><span class="chip pass">${count(r.items.length)}</span></div><ul>${r.items.map(m =>
+      `<li><a class="pr" href="${esc(m.url)}" target="_blank" rel="noopener">#${esc(m.url.split("/").pop())}</a><span>${esc(lang === "fr" ? m.fr : m.en)}</span><span class="when">${esc(m.date)}</span></li>`).join("")}</ul></article>`).join("");
+  }
+
   function renderDrawer(el, lang) {
     el.innerHTML = REG.map(e =>
       `<a class="cell" href="${REGISTRY_URL}#${esc(e.id)}" target="_blank" rel="noopener"><i class="mk ${esc(e.detect)}" aria-hidden="true"></i><span class="id">${esc(e.id)}</span><span class="nm">${esc(lang === "fr" ? e.fr : e.en)}</span></a>`
@@ -580,7 +606,7 @@ footer { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--rule);
   }
 
   document.querySelectorAll("[data-timeline]").forEach(el => renderTimeline(el, el.dataset.timeline));
-  document.querySelectorAll("[data-record]").forEach(el => renderRecord(el, el.dataset.record));
+  document.querySelectorAll("[data-projects]").forEach(el => renderProjects(el, el.dataset.projects));
   document.querySelectorAll("[data-drawer]").forEach(el => renderDrawer(el, el.dataset.drawer));
   document.querySelectorAll("[data-sf]").forEach(el => {
     const lang = el.closest("[lang-block]")?.getAttribute("lang-block") || "en";

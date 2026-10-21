@@ -1,11 +1,8 @@
-# Axel Coiffard-Donaty — ML reliability & evaluation engineer
+# Axel Coiffard-Donaty — open-source contributor, scientific & ML Python
 
-I find the bugs that don't crash but falsify results: data leakage, biased samplers, GPU races, numerical drift, CI that stays green on failure. Every fix below is public, tested, and was merged by the project's maintainers. I keep the public **[Silent Failures Registry](https://github.com/AxelNoun/silent-failures)**: twenty classes of such bugs, each with a real specimen, the test that would have caught it, and — for thirteen of them — a static detector.
+I contribute to the open-source libraries that research and ML teams run on: PyTorch ExecuTorch, PyHealth, Brian2, python-neo, HSSM, DeepLabCut and others. Everything listed below was reviewed and merged by each project's maintainers. The bugs I end up fixing are often the quiet ones: they don't crash, they falsify results (data leakage, biased samplers, GPU races, numerical drift, CI that stays green on failure).
 
-> [!NOTE]
-> **Open to contracts** (remote, English or French): evaluation & test engineering for ML teams, evaluation-integrity reviews, targeted correctness fixes, scientific-stack migrations. Contact: [axel.cffrd.dnty@icloud.com](mailto:axel.cffrd.dnty@icloud.com) · [LinkedIn](https://www.linkedin.com/in/axel-coiffard-donaty-208a9a183/)
-
-[Merged upstream](#merged-upstream) · [Diagnoses](#diagnoses-maintainers-agreed-with) · [Silent Failures Registry](#silent-failures-registry) · [Own projects](#own-projects) · [How I work](#how-i-work)
+[Merged upstream](#merged-upstream) · [Diagnoses](#diagnoses-maintainers-agreed-with) · [Notes I keep](#notes-i-keep-the-silent-failures-registry) · [Own projects](#own-projects) · [How I work](#how-i-work) · [Working together](#working-together)
 
 ## Merged upstream
 
@@ -47,14 +44,14 @@ Open and under review: [brian2 #1891](https://github.com/brian-team/brian2/pull/
 - [ml-explore/mlx-lm #1700](https://github.com/ml-explore/mlx-lm/issues/1700) — fused Metal KL/JS kernels reused one threadgroup buffer for max and sum exchanges without a barrier; my fix ([#1719](https://github.com/ml-explore/mlx-lm/pull/1719)) was reproduced independently on an M5 Max (26/50 → 0/50 mismatches). Closed by the maintainers for review capacity, not on technical grounds.
 - [PCNtoolkit #600](https://github.com/predictive-clinical-neuroscience/PCNtoolkit/issues/600) — MLL/MSLL used the posterior mean of log p instead of log p(y | D, x) (Jensen bias). Collaborator: "To me it makes sense… I would change it."
 
-## Silent Failures Registry
+## Notes I keep: the Silent Failures Registry
 
 The fixes above belong to a small number of recurring classes. I wrote them down.
 
 - **[The Registry](https://github.com/AxelNoun/silent-failures)** (EN/FR) — twenty classes of bugs that pass the tests and falsify the results: how each one looks in code, the public pull request where it was found and fixed, the test that would have caught it, how to prevent it. Examples: *the assertion that cannot fail* (executorch #22373), *the parameter order permuted between two libraries* (HSSM #1371), *the CI step that stays green on failure* (python-neo #1912), *the write into a DataFrame view* (DeepLabCut #3445), *the threadgroup barrier that guards nothing* (mlx-lm #1719).
 - **[sfradar](https://github.com/AxelNoun/silent-failures/tree/main/sfradar)** — a dependency-free static radar for the thirteen classes that have a reliable pattern (AST + regex, with taint tracking for pandas views). Validated against the seven bug sites above at the commit before each fix (7/7 found, 6/6 cleared on the fixed version) and against a 344-test control repository (0 findings). On a first pass over six live scientific repositories it surfaced seven error guards that cannot fire in a widely used neuroscience library — being reproduced before I report them upstream.
 
-It is a radar, not a judge: it ranks where a reviewer should look first. The registry is how I audit a codebase; the radar makes the first look take minutes.
+It is a radar, not a judge: it ranks where a reviewer should look first. The registry is the checklist I bring to a new repository; the radar makes the first look take minutes.
 
 ## Own projects
 
@@ -69,5 +66,12 @@ It is a radar, not a judge: it ranks where a reviewer should look first. The reg
 
 - Test plans say what they did **not** exercise, with negative controls (see executorch #22372 and #22373).
 - I work in unfamiliar codebases and follow their conventions (Buck targets, FlatBuffer wire compatibility, review requests).
-- I use AI coding assistants and say so in every commit; what I'm paid for is the diagnosis, the direction and the verification.
+- I use AI coding assistants and say so in every commit; what I answer for is the diagnosis, the direction and the verification.
 - Windows machine, no Apple or NVIDIA hardware: Metal/MLX work is validated through upstream CI and third-party reproduction.
+
+## Working together
+
+> [!NOTE]
+> **I can do the same on your project** (freelance, remote, English or French): bugs that falsify results, scientific-stack migrations (pandas 3, NumPy 2, Python 3.14, Cython), correctness and evaluation reviews, the maintenance your team has no time for. I work the way I contribute upstream: read your code and its conventions, open a fix with its tests, say what I did not verify.
+>
+> Contact: [axel.cffrd.dnty@icloud.com](mailto:axel.cffrd.dnty@icloud.com) · [LinkedIn](https://www.linkedin.com/in/axel-coiffard-donaty-208a9a183/)
