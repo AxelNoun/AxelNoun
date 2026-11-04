@@ -110,6 +110,8 @@ I'm self-taught: oncology, then bioinformatics, then AI for proteins, and now ne
 | PyHealth | [#1187](https://github.com/sunlabuiuc/PyHealth/pull/1187) | PTB-XL ECG dataset support |
 | PyHealth | [#1344](https://github.com/sunlabuiuc/PyHealth/pull/1344) | Normalise URL paths with `posixpath` in `clean_path` |
 | SpikingJelly | [#692](https://github.com/fangwei123456/spikingjelly/pull/692) | Fix `LIAFNode` initialisation (closes #655) |
+| SpikingJelly | [#808](https://github.com/fangwei123456/spikingjelly/pull/808) | Fix empty intervals and boundary rounding in time-based frame splitting |
+| SpikingJelly | [#809](https://github.com/fangwei123456/spikingjelly/pull/809) | Download the SSC archives in `SpikingSpeechCommands` |
 | NeuroConv | [#1855](https://github.com/catalystneuro/neuroconv/pull/1855) | Fix an unsatisfiable Spike2 dependency marker |
 | DeepLabCut | [#3445](https://github.com/DeepLabCut/DeepLabCut/pull/3445) | pandas 3 Copy-on-Write guards across eight modules |
 
