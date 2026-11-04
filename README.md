@@ -63,7 +63,9 @@ I'm self-taught: oncology, then bioinformatics, then AI for proteins, and now ne
 - [HSSM #1448](https://github.com/lnccbrown/HSSM/pull/1448) fix(utils): index log-likelihood draws by position, not coordinate value
 - [NIR #201](https://github.com/neuromorphs/NIR/pull/201) fix: Use full kernel shape in Conv2d output shape inference
 - [executorch #24484](https://github.com/pytorch/executorch/pull/24484) \[XNNPACK\] Compose stacked activations in FuseActivationPass instead of overwriting
-- [brian2 #1928](https://github.com/brian-team/brian2/pull/1928) Fix `linspace` and `where` dropping units when a plain `0` is combined with a quantity … and 9 more
+- [brian2 #1928](https://github.com/brian-team/brian2/pull/1928) Fix `linspace` and `where` dropping units when a plain `0` is combined with a quantity
+
+[… and 9 more](https://github.com/search?q=is%3Apr+author%3AAxelNoun+is%3Aopen+-user%3AAxelNoun&type=pullrequests)
 <!-- open:end -->
 
 ### Where my code is merged

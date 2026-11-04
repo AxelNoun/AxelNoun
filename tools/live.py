@@ -93,7 +93,8 @@ def main() -> None:
         print(f"open: {len(opened)}")
         if opened:
             parts = [f"[{repo_of(i).split('/')[1]} #{i['number']}]({i['html_url']}) {md(i['title'])}" for i in opened[:8]]
-            more = f" … and {len(opened) - 8} more" if len(opened) > 8 else ""
+            search_open = f"https://github.com/search?q=is%3Apr+author%3A{USER}+is%3Aopen+-user%3A{USER}&type=pullrequests"
+            more = f"\n\n[… and {len(opened) - 8} more]({search_open})" if len(opened) > 8 else ""
             body = f"**In review right now ({len(opened)}):**\n\n" + "\n".join(f"- {p}" for p in parts) + more
         else:
             body = "_No pull request in review right now._"
