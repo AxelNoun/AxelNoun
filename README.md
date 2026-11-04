@@ -45,13 +45,25 @@ I'm self-taught: oncology, then bioinformatics, then AI for proteins, and now ne
 
 <!-- live:start -->
 - `2026-11-04` **[pytorch/executorch #24202](https://github.com/pytorch/executorch/pull/24202)**: Raise InternalError for non-CPU constant storage in the emitter
+- `2026-11-04` **[fangwei123456/spikingjelly #808](https://github.com/fangwei123456/spikingjelly/pull/808)**: Fix empty intervals and boundary rounding in time-based frame splitting
+- `2026-11-04` **[fangwei123456/spikingjelly #809](https://github.com/fangwei123456/spikingjelly/pull/809)**: Download the SSC archives in SpikingSpeechCommands
 - `2026-10-29` **[ComputationalPsychiatry/pyhgf #451](https://github.com/ComputationalPsychiatry/pyhgf/pull/451)**: Fix the batched weight gradient of binary layers in rshgf.DeepNetwork (changes results of 0.3.1 and 0.3.2)
+- `2026-10-29` **[ComputationalPsychiatry/pyhgf #450](https://github.com/ComputationalPsychiatry/pyhgf/pull/450)**: Fix add_edges dropping value children, ignoring coupling_fn and mismatching coupling strengths
 
-<sub>Refreshed daily by GitHub Actions</sub>
+<sub>Refreshed daily by GitHub Actions · last run 2026-11-04</sub>
 <!-- live:end -->
 
 <!-- open:start -->
-**In review right now:** Brian2 ([#1903](https://github.com/brian-team/brian2/pull/1903): C++ dynamic arrays returned as views instead of copies, a regression since 2.10; [#1891](https://github.com/brian-team/brian2/pull/1891): biased binomial sampling for p > 0.5 in generated code), and fixes for HSSM, python-neo, NeuroConv, PyHealth and PCNtoolkit. [See all open PRs →](https://github.com/search?q=is%3Apr+author%3AAxelNoun+is%3Aopen+-user%3AAxelNoun&type=pullrequests)
+**In review right now (17):**
+
+- [HSSM #1455](https://github.com/lnccbrown/HSSM/pull/1455) fix(hssm): reorder fixed-vector parameters with the rows _rearrange_data moves
+- [HSSM #1454](https://github.com/lnccbrown/HSSM/pull/1454) fix(rldm): give the angle LAN -1/1 choices for 0/1 responses
+- [HSSM #1450](https://github.com/lnccbrown/HSSM/pull/1450) fix(utils): find missing-RT rows by the rt column in _rearrange_data
+- [ssm-simulators #417](https://github.com/lnccbrown/ssm-simulators/pull/417) Fix racing_diffusion_model stopping rule on same-step crossings
+- [HSSM #1448](https://github.com/lnccbrown/HSSM/pull/1448) fix(utils): index log-likelihood draws by position, not coordinate value
+- [NIR #201](https://github.com/neuromorphs/NIR/pull/201) fix: Use full kernel shape in Conv2d output shape inference
+- [executorch #24484](https://github.com/pytorch/executorch/pull/24484) \[XNNPACK\] Compose stacked activations in FuseActivationPass instead of overwriting
+- [brian2 #1928](https://github.com/brian-team/brian2/pull/1928) Fix `linspace` and `where` dropping units when a plain `0` is combined with a quantity … and 9 more
 <!-- open:end -->
 
 ### Where my code is merged
