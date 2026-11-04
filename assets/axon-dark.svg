@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 84" width="1280" height="84" role="img" aria-label="A myelinated axon: the action potential jumps from one node of Ranvier to the next.">
+<defs><radialGradient id="ag"><stop offset="0" stop-color="#FDE725" stop-opacity="1"/><stop offset=".45" stop-color="#FDE725" stop-opacity=".45"/><stop offset="1" stop-color="#FDE725" stop-opacity="0"/></radialGradient></defs>
+<style>.ap{opacity:0;animation:ap 3.6s linear infinite}
+@keyframes ap{0%{opacity:1}7%{opacity:.15}13%{opacity:0}100%{opacity:0}}
+.my{fill:#161B22;stroke:#30363D;stroke-width:1.3}
+@media (prefers-reduced-motion: reduce){.ap{animation:none}}</style>
+<g stroke="#6E7681" stroke-width="1.6" fill="none" stroke-linecap="round"><path d="M30,36 l-14,-14 m6,6 l-10,2 M30,48 l-16,14 m8,-8 l-4,10 M24,42 l-18,-2"/></g>
+<circle cx="38" cy="42" r="11" fill="#21918C"/>
+<circle cx="38" cy="42" r="20" fill="url(#ag)" class="ap" style="animation-delay:0s"/>
+<line x1="48" y1="42" x2="1188" y2="42" stroke="#6E7681" stroke-width="2"/>
+<rect class="my" x="56" y="34" width="104" height="16" rx="8"/>
+<rect class="my" x="174" y="34" width="104" height="16" rx="8"/>
+<rect class="my" x="292" y="34" width="104" height="16" rx="8"/>
+<rect class="my" x="410" y="34" width="104" height="16" rx="8"/>
+<rect class="my" x="528" y="34" width="104" height="16" rx="8"/>
+<rect class="my" x="646" y="34" width="104" height="16" rx="8"/>
+<rect class="my" x="764" y="34" width="104" height="16" rx="8"/>
+<rect class="my" x="882" y="34" width="104" height="16" rx="8"/>
+<rect class="my" x="1000" y="34" width="104" height="16" rx="8"/>
+<circle cx="167.0" cy="42" r="3" fill="#35B779"/>
+<circle cx="167.0" cy="42" r="15" fill="url(#ag)" class="ap" style="animation-delay:-3.430s"/>
+<circle cx="285.0" cy="42" r="3" fill="#35B779"/>
+<circle cx="285.0" cy="42" r="15" fill="url(#ag)" class="ap" style="animation-delay:-3.260s"/>
+<circle cx="403.0" cy="42" r="3" fill="#35B779"/>
+<circle cx="403.0" cy="42" r="15" fill="url(#ag)" class="ap" style="animation-delay:-3.090s"/>
+<circle cx="521.0" cy="42" r="3" fill="#35B779"/>
+<circle cx="521.0" cy="42" r="15" fill="url(#ag)" class="ap" style="animation-delay:-2.920s"/>
+<circle cx="639.0" cy="42" r="3" fill="#35B779"/>
+<circle cx="639.0" cy="42" r="15" fill="url(#ag)" class="ap" style="animation-delay:-2.750s"/>
+<circle cx="757.0" cy="42" r="3" fill="#35B779"/>
+<circle cx="757.0" cy="42" r="15" fill="url(#ag)" class="ap" style="animation-delay:-2.580s"/>
+<circle cx="875.0" cy="42" r="3" fill="#35B779"/>
+<circle cx="875.0" cy="42" r="15" fill="url(#ag)" class="ap" style="animation-delay:-2.410s"/>
+<circle cx="993.0" cy="42" r="3" fill="#35B779"/>
+<circle cx="993.0" cy="42" r="15" fill="url(#ag)" class="ap" style="animation-delay:-2.240s"/>
+<circle cx="1111.0" cy="42" r="3" fill="#35B779"/>
+<circle cx="1111.0" cy="42" r="15" fill="url(#ag)" class="ap" style="animation-delay:-2.070s"/>
+<g stroke="#6E7681" stroke-width="1.6" fill="none" stroke-linecap="round"><path d="M1188,42 C1218,42 1228,22 1254,20 M1188,42 L1258,42 M1188,42 C1218,42 1228,62 1254,64"/></g>
+<circle cx="1260" cy="20" r="5" fill="#35B779"/>
+<circle cx="1260" cy="20" r="13" fill="url(#ag)" class="ap" style="animation-delay:-1.900s"/>
+<circle cx="1260" cy="42" r="5" fill="#35B779"/>
+<circle cx="1260" cy="42" r="13" fill="url(#ag)" class="ap" style="animation-delay:-1.900s"/>
+<circle cx="1260" cy="64" r="5" fill="#35B779"/>
+<circle cx="1260" cy="64" r="13" fill="url(#ag)" class="ap" style="animation-delay:-1.900s"/>
+</svg>

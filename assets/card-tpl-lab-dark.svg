@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 220" width="640" height="220" role="img" aria-label="TPL-Lab: A speculative theory of perception turned into a pre-registered test on Allen Neuropixels data. Result: refuted in 12 of 12 area × session pairs.">
+<rect x=".5" y=".5" width="639" height="219" rx="16" fill="#161B22" stroke="#30363D"/>
+<text x="30" y="42" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" letter-spacing="1.6" fill="#35B779">NEUROPIXELS · FALSIFICATION</text>
+<text x="29" y="82" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="30" font-weight="650" letter-spacing="-.5" fill="#E6EDF3">TPL-Lab</text>
+<text x="30" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15.5" fill="#8B949E">A speculative theory of perception turned into a</text>
+<text x="30" y="133" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15.5" fill="#8B949E">pre-registered test on Allen Neuropixels data.</text>
+<text x="30" y="154" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15.5" fill="#8B949E">Result: refuted in 12 of 12 area × session pairs.</text>
+<rect x="30" y="174" width="60" height="24" rx="12" fill="#1F2630" stroke="#30363D"/>
+<text x="60" y="190.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#C9D1D9">Python</text>
+<rect x="97.8" y="174" width="118" height="24" rx="12" fill="#1F2630" stroke="#30363D"/>
+<text x="157" y="190.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#C9D1D9">pre-registered</text>
+<rect x="224.0" y="174" width="126" height="24" rx="12" fill="#1F2630" stroke="#30363D"/>
+<text x="287" y="190.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#C9D1D9">negative result</text>
+<style>.pt{animation:d0 3.6s ease-in-out infinite alternate}.p1{animation-name:d1}.p2{animation-name:d2}.p3{animation-name:d3}@keyframes d0{to{transform:translate(3px,-2px)}}@keyframes d1{to{transform:translate(-3px,2px)}}@keyframes d2{to{transform:translate(2px,3px)}}@keyframes d3{to{transform:translate(-2px,-3px)}}.xx{animation:xp 2.2s ease-in-out infinite}@keyframes xp{0%,100%{opacity:.35}50%{opacity:1}}.rg{animation:rg 6s linear infinite;stroke-dasharray:3 4}@keyframes rg{to{stroke-dashoffset:-70}}</style>
+<circle class="rg" cx="540" cy="66" r="36" fill="none" stroke="#6E7681"/>
+<circle class="pt p0" style="animation-delay:-0.11s" cx="531.7" cy="75.1" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p1" style="animation-delay:-1.27s" cx="555.4" cy="82.6" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p2" style="animation-delay:-2.60s" cx="545.3" cy="66.3" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p3" style="animation-delay:-0.23s" cx="535.7" cy="68.3" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p0" style="animation-delay:-0.93s" cx="531.8" cy="87.7" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p1" style="animation-delay:-2.55s" cx="549.2" cy="67.8" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p2" style="animation-delay:-3.32s" cx="542.5" cy="64.1" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p3" style="animation-delay:-0.48s" cx="537.6" cy="39.4" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p0" style="animation-delay:-0.62s" cx="539.9" cy="56.1" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p1" style="animation-delay:-0.31s" cx="541.9" cy="67.8" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p2" style="animation-delay:-2.34s" cx="546.3" cy="70.1" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p3" style="animation-delay:-3.56s" cx="527.3" cy="67.8" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p0" style="animation-delay:-1.63s" cx="521.4" cy="48.8" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p1" style="animation-delay:-1.83s" cx="531.3" cy="52.2" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p2" style="animation-delay:-3.46s" cx="570.8" cy="70.7" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p3" style="animation-delay:-3.19s" cx="529.1" cy="55.5" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p0" style="animation-delay:-1.13s" cx="534.4" cy="55.4" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p1" style="animation-delay:-1.24s" cx="561.1" cy="54.7" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p2" style="animation-delay:-0.50s" cx="552.7" cy="86.1" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p3" style="animation-delay:-2.35s" cx="515.7" cy="63.7" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p0" style="animation-delay:-3.03s" cx="554.4" cy="53.2" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p1" style="animation-delay:-0.62s" cx="534.5" cy="63.5" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p2" style="animation-delay:-0.57s" cx="541.1" cy="65.5" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p3" style="animation-delay:-1.75s" cx="538.6" cy="50.8" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p0" style="animation-delay:-3.05s" cx="539.8" cy="66.1" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p1" style="animation-delay:-3.05s" cx="531.3" cy="76.5" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p2" style="animation-delay:-1.53s" cx="554.2" cy="55.4" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p3" style="animation-delay:-1.37s" cx="549.8" cy="66.1" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p0" style="animation-delay:-0.34s" cx="529.7" cy="64.4" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p1" style="animation-delay:-1.08s" cx="536.3" cy="68.3" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p2" style="animation-delay:-1.68s" cx="534.2" cy="63.3" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p3" style="animation-delay:-1.38s" cx="550.5" cy="76.2" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p0" style="animation-delay:-0.76s" cx="536.3" cy="66.1" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p1" style="animation-delay:-1.83s" cx="574.6" cy="75.0" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p2" style="animation-delay:-1.12s" cx="543.1" cy="64.4" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p3" style="animation-delay:-2.83s" cx="555.0" cy="77.7" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p0" style="animation-delay:-1.67s" cx="563.2" cy="79.5" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p1" style="animation-delay:-3.34s" cx="539.4" cy="65.8" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p2" style="animation-delay:-2.33s" cx="521.5" cy="66.5" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p3" style="animation-delay:-1.35s" cx="572.5" cy="89.9" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p0" style="animation-delay:-1.75s" cx="530.9" cy="68.2" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p1" style="animation-delay:-2.84s" cx="558.4" cy="57.4" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p2" style="animation-delay:-0.97s" cx="540.1" cy="66.0" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p3" style="animation-delay:-2.34s" cx="506.9" cy="55.5" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p0" style="animation-delay:-1.02s" cx="535.1" cy="82.0" r="1.9" fill="#35B779" opacity=".8"/>
+<circle class="pt p1" style="animation-delay:-0.04s" cx="525.5" cy="86.0" r="1.9" fill="#35B779" opacity=".8"/>
+<path class="xx" d="M570,26 l14,14 m0,-14 l-14,14" stroke="#FDE725" stroke-width="2.4" stroke-linecap="round"/>
+<text x="612" y="190.5" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#6E7681">AxelNoun/tpl-lab ↗</text>
+</svg>

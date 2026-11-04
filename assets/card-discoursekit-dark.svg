@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 220" width="640" height="220" role="img" aria-label="discoursekit: Linguistic measures for discourse research, each tied to a published definition and tested against it. Not a clinical tool.">
+<rect x=".5" y=".5" width="639" height="219" rx="16" fill="#161B22" stroke="#30363D"/>
+<text x="30" y="42" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" letter-spacing="1.6" fill="#35B779">LANGUAGE · RESEARCH TOOLING</text>
+<text x="29" y="82" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="30" font-weight="650" letter-spacing="-.5" fill="#E6EDF3">discoursekit</text>
+<text x="30" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15.5" fill="#8B949E">Linguistic measures for discourse research,</text>
+<text x="30" y="133" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15.5" fill="#8B949E">each tied to a published definition and</text>
+<text x="30" y="154" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15.5" fill="#8B949E">tested against it. Not a clinical tool.</text>
+<rect x="30" y="174" width="60" height="24" rx="12" fill="#1F2630" stroke="#30363D"/>
+<text x="60" y="190.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#C9D1D9">Python</text>
+<rect x="97.8" y="174" width="67" height="24" rx="12" fill="#1F2630" stroke="#30363D"/>
+<text x="131" y="190.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#C9D1D9">UAX #29</text>
+<rect x="172.89999999999998" y="174" width="52" height="24" rx="12" fill="#1F2630" stroke="#30363D"/>
+<text x="199" y="190.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#C9D1D9">alpha</text>
+<style>.arc{stroke-dasharray:40;animation:dw 4.8s ease-out infinite}@keyframes dw{0%{stroke-dashoffset:40}25%,80%{stroke-dashoffset:0}100%{stroke-dashoffset:-40}}.brk{animation:bk 1.2s steps(1) infinite}@keyframes bk{50%{opacity:.2}}.ln{animation:ln 4.8s ease-in-out infinite}@keyframes ln{0%,100%{opacity:.4}20%{opacity:.85}}</style>
+<rect class="ln" style="animation-delay:-4.80s" x="502" y="36" width="96" height="5" rx="2.5" fill="#6E7681"/>
+<rect class="ln" style="animation-delay:-4.45s" x="502" y="49" width="80" height="5" rx="2.5" fill="#6E7681"/>
+<rect class="ln" style="animation-delay:-4.10s" x="502" y="62" width="104" height="5" rx="2.5" fill="#6E7681"/>
+<rect class="ln" style="animation-delay:-3.75s" x="502" y="75" width="62" height="5" rx="2.5" fill="#6E7681"/>
+<rect class="ln" style="animation-delay:-3.40s" x="502" y="88" width="92" height="5" rx="2.5" fill="#6E7681"/>
+<rect class="ln" style="animation-delay:-3.05s" x="502" y="101" width="74" height="5" rx="2.5" fill="#6E7681"/>
+<path class="arc" style="animation-delay:-4.80s" d="M498,38.5 C482,38.5 482,51.5 498,51.5" fill="none" stroke="#35B779" stroke-width="1.8"/>
+<path class="arc" style="animation-delay:-4.35s" d="M498,51.5 C482,51.5 482,64.5 498,64.5" fill="none" stroke="#35B779" stroke-width="1.8"/>
+<path class="arc" style="animation-delay:-3.90s" d="M498,64.5 C482,64.5 482,90.5 498,90.5" fill="none" stroke="#35B779" stroke-width="1.8"/>
+<path class="arc" style="animation-delay:-3.45s" d="M498,90.5 C482,90.5 482,103.5 498,103.5" fill="none" stroke="#35B779" stroke-width="1.8"/>
+<path class="brk" d="M498,64.5 C472,62 472,80 498,77.5" fill="none" stroke="#FDE725" stroke-width="1.8" stroke-dasharray="3 3"/>
+<text x="612" y="190.5" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#6E7681">AxelNoun/discoursekit ↗</text>
+</svg>

@@ -1,0 +1,45 @@
+name: live
+
+# Refreshes the live parts of the profile README every day: merged-PR count and project count
+# (assets/stats-dark.svg), the activity raster (assets/activity-dark.svg), the latest merges and
+# the PRs in review (README blocks "live" and "open"). Manual run: Actions tab > live > Run workflow.
+
+on:
+  schedule:
+    - cron: "43 6 * * *"   # every day, 06:43 UTC
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths: ["tools/**", ".github/workflows/live.yml"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-readme
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Refresh live data and images
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python tools/live.py
+      - name: Commit if something changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md assets
+          if git diff --cached --quiet; then
+            echo "nothing to commit"
+            exit 0
+          fi
+          git commit -m "Refresh live profile data"
+          git pull --rebase --autostash
+          git push
