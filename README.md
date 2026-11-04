@@ -148,17 +148,7 @@ My own repositories say what has been validated and what hasn't. A clean negativ
 
 <p align="center"><img src="assets/axon-dark.svg" width="100%" alt=""></p>
 
-## How I work
-
-- **A failing test comes first.** If a test doesn't fail on the old code, the bug isn't fixed yet.
-- **Claims are measured or labelled.** Test plans say what they did *not* exercise; "validated", "exploratory" and "not done" are different words, and my READMEs use them.
-- **I follow the codebase, not my habits:** Buck targets, FlatBuffer wire compatibility, each project's review etiquette.
-- **AI-assisted, openly.** I use Claude Code and say so in my pull requests. I pick the problem, define the test that proves it, and carry the review through to merge.
-- **Written and async.** I'm French and do my best work in written English: issues, PRs, design notes.
-
-<p align="center"><img src="assets/terminal.svg" width="100%" alt="Animated terminal: reproduce the bug with a failing test, apply the smallest fix, run the whole suite, open the pull request, get it merged."></p>
-
-### Activity <sub>· live</sub>
+## Activity <sub>· live</sub>
 
 <p align="center"><img src="assets/activity-dark.svg" width="100%" alt="My GitHub contributions over the last 12 months, drawn as a spike raster. Refreshed daily."></p>
 

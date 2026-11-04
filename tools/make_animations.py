@@ -468,6 +468,4 @@ if __name__ == "__main__":
         if not os.path.exists(act):
             with open(act, "w") as f:
                 f.write(activity(th, None, None, None))
-    with open(os.path.join(OUT, "terminal.svg"), "w") as f:
-        f.write(terminal())
     print("ok")
