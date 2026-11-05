@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 300" width="1280" height="300" role="img" aria-label="GitHub activity over the last 12 months as a spike raster: 378 contributions.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 300" width="1280" height="300" role="img" aria-label="GitHub activity over the last 12 months as a spike raster: 383 contributions.">
 <defs><linearGradient id="atr" x1="0" x2="1"><stop offset="0" stop-color="#35B779" stop-opacity="0"/><stop offset="1" stop-color="#35B779" stop-opacity=".16"/></linearGradient></defs>
 <style>.k{opacity:.85;animation:fk 9.0s linear infinite}
 @keyframes fk{0%{fill:#FDE725;opacity:1}6%{opacity:1}12%{fill:var(--c)}45%,100%{fill:var(--c);opacity:.55}}
 .cur{animation:sw 9.0s linear infinite}@keyframes sw{0%{transform:translateX(0);opacity:0}2%{opacity:1}97%{opacity:1}100%{transform:translateX(1113px);opacity:0}}</style>
 <rect x=".5" y=".5" width="1279" height="299" rx="16" fill="#161B22" stroke="#30363D"/>
 <text x="34" y="40" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" letter-spacing="2" fill="#35B779">ACTIVITY · LAST 12 MONTHS · LIVE</text>
-<text x="34" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="21" font-weight="600" fill="#E6EDF3">378 contributions, one spike per active day</text>
-<text x="1246" y="40" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#6E7681">updated 2026-11-04</text>
+<text x="34" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="21" font-weight="600" fill="#E6EDF3">383 contributions, one spike per active day</text>
+<text x="1246" y="40" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#6E7681">updated 2026-11-05</text>
 <text x="96" y="100" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#6E7681">Sun</text>
 <text x="96" y="122" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#6E7681">Mon</text>
 <text x="96" y="166" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#6E7681">Wed</text>
@@ -87,6 +87,7 @@
 <text x="1208.5" y="258" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#6E7681">Nov</text>
 <rect class="k" style="--c:#FDE725;animation-delay:-0.08s" x="1213.1" y="131.0" width="2.8" height="18.0" rx="1.3" fill="#FDE725"/>
 <rect class="k" style="--c:#FDE725;animation-delay:-0.08s" x="1213.1" y="153.0" width="2.8" height="18.0" rx="1.3" fill="#FDE725"/>
+<rect class="k" style="--c:#5EC962;animation-delay:-0.08s" x="1213.1" y="176.9" width="2.8" height="14.3" rx="1.3" fill="#5EC962"/>
 <g class="cur"><rect x="52" y="80" width="60" height="164" fill="url(#atr)"/><line x1="112" x2="112" y1="78" y2="246" stroke="#FDE725" opacity=".7"/></g>
 <text x="34" y="280" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#6E7681">// silent days cost nothing: that is the point of event-driven hardware</text>
 </svg>
