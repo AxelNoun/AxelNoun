@@ -6,7 +6,7 @@
 <rect x=".5" y=".5" width="1279" height="299" rx="16" fill="#161B22" stroke="#30363D"/>
 <text x="34" y="40" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" letter-spacing="2" fill="#35B779">ACTIVITY · LAST 12 MONTHS · LIVE</text>
 <text x="34" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="21" font-weight="600" fill="#E6EDF3">387 contributions, one spike per active day</text>
-<text x="1246" y="40" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#6E7681">updated 2026-11-07</text>
+<text x="1246" y="40" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#6E7681">updated 2026-11-08</text>
 <text x="96" y="100" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#6E7681">Sun</text>
 <text x="96" y="122" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#6E7681">Mon</text>
 <text x="96" y="166" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#6E7681">Wed</text>
@@ -18,76 +18,75 @@
 <line x1="112" x2="1225" y1="184" y2="184" stroke="#30363D" stroke-width=".6" opacity=".6"/>
 <line x1="112" x2="1225" y1="206" y2="206" stroke="#30363D" stroke-width=".6" opacity=".6"/>
 <line x1="112" x2="1225" y1="228" y2="228" stroke="#30363D" stroke-width=".6" opacity=".6"/>
-<text x="116.5" y="258" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#6E7681">Nov</text>
-<text x="221.5" y="258" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#6E7681">Dec</text>
-<text x="305.5" y="258" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#6E7681">Jan</text>
-<text x="389.5" y="258" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#6E7681">Feb</text>
-<text x="473.5" y="258" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#6E7681">Mar</text>
-<text x="578.5" y="258" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#6E7681">Apr</text>
-<text x="662.5" y="258" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#6E7681">May</text>
-<rect class="k" style="--c:#FDE725;animation-delay:-4.33s" x="688.1" y="175.0" width="2.8" height="18.0" rx="1.3" fill="#FDE725"/>
-<rect class="k" style="--c:#5EC962;animation-delay:-4.33s" x="688.1" y="197.5" width="2.8" height="17.0" rx="1.3" fill="#5EC962"/>
-<rect class="k" style="--c:#5EC962;animation-delay:-4.33s" x="688.1" y="219.2" width="2.8" height="17.7" rx="1.3" fill="#5EC962"/>
-<rect class="k" style="--c:#5EC962;animation-delay:-3.99s" x="730.1" y="110.3" width="2.8" height="15.3" rx="1.3" fill="#5EC962"/>
-<rect class="k" style="--c:#FDE725;animation-delay:-3.99s" x="730.1" y="131.0" width="2.8" height="18.0" rx="1.3" fill="#FDE725"/>
-<rect class="k" style="--c:#FDE725;animation-delay:-3.99s" x="730.1" y="153.0" width="2.8" height="18.0" rx="1.3" fill="#FDE725"/>
-<rect class="k" style="--c:#5EC962;animation-delay:-3.99s" x="730.1" y="175.2" width="2.8" height="17.7" rx="1.3" fill="#5EC962"/>
-<rect class="k" style="--c:#FDE725;animation-delay:-3.99s" x="730.1" y="197.0" width="2.8" height="18.0" rx="1.3" fill="#FDE725"/>
-<rect class="k" style="--c:#21918C;animation-delay:-3.99s" x="730.1" y="222.3" width="2.8" height="11.3" rx="1.3" fill="#21918C"/>
-<text x="767.5" y="258" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#6E7681">Jun</text>
-<rect class="k" style="--c:#21918C;animation-delay:-3.48s" x="793.1" y="135.5" width="2.8" height="9.0" rx="1.3" fill="#21918C"/>
-<rect class="k" style="--c:#21918C;animation-delay:-3.48s" x="793.1" y="222.3" width="2.8" height="11.3" rx="1.3" fill="#21918C"/>
+<text x="200.5" y="258" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#6E7681">Dec</text>
+<text x="284.5" y="258" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#6E7681">Jan</text>
+<text x="368.5" y="258" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#6E7681">Feb</text>
+<text x="452.5" y="258" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#6E7681">Mar</text>
+<text x="557.5" y="258" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#6E7681">Apr</text>
+<text x="641.5" y="258" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#6E7681">May</text>
+<rect class="k" style="--c:#FDE725;animation-delay:-4.50s" x="667.1" y="175.0" width="2.8" height="18.0" rx="1.3" fill="#FDE725"/>
+<rect class="k" style="--c:#5EC962;animation-delay:-4.50s" x="667.1" y="197.5" width="2.8" height="17.0" rx="1.3" fill="#5EC962"/>
+<rect class="k" style="--c:#5EC962;animation-delay:-4.50s" x="667.1" y="219.2" width="2.8" height="17.7" rx="1.3" fill="#5EC962"/>
+<rect class="k" style="--c:#5EC962;animation-delay:-4.16s" x="709.1" y="110.3" width="2.8" height="15.3" rx="1.3" fill="#5EC962"/>
+<rect class="k" style="--c:#FDE725;animation-delay:-4.16s" x="709.1" y="131.0" width="2.8" height="18.0" rx="1.3" fill="#FDE725"/>
+<rect class="k" style="--c:#FDE725;animation-delay:-4.16s" x="709.1" y="153.0" width="2.8" height="18.0" rx="1.3" fill="#FDE725"/>
+<rect class="k" style="--c:#5EC962;animation-delay:-4.16s" x="709.1" y="175.2" width="2.8" height="17.7" rx="1.3" fill="#5EC962"/>
+<rect class="k" style="--c:#FDE725;animation-delay:-4.16s" x="709.1" y="197.0" width="2.8" height="18.0" rx="1.3" fill="#FDE725"/>
+<rect class="k" style="--c:#21918C;animation-delay:-4.16s" x="709.1" y="222.3" width="2.8" height="11.3" rx="1.3" fill="#21918C"/>
+<text x="746.5" y="258" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#6E7681">Jun</text>
+<rect class="k" style="--c:#21918C;animation-delay:-3.65s" x="772.1" y="135.5" width="2.8" height="9.0" rx="1.3" fill="#21918C"/>
+<rect class="k" style="--c:#21918C;animation-delay:-3.65s" x="772.1" y="222.3" width="2.8" height="11.3" rx="1.3" fill="#21918C"/>
+<rect class="k" style="--c:#21918C;animation-delay:-3.48s" x="793.1" y="179.5" width="2.8" height="9.0" rx="1.3" fill="#21918C"/>
 <rect class="k" style="--c:#21918C;animation-delay:-3.31s" x="814.1" y="179.5" width="2.8" height="9.0" rx="1.3" fill="#21918C"/>
-<rect class="k" style="--c:#21918C;animation-delay:-3.14s" x="835.1" y="179.5" width="2.8" height="9.0" rx="1.3" fill="#21918C"/>
-<text x="851.5" y="258" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#6E7681">Jul</text>
-<rect class="k" style="--c:#21918C;animation-delay:-2.80s" x="877.1" y="156.3" width="2.8" height="11.3" rx="1.3" fill="#21918C"/>
-<rect class="k" style="--c:#5EC962;animation-delay:-2.80s" x="877.1" y="175.0" width="2.8" height="18.0" rx="1.3" fill="#5EC962"/>
-<rect class="k" style="--c:#5EC962;animation-delay:-2.80s" x="877.1" y="220.9" width="2.8" height="14.3" rx="1.3" fill="#5EC962"/>
-<rect class="k" style="--c:#21918C;animation-delay:-2.63s" x="898.1" y="90.3" width="2.8" height="11.3" rx="1.3" fill="#21918C"/>
-<rect class="k" style="--c:#21918C;animation-delay:-2.63s" x="898.1" y="223.5" width="2.8" height="9.0" rx="1.3" fill="#21918C"/>
-<rect class="k" style="--c:#21918C;animation-delay:-2.46s" x="919.1" y="113.5" width="2.8" height="9.0" rx="1.3" fill="#21918C"/>
-<rect class="k" style="--c:#21918C;animation-delay:-2.46s" x="919.1" y="178.3" width="2.8" height="11.3" rx="1.3" fill="#21918C"/>
-<rect class="k" style="--c:#5EC962;animation-delay:-2.46s" x="919.1" y="197.0" width="2.8" height="18.0" rx="1.3" fill="#5EC962"/>
-<rect class="k" style="--c:#21918C;animation-delay:-2.46s" x="919.1" y="222.3" width="2.8" height="11.3" rx="1.3" fill="#21918C"/>
-<text x="935.5" y="258" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#6E7681">Aug</text>
-<rect class="k" style="--c:#21918C;animation-delay:-2.29s" x="940.1" y="201.5" width="2.8" height="9.0" rx="1.3" fill="#21918C"/>
-<rect class="k" style="--c:#21918C;animation-delay:-2.12s" x="961.1" y="91.5" width="2.8" height="9.0" rx="1.3" fill="#21918C"/>
-<rect class="k" style="--c:#5EC962;animation-delay:-2.12s" x="961.1" y="132.9" width="2.8" height="14.3" rx="1.3" fill="#5EC962"/>
-<rect class="k" style="--c:#FDE725;animation-delay:-2.12s" x="961.1" y="153.0" width="2.8" height="18.0" rx="1.3" fill="#FDE725"/>
-<rect class="k" style="--c:#FDE725;animation-delay:-2.12s" x="961.1" y="175.0" width="2.8" height="18.0" rx="1.3" fill="#FDE725"/>
-<rect class="k" style="--c:#21918C;animation-delay:-1.95s" x="982.1" y="201.5" width="2.8" height="9.0" rx="1.3" fill="#21918C"/>
-<rect class="k" style="--c:#21918C;animation-delay:-1.78s" x="1003.1" y="111.5" width="2.8" height="13.0" rx="1.3" fill="#21918C"/>
-<rect class="k" style="--c:#21918C;animation-delay:-1.78s" x="1003.1" y="134.3" width="2.8" height="11.3" rx="1.3" fill="#21918C"/>
-<rect class="k" style="--c:#5EC962;animation-delay:-1.78s" x="1003.1" y="154.9" width="2.8" height="14.3" rx="1.3" fill="#5EC962"/>
-<rect class="k" style="--c:#21918C;animation-delay:-1.61s" x="1024.1" y="91.5" width="2.8" height="9.0" rx="1.3" fill="#21918C"/>
-<rect class="k" style="--c:#21918C;animation-delay:-1.61s" x="1024.1" y="113.5" width="2.8" height="9.0" rx="1.3" fill="#21918C"/>
-<rect class="k" style="--c:#FDE725;animation-delay:-1.61s" x="1024.1" y="131.0" width="2.8" height="18.0" rx="1.3" fill="#FDE725"/>
-<rect class="k" style="--c:#5EC962;animation-delay:-1.61s" x="1024.1" y="153.0" width="2.8" height="18.0" rx="1.3" fill="#5EC962"/>
-<rect class="k" style="--c:#5EC962;animation-delay:-1.61s" x="1024.1" y="176.9" width="2.8" height="14.3" rx="1.3" fill="#5EC962"/>
-<text x="1040.5" y="258" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#6E7681">Sep</text>
-<rect class="k" style="--c:#21918C;animation-delay:-1.44s" x="1045.1" y="179.5" width="2.8" height="9.0" rx="1.3" fill="#21918C"/>
-<rect class="k" style="--c:#21918C;animation-delay:-1.27s" x="1066.1" y="113.5" width="2.8" height="9.0" rx="1.3" fill="#21918C"/>
-<text x="1124.5" y="258" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#6E7681">Oct</text>
-<rect class="k" style="--c:#5EC962;animation-delay:-0.76s" x="1129.1" y="131.0" width="2.8" height="18.0" rx="1.3" fill="#5EC962"/>
-<rect class="k" style="--c:#5EC962;animation-delay:-0.76s" x="1129.1" y="153.0" width="2.8" height="18.0" rx="1.3" fill="#5EC962"/>
-<rect class="k" style="--c:#21918C;animation-delay:-0.76s" x="1129.1" y="200.3" width="2.8" height="11.3" rx="1.3" fill="#21918C"/>
-<rect class="k" style="--c:#5EC962;animation-delay:-0.76s" x="1129.1" y="220.3" width="2.8" height="15.3" rx="1.3" fill="#5EC962"/>
-<rect class="k" style="--c:#FDE725;animation-delay:-0.59s" x="1150.1" y="87.0" width="2.8" height="18.0" rx="1.3" fill="#FDE725"/>
-<rect class="k" style="--c:#21918C;animation-delay:-0.59s" x="1150.1" y="112.3" width="2.8" height="11.3" rx="1.3" fill="#21918C"/>
-<rect class="k" style="--c:#5EC962;animation-delay:-0.59s" x="1150.1" y="132.9" width="2.8" height="14.3" rx="1.3" fill="#5EC962"/>
-<rect class="k" style="--c:#5EC962;animation-delay:-0.59s" x="1150.1" y="154.3" width="2.8" height="15.3" rx="1.3" fill="#5EC962"/>
-<rect class="k" style="--c:#5EC962;animation-delay:-0.42s" x="1171.1" y="110.3" width="2.8" height="15.3" rx="1.3" fill="#5EC962"/>
-<rect class="k" style="--c:#5EC962;animation-delay:-0.42s" x="1171.1" y="131.5" width="2.8" height="17.0" rx="1.3" fill="#5EC962"/>
-<rect class="k" style="--c:#21918C;animation-delay:-0.42s" x="1171.1" y="156.3" width="2.8" height="11.3" rx="1.3" fill="#21918C"/>
-<rect class="k" style="--c:#21918C;animation-delay:-0.25s" x="1192.1" y="113.5" width="2.8" height="9.0" rx="1.3" fill="#21918C"/>
+<text x="830.5" y="258" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#6E7681">Jul</text>
+<rect class="k" style="--c:#21918C;animation-delay:-2.97s" x="856.1" y="156.3" width="2.8" height="11.3" rx="1.3" fill="#21918C"/>
+<rect class="k" style="--c:#5EC962;animation-delay:-2.97s" x="856.1" y="175.0" width="2.8" height="18.0" rx="1.3" fill="#5EC962"/>
+<rect class="k" style="--c:#5EC962;animation-delay:-2.97s" x="856.1" y="220.9" width="2.8" height="14.3" rx="1.3" fill="#5EC962"/>
+<rect class="k" style="--c:#21918C;animation-delay:-2.80s" x="877.1" y="90.3" width="2.8" height="11.3" rx="1.3" fill="#21918C"/>
+<rect class="k" style="--c:#21918C;animation-delay:-2.80s" x="877.1" y="223.5" width="2.8" height="9.0" rx="1.3" fill="#21918C"/>
+<rect class="k" style="--c:#21918C;animation-delay:-2.63s" x="898.1" y="113.5" width="2.8" height="9.0" rx="1.3" fill="#21918C"/>
+<rect class="k" style="--c:#21918C;animation-delay:-2.63s" x="898.1" y="178.3" width="2.8" height="11.3" rx="1.3" fill="#21918C"/>
+<rect class="k" style="--c:#5EC962;animation-delay:-2.63s" x="898.1" y="197.0" width="2.8" height="18.0" rx="1.3" fill="#5EC962"/>
+<rect class="k" style="--c:#21918C;animation-delay:-2.63s" x="898.1" y="222.3" width="2.8" height="11.3" rx="1.3" fill="#21918C"/>
+<text x="914.5" y="258" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#6E7681">Aug</text>
+<rect class="k" style="--c:#21918C;animation-delay:-2.46s" x="919.1" y="201.5" width="2.8" height="9.0" rx="1.3" fill="#21918C"/>
+<rect class="k" style="--c:#21918C;animation-delay:-2.29s" x="940.1" y="91.5" width="2.8" height="9.0" rx="1.3" fill="#21918C"/>
+<rect class="k" style="--c:#5EC962;animation-delay:-2.29s" x="940.1" y="132.9" width="2.8" height="14.3" rx="1.3" fill="#5EC962"/>
+<rect class="k" style="--c:#FDE725;animation-delay:-2.29s" x="940.1" y="153.0" width="2.8" height="18.0" rx="1.3" fill="#FDE725"/>
+<rect class="k" style="--c:#FDE725;animation-delay:-2.29s" x="940.1" y="175.0" width="2.8" height="18.0" rx="1.3" fill="#FDE725"/>
+<rect class="k" style="--c:#21918C;animation-delay:-2.12s" x="961.1" y="201.5" width="2.8" height="9.0" rx="1.3" fill="#21918C"/>
+<rect class="k" style="--c:#21918C;animation-delay:-1.95s" x="982.1" y="111.5" width="2.8" height="13.0" rx="1.3" fill="#21918C"/>
+<rect class="k" style="--c:#21918C;animation-delay:-1.95s" x="982.1" y="134.3" width="2.8" height="11.3" rx="1.3" fill="#21918C"/>
+<rect class="k" style="--c:#5EC962;animation-delay:-1.95s" x="982.1" y="154.9" width="2.8" height="14.3" rx="1.3" fill="#5EC962"/>
+<rect class="k" style="--c:#21918C;animation-delay:-1.78s" x="1003.1" y="91.5" width="2.8" height="9.0" rx="1.3" fill="#21918C"/>
+<rect class="k" style="--c:#21918C;animation-delay:-1.78s" x="1003.1" y="113.5" width="2.8" height="9.0" rx="1.3" fill="#21918C"/>
+<rect class="k" style="--c:#FDE725;animation-delay:-1.78s" x="1003.1" y="131.0" width="2.8" height="18.0" rx="1.3" fill="#FDE725"/>
+<rect class="k" style="--c:#5EC962;animation-delay:-1.78s" x="1003.1" y="153.0" width="2.8" height="18.0" rx="1.3" fill="#5EC962"/>
+<rect class="k" style="--c:#5EC962;animation-delay:-1.78s" x="1003.1" y="176.9" width="2.8" height="14.3" rx="1.3" fill="#5EC962"/>
+<text x="1019.5" y="258" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#6E7681">Sep</text>
+<rect class="k" style="--c:#21918C;animation-delay:-1.61s" x="1024.1" y="179.5" width="2.8" height="9.0" rx="1.3" fill="#21918C"/>
+<rect class="k" style="--c:#21918C;animation-delay:-1.44s" x="1045.1" y="113.5" width="2.8" height="9.0" rx="1.3" fill="#21918C"/>
+<text x="1103.5" y="258" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#6E7681">Oct</text>
+<rect class="k" style="--c:#5EC962;animation-delay:-0.93s" x="1108.1" y="131.0" width="2.8" height="18.0" rx="1.3" fill="#5EC962"/>
+<rect class="k" style="--c:#5EC962;animation-delay:-0.93s" x="1108.1" y="153.0" width="2.8" height="18.0" rx="1.3" fill="#5EC962"/>
+<rect class="k" style="--c:#21918C;animation-delay:-0.93s" x="1108.1" y="200.3" width="2.8" height="11.3" rx="1.3" fill="#21918C"/>
+<rect class="k" style="--c:#5EC962;animation-delay:-0.93s" x="1108.1" y="220.3" width="2.8" height="15.3" rx="1.3" fill="#5EC962"/>
+<rect class="k" style="--c:#FDE725;animation-delay:-0.76s" x="1129.1" y="87.0" width="2.8" height="18.0" rx="1.3" fill="#FDE725"/>
+<rect class="k" style="--c:#21918C;animation-delay:-0.76s" x="1129.1" y="112.3" width="2.8" height="11.3" rx="1.3" fill="#21918C"/>
+<rect class="k" style="--c:#5EC962;animation-delay:-0.76s" x="1129.1" y="132.9" width="2.8" height="14.3" rx="1.3" fill="#5EC962"/>
+<rect class="k" style="--c:#5EC962;animation-delay:-0.76s" x="1129.1" y="154.3" width="2.8" height="15.3" rx="1.3" fill="#5EC962"/>
+<rect class="k" style="--c:#5EC962;animation-delay:-0.59s" x="1150.1" y="110.3" width="2.8" height="15.3" rx="1.3" fill="#5EC962"/>
+<rect class="k" style="--c:#5EC962;animation-delay:-0.59s" x="1150.1" y="131.5" width="2.8" height="17.0" rx="1.3" fill="#5EC962"/>
+<rect class="k" style="--c:#21918C;animation-delay:-0.59s" x="1150.1" y="156.3" width="2.8" height="11.3" rx="1.3" fill="#21918C"/>
+<rect class="k" style="--c:#21918C;animation-delay:-0.42s" x="1171.1" y="113.5" width="2.8" height="9.0" rx="1.3" fill="#21918C"/>
+<rect class="k" style="--c:#FDE725;animation-delay:-0.42s" x="1171.1" y="131.0" width="2.8" height="18.0" rx="1.3" fill="#FDE725"/>
+<rect class="k" style="--c:#5EC962;animation-delay:-0.42s" x="1171.1" y="154.3" width="2.8" height="15.3" rx="1.3" fill="#5EC962"/>
+<rect class="k" style="--c:#5EC962;animation-delay:-0.42s" x="1171.1" y="176.3" width="2.8" height="15.3" rx="1.3" fill="#5EC962"/>
+<rect class="k" style="--c:#21918C;animation-delay:-0.42s" x="1171.1" y="222.3" width="2.8" height="11.3" rx="1.3" fill="#21918C"/>
+<text x="1187.5" y="258" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#6E7681">Nov</text>
 <rect class="k" style="--c:#FDE725;animation-delay:-0.25s" x="1192.1" y="131.0" width="2.8" height="18.0" rx="1.3" fill="#FDE725"/>
-<rect class="k" style="--c:#5EC962;animation-delay:-0.25s" x="1192.1" y="154.3" width="2.8" height="15.3" rx="1.3" fill="#5EC962"/>
-<rect class="k" style="--c:#5EC962;animation-delay:-0.25s" x="1192.1" y="176.3" width="2.8" height="15.3" rx="1.3" fill="#5EC962"/>
-<rect class="k" style="--c:#21918C;animation-delay:-0.25s" x="1192.1" y="222.3" width="2.8" height="11.3" rx="1.3" fill="#21918C"/>
-<text x="1208.5" y="258" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#6E7681">Nov</text>
-<rect class="k" style="--c:#FDE725;animation-delay:-0.08s" x="1213.1" y="131.0" width="2.8" height="18.0" rx="1.3" fill="#FDE725"/>
-<rect class="k" style="--c:#FDE725;animation-delay:-0.08s" x="1213.1" y="153.0" width="2.8" height="18.0" rx="1.3" fill="#FDE725"/>
-<rect class="k" style="--c:#5EC962;animation-delay:-0.08s" x="1213.1" y="175.2" width="2.8" height="17.7" rx="1.3" fill="#5EC962"/>
+<rect class="k" style="--c:#FDE725;animation-delay:-0.25s" x="1192.1" y="153.0" width="2.8" height="18.0" rx="1.3" fill="#FDE725"/>
+<rect class="k" style="--c:#5EC962;animation-delay:-0.25s" x="1192.1" y="175.2" width="2.8" height="17.7" rx="1.3" fill="#5EC962"/>
 <g class="cur"><rect x="52" y="80" width="60" height="164" fill="url(#atr)"/><line x1="112" x2="112" y1="78" y2="246" stroke="#FDE725" opacity=".7"/></g>
 <text x="34" y="280" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#6E7681">// silent days cost nothing: that is the point of event-driven hardware</text>
 </svg>

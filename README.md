@@ -50,7 +50,7 @@ I'm self-taught: oncology, then bioinformatics, then AI for proteins, and now ne
 - `2026-10-29` **[ComputationalPsychiatry/pyhgf #451](https://github.com/ComputationalPsychiatry/pyhgf/pull/451)**: Fix the batched weight gradient of binary layers in rshgf.DeepNetwork (changes results of 0.3.1 and 0.3.2)
 - `2026-10-29` **[ComputationalPsychiatry/pyhgf #450](https://github.com/ComputationalPsychiatry/pyhgf/pull/450)**: Fix add_edges dropping value children, ignoring coupling_fn and mismatching coupling strengths
 
-<sub>Refreshed daily by GitHub Actions · last run 2026-11-07</sub>
+<sub>Refreshed daily by GitHub Actions · last run 2026-11-08</sub>
 <!-- live:end -->
 
 <!-- open:start -->
