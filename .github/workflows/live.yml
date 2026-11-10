@@ -1,12 +1,12 @@
 name: live
 
-# Refreshes the live parts of the profile README every day: merged-PR count and project count
+# Refreshes the live parts of the profile README every 2 hours: merged-PR count and project count
 # (assets/stats-dark.svg), the activity raster (assets/activity-dark.svg), the latest merges and
 # the PRs in review (README blocks "live" and "open"). Manual run: Actions tab > live > Run workflow.
 
 on:
   schedule:
-    - cron: "43 6 * * *"   # every day, 06:43 UTC
+    - cron: "43 */2 * * *"   # every 2 hours, at minute 43 UTC
   workflow_dispatch:
   push:
     branches: [master]
