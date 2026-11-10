@@ -54,18 +54,7 @@ I'm self-taught: oncology, then bioinformatics, then AI for proteins, and now ne
 <!-- live:end -->
 
 <!-- open:start -->
-**In review right now (19):**
-
-- [spikeinterface #4921](https://github.com/SpikeInterface/spikeinterface/pull/4921) Fix `select_periods` dropping metadata, recording, times and empty segments
-- [spikeinterface #4922](https://github.com/SpikeInterface/spikeinterface/pull/4922) Fix saving a recording when only some segments have a `t_start`
-- [spikeinterface #4923](https://github.com/SpikeInterface/spikeinterface/pull/4923) Fix binary save when only some segments have a time vector
-- [PCNtoolkit #623](https://github.com/predictive-clinical-neuroscience/PCNtoolkit/pull/623) fix: score compare_hbr_models on the fit data
-- [HSSM #1455](https://github.com/lnccbrown/HSSM/pull/1455) fix(hssm): reorder fixed-vector parameters with the rows _rearrange_data moves
-- [HSSM #1454](https://github.com/lnccbrown/HSSM/pull/1454) fix(rldm): give the angle LAN -1/1 choices for 0/1 responses
-- [HSSM #1450](https://github.com/lnccbrown/HSSM/pull/1450) fix(utils): find missing-RT rows by the rt column in _rearrange_data
-- [ssm-simulators #417](https://github.com/lnccbrown/ssm-simulators/pull/417) Fix racing_diffusion_model stopping rule on same-step crossings
-
-[… and 11 more](https://github.com/search?q=is%3Apr+author%3AAxelNoun+is%3Aopen+-user%3AAxelNoun&type=pullrequests)
+Open and under review: [brian2 #1891](https://github.com/brian-team/brian2/pull/1891) (Cython Binomial sampler wrong for p > 0.5 and non-terminating on underflow), [HSSM #1414](https://github.com/lnccbrown/HSSM/pull/1414) (approved), [huggingface/course #1328](https://github.com/huggingface/course/pull/1328), [PyHealth #1202](https://github.com/sunlabuiuc/PyHealth/pull/1202) (knowledge-graph embeddings on the 2.0 pipeline, negatives drawn from training triples only), [PyHealth #1207](https://github.com/sunlabuiuc/PyHealth/pull/1207) (deterministic, collision-free task cache keys), [python-neo #1913](https://github.com/NeuralEnsemble/python-neo/pull/1913).
 <!-- open:end -->
 
 ### Where my code is merged
@@ -87,37 +76,33 @@ I'm self-taught: oncology, then bioinformatics, then AI for proteins, and now ne
 <br>
 
 <!-- merged:start -->
-| Project | PR | What it does |
-|:--|:--|:--|
-| ExecuTorch | [#20685](https://github.com/pytorch/executorch/pull/20685) | MLX backend: runtime MoE expert-sort for the decode path |
-| ExecuTorch | [#22372](https://github.com/pytorch/executorch/pull/22372) | Vulkan quantizer: preserve node output dtype when lifting scalars to attributes |
-| ExecuTorch | [#22373](https://github.com/pytorch/executorch/pull/22373) | Make inoperative error guards raise (ExportSession, XNNPACK node visitor, Samsung conv1d) |
-| ExecuTorch | [#23798](https://github.com/pytorch/executorch/pull/23798) | Fix bf16 positional-embedding interpolation on CPU |
-| ExecuTorch | [#24203](https://github.com/pytorch/executorch/pull/24203) | Enforce per-dimension upper bounds for `DYNAMIC_BOUND` inputs in `set_input` |
-| ExecuTorch | [#24202](https://github.com/pytorch/executorch/pull/24202) | Raise `InternalError` for non-CPU constant storage in the emitter |
-| pyhgf | [#451](https://github.com/ComputationalPsychiatry/pyhgf/pull/451) | Fix the batched weight gradient of binary layers in `rshgf.DeepNetwork` |
-| pyhgf | [#450](https://github.com/ComputationalPsychiatry/pyhgf/pull/450) | Fix `add_edges` dropping value children, ignoring `coupling_fn` and mismatching coupling strengths |
-| pyhgf | [#449](https://github.com/ComputationalPsychiatry/pyhgf/pull/449) | Fix `remove_node` on nodes with several edges |
-| pyhgf | [#448](https://github.com/ComputationalPsychiatry/pyhgf/pull/448) | Use all volatility and value children in the unbounded volatility update |
-| Brian2 | [#1861](https://github.com/brian-team/brian2/pull/1861) | Skip `gc.collect()` in `Network.run()` when unused-object warnings are disabled |
-| Brian2 | [#1885](https://github.com/brian-team/brian2/pull/1885) | Developer guidelines: drop ruff-enforced rules, fix stale references |
-| Brian2 | [#1896](https://github.com/brian-team/brian2/pull/1896) | Store Cython random-number buffers by value, fixing restore after a buffer refill |
-| HSSM | [#1371](https://github.com/lnccbrown/HSSM/pull/1371) | Align `racing_diffusion_3` parameter order with ssm-simulators |
-| HSSM | [#1411](https://github.com/lnccbrown/HSSM/pull/1411) | Suggest a stable sort in the balanced-panel error message |
-| HSSM | [#1415](https://github.com/lnccbrown/HSSM/pull/1415) | Use a stable sort in `test_sorted_data_passes` |
-| python-neo | [#1891](https://github.com/NeuralEnsemble/python-neo/pull/1891) | Restore CED/Spike2 reading under sonpy ≥ 1.9.12, re-enable its tests |
-| python-neo | [#1911](https://github.com/NeuralEnsemble/python-neo/pull/1911) | CI: drop Python 3.9 from the `NeoPlexon2Test` matrix |
-| python-neo | [#1912](https://github.com/NeuralEnsemble/python-neo/pull/1912) | CI step no longer stays green when `git ls-remote` fails |
-| PyHealth | [#1179](https://github.com/sunlabuiuc/PyHealth/pull/1179) | MEDS dataset support with a typed Parquet scan path |
-| PyHealth | [#1187](https://github.com/sunlabuiuc/PyHealth/pull/1187) | PTB-XL ECG dataset support |
-| PyHealth | [#1344](https://github.com/sunlabuiuc/PyHealth/pull/1344) | Normalise URL paths with `posixpath` in `clean_path` |
-| SpikingJelly | [#692](https://github.com/fangwei123456/spikingjelly/pull/692) | Fix `LIAFNode` initialisation (closes #655) |
-| SpikingJelly | [#808](https://github.com/fangwei123456/spikingjelly/pull/808) | Fix empty intervals and boundary rounding in time-based frame splitting |
-| SpikingJelly | [#809](https://github.com/fangwei123456/spikingjelly/pull/809) | Download the SSC archives in `SpikingSpeechCommands` |
-| NeuroConv | [#1855](https://github.com/catalystneuro/neuroconv/pull/1855) | Fix an unsatisfiable Spike2 dependency marker |
-| DeepLabCut | [#3445](https://github.com/DeepLabCut/DeepLabCut/pull/3445) | pandas 3 Copy-on-Write guards across eight modules |
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/merged-dark.png">
+  <img alt="Timeline of the merge dates of the pull requests listed below, one row per project, June to October 2026." src="assets/merged-light.png" width="100%">
+</picture>
 
-Always up to date: [every merged PR outside my own repos](https://github.com/search?q=is%3Apr+author%3AAxelNoun+is%3Amerged+-user%3AAxelNoun&type=pullrequests).
+| Project | What I fixed or built | Maintainer's words |
+|---|---|---|
+| [pytorch/executorch #20685](https://github.com/pytorch/executorch/pull/20685) | Runtime MoE expert-sort for the MLX backend: two custom ops, a wire-compatible FlatBuffer field, C++ interpreter changes, a serialization fix, and a stride bug traced into Apple's MLX `matmul.cpp` | "Tested locally. Improves Qwen3.5 perf from 73 tok/sec to 80 tok/sec. Great job!" |
+| [pytorch/executorch #22372](https://github.com/pytorch/executorch/pull/22372) | Vulkan quantizer lifted integer scalars as float32 and broke integer indexing; fix + test + Buck target | merged, no changes requested |
+| [pytorch/executorch #22373](https://github.com/pytorch/executorch/pull/22373) | Four error guards that could never fire (unraised exceptions, always-true `assert`) made to actually raise; tests | merged |
+| [pytorch/executorch #23798](https://github.com/pytorch/executorch/pull/23798) | [muse-glimmer] Fix bf16 positional embedding interpolation on CPU | merged |
+| [sunlabuiuc/PyHealth #1179](https://github.com/sunlabuiuc/PyHealth/pull/1179) | MEDS (Medical Event Data Standard) dataset support: typed Parquet scan path, schema guard, tests, docs, MIMIC-IV demo (+1,526 lines) | "lgtm" |
+| [sunlabuiuc/PyHealth #1203](https://github.com/sunlabuiuc/PyHealth/pull/1203) | External review of an OMOP drug-recommendation task: found a self-leakage bug and a fixture that could not detect the regression it targeted; two hardening commits integrated | author merged my commits |
+| [sunlabuiuc/PyHealth #1187](https://github.com/sunlabuiuc/PyHealth/pull/1187) | Add PTB-XL dataset support (ECG) | merged |
+| [lnccbrown/HSSM #1371](https://github.com/lnccbrown/HSSM/pull/1371) | Parameter order permuted between HSSM and ssm-simulators: fits were fine, predictive draws silently wrong; fix + test over 21 model/likelihood pairs | "Looks good, and thanks for catching the issue." |
+| [lnccbrown/HSSM #1411](https://github.com/lnccbrown/HSSM/pull/1411) | The balanced-panel error message suggested `sort_values('participant_id')`, an unstable sort that scrambles each participant's trial order (which the RL likelihood reads) and still passes validation; stable sort suggested, docstrings, tests | "…this is a real bug and a clean fix." |
+| [lnccbrown/HSSM #1415](https://github.com/lnccbrown/HSSM/pull/1415) | Follow-up to #1411 from the maintainer's review: the test of the balanced-panel check sorted with the default (unstable) sort that #1410 warns against; it now uses `kind="stable"` | "lgtm! thanks @AxelNoun" |
+| [DeepLabCut #3445](https://github.com/DeepLabCut/DeepLabCut/pull/3445) | pandas 3 Copy-on-Write: ten in-place mutations on read-only arrays made safe across eight modules | "definitely correct and very helpful!" |
+| [brian-team/brian2 #1861](https://github.com/brian-team/brian2/pull/1861) | ~80 ms `gc.collect()` per `Network.run()` skipped when the warning it served is disabled; regression test | "This makes perfect sense to me, and everything looks good." |
+| [brian-team/brian2 #1885](https://github.com/brian-team/brian2/pull/1885) | Developer guidelines refresh (scope I proposed in #1827/#1829) | "Thanks, LGTM!" |
+| [brian-team/brian2 #1896](https://github.com/brian-team/brian2/pull/1896) | Dangling pointer diagnosed in #1893: the random state now stores the Cython random-number buffers by value instead of the address of a buffer freed on refill, so `restore()` no longer reads freed memory; older stored states handled with a warning; test | "Thanks, LGTM!" |
+| [NeuralEnsemble/python-neo #1891](https://github.com/NeuralEnsemble/python-neo/pull/1891) | `CedRawIO` broken by sonpy ≥ 1.9.12 (three import layouts by version and platform); CED tests re-enabled; test extra fixed | "Looks great. Thanks." — added to the neo 0.14.6 author list |
+| [NeuralEnsemble/python-neo #1912](https://github.com/NeuralEnsemble/python-neo/pull/1912) | CI step stayed green when `git ls-remote` failed (exit status of `echo`); `pipefail`, emptiness check, error annotation; backed by log counts | approved by two maintainers |
+| [NeuralEnsemble/python-neo #1911](https://github.com/NeuralEnsemble/python-neo/pull/1911) | Python 3.9 dropped from a matrix that had failed weekly since February | approved |
+| [catalystneuro/neuroconv #1855](https://github.com/catalystneuro/neuroconv/pull/1855) | `spike2` extra had a PEP 508 marker that could never be satisfied; platform-aware test | "This is ready to go" |
+| [fangwei123456/spikingjelly #692](https://github.com/fangwei123456/spikingjelly/pull/692) | Dead assertion on an attribute never defined in the repository's history | merged |
+| [ComputationalPsychiatry/pyhgf #448](https://github.com/ComputationalPsychiatry/pyhgf/pull/448) | Use all volatility and value children in the unbounded volatility update | merged |
 <!-- merged:end -->
 </details>
 
@@ -138,12 +123,10 @@ My own repositories say what has been validated and what hasn't. A clean negativ
 <p align="center"><a href="https://github.com/AxelNoun/kinoscope"><img src="assets/card-kinoscope-dark.svg" width="49%" alt="KinoScope: kinase-inhibitor affinity prediction under a leakage-free evaluation protocol"></a>&nbsp;<a href="https://github.com/AxelNoun/discoursekit"><img src="assets/card-discoursekit-dark.svg" width="49%" alt="discoursekit: linguistic measures for discourse research"></a></p>
 
 <!-- projects:start -->
-| Repository | What it is | Live status |
-|:--|:--|:--|
-| [**neurovis3d**](https://github.com/AxelNoun/neurovis3d) | diagnostics for spiking neural networks (snnTorch) | ![CI](https://img.shields.io/github/actions/workflow/status/AxelNoun/neurovis3d/ci-public-readiness.yml?branch=main&label=CI&style=flat-square&labelColor=161B22) ![last commit](https://img.shields.io/github/last-commit/AxelNoun/neurovis3d?label=last%20commit&style=flat-square&color=21918C&labelColor=161B22) ![stars](https://img.shields.io/github/stars/AxelNoun/neurovis3d?style=flat-square&color=35B779&labelColor=161B22) |
-| [**tpl-lab**](https://github.com/AxelNoun/tpl-lab) | pre-registered falsification test on Allen Neuropixels data | ![CI](https://img.shields.io/github/actions/workflow/status/AxelNoun/tpl-lab/tests.yml?branch=master&label=CI&style=flat-square&labelColor=161B22) ![last commit](https://img.shields.io/github/last-commit/AxelNoun/tpl-lab?label=last%20commit&style=flat-square&color=21918C&labelColor=161B22) ![stars](https://img.shields.io/github/stars/AxelNoun/tpl-lab?style=flat-square&color=35B779&labelColor=161B22) ![release](https://img.shields.io/github/v/release/AxelNoun/tpl-lab?style=flat-square&color=FDE725&labelColor=161B22) |
-| [**kinoscope**](https://github.com/AxelNoun/kinoscope) | kinase-inhibitor affinity, leakage-free evaluation | ![CI](https://img.shields.io/github/actions/workflow/status/AxelNoun/kinoscope/ci.yml?branch=main&label=CI&style=flat-square&labelColor=161B22) ![last commit](https://img.shields.io/github/last-commit/AxelNoun/kinoscope?label=last%20commit&style=flat-square&color=21918C&labelColor=161B22) ![stars](https://img.shields.io/github/stars/AxelNoun/kinoscope?style=flat-square&color=35B779&labelColor=161B22) |
-| [**discoursekit**](https://github.com/AxelNoun/discoursekit) | linguistic measures for discourse research | ![CI](https://img.shields.io/github/actions/workflow/status/AxelNoun/discoursekit/tests.yml?branch=main&label=CI&style=flat-square&labelColor=161B22) ![last commit](https://img.shields.io/github/last-commit/AxelNoun/discoursekit?label=last%20commit&style=flat-square&color=21918C&labelColor=161B22) ![stars](https://img.shields.io/github/stars/AxelNoun/discoursekit?style=flat-square&color=35B779&labelColor=161B22) |
+- [discoursekit](https://github.com/AxelNoun/discoursekit) — linguistic measures for discourse research; UAX #29 tokenizer that passes the official conformance test, MATTR, embedding-based coherence, permutation-test segmentation. 344 tests, `ruff` and `mypy` clean, doctests run as tests.
+- [kinoscope](https://github.com/AxelNoun/kinoscope) — kinase–inhibitor affinity prediction under a leakage-free, four-regime evaluation protocol (random, cold-drug, cold-target, temporal) with an automated leakage audit in CI and Hypothesis property tests. No model trained yet; the README says so.
+- [tpl-lab](https://github.com/AxelNoun/tpl-lab) — a pre-registered falsification test of a geometric conjecture on Allen Neuropixels recordings; decision rule frozen before the data; 12/12 refuted. Latest release: [v0.1.0](https://github.com/AxelNoun/tpl-lab/releases/tag/v0.1.0).
+- [neurovis3d](https://github.com/AxelNoun/neurovis3d) — diagnostics for spiking neural networks (snnTorch): dead-neuron ratio, sparsity, temporal gradient signature. Work in progress; indicators not yet validated against analytical ground truth.
 <!-- projects:end -->
 
 <p align="center"><img src="assets/axon-dark.svg" width="100%" alt=""></p>
