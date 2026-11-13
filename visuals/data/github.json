@@ -172,7 +172,7 @@
    "number": 1914,
    "title": "Re-enable Spike2 real-data tests on platforms with sonpy wheels",
    "state": "OPEN",
-   "draft": true,
+   "draft": false,
    "merged": null,
    "review": "REVIEW_REQUIRED",
    "by_author": true
