@@ -54,18 +54,7 @@ I'm self-taught: oncology, then bioinformatics, then AI for proteins, and now ne
 <!-- live:end -->
 
 <!-- open:start -->
-**In review right now (16):**
-
-- [ssm-simulators #430](https://github.com/lnccbrown/ssm-simulators/pull/430) Write uniform mixture rows in the one-hot layout when separate_response_channels=True
-- [ssm-simulators #431](https://github.com/lnccbrown/ssm-simulators/pull/431) Fix the sign in the angle and conflict_gamma boundary docstrings
-- [NIR #204](https://github.com/neuromorphs/NIR/pull/204) fix: Account for groups in Conv1d and Conv2d input channels
-- [neuroconv #1914](https://github.com/catalystneuro/neuroconv/pull/1914) Re-enable Spike2 real-data tests on platforms with sonpy wheels
-- [HSSM #1450](https://github.com/lnccbrown/HSSM/pull/1450) fix(utils): find missing-RT rows by the rt column in _rearrange_data
-- [HSSM #1448](https://github.com/lnccbrown/HSSM/pull/1448) fix(utils): index log-likelihood draws by position, not coordinate value
-- [HSSM #1455](https://github.com/lnccbrown/HSSM/pull/1455) fix(hssm): reorder fixed-vector parameters with the rows _rearrange_data moves
-- [HSSM #1454](https://github.com/lnccbrown/HSSM/pull/1454) fix(rldm): give the angle LAN -1/1 choices for 0/1 responses
-
-[… and 8 more](https://github.com/search?q=is%3Apr+author%3AAxelNoun+is%3Aopen+-user%3AAxelNoun&type=pullrequests)
+Open and under review: [brian2 #1891](https://github.com/brian-team/brian2/pull/1891) (Cython Binomial sampler wrong for p > 0.5 and non-terminating on underflow), [HSSM #1414](https://github.com/lnccbrown/HSSM/pull/1414) (approved), [huggingface/course #1328](https://github.com/huggingface/course/pull/1328), [neuroconv #1914](https://github.com/catalystneuro/neuroconv/pull/1914), [PyHealth #1202](https://github.com/sunlabuiuc/PyHealth/pull/1202) (knowledge-graph embeddings on the 2.0 pipeline, negatives drawn from training triples only), [PyHealth #1207](https://github.com/sunlabuiuc/PyHealth/pull/1207) (deterministic, collision-free task cache keys), [python-neo #1913](https://github.com/NeuralEnsemble/python-neo/pull/1913).
 <!-- open:end -->
 
 ### Where my code is merged
