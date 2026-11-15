@@ -174,7 +174,7 @@
    "state": "OPEN",
    "draft": false,
    "merged": null,
-   "review": "REVIEW_REQUIRED",
+   "review": "APPROVED",
    "by_author": true
   },
   {
