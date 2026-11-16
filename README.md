@@ -50,11 +50,22 @@ I'm self-taught: oncology, then bioinformatics, then AI for proteins, and now ne
 - `2026-11-10` **[SpikeInterface/spikeinterface #4921](https://github.com/SpikeInterface/spikeinterface/pull/4921)**: Fix `select_periods` dropping metadata, recording, times and empty segments
 - `2026-11-10` **[SpikeInterface/spikeinterface #4923](https://github.com/SpikeInterface/spikeinterface/pull/4923)**: Fix binary save when only some segments have a time vector
 
-<sub>Refreshed daily by GitHub Actions · last run 2026-11-15</sub>
+<sub>Refreshed daily by GitHub Actions · last run 2026-11-16</sub>
 <!-- live:end -->
 
 <!-- open:start -->
-Open and under review: [brian2 #1891](https://github.com/brian-team/brian2/pull/1891) (Cython Binomial sampler wrong for p > 0.5 and non-terminating on underflow), [HSSM #1414](https://github.com/lnccbrown/HSSM/pull/1414) (approved), [huggingface/course #1328](https://github.com/huggingface/course/pull/1328), [neuroconv #1914](https://github.com/catalystneuro/neuroconv/pull/1914) (approved), [PyHealth #1202](https://github.com/sunlabuiuc/PyHealth/pull/1202) (knowledge-graph embeddings on the 2.0 pipeline, negatives drawn from training triples only), [PyHealth #1207](https://github.com/sunlabuiuc/PyHealth/pull/1207) (deterministic, collision-free task cache keys), [python-neo #1913](https://github.com/NeuralEnsemble/python-neo/pull/1913).
+**In review right now (28):**
+
+- [PyHealth #1202](https://github.com/sunlabuiuc/PyHealth/pull/1202) fix(kg_emb): port kg_emb to the 2.0 dataset pipeline
+- [PyHealth #1207](https://github.com/sunlabuiuc/PyHealth/pull/1207) fix(cache): make task fingerprints deterministic and collision-free
+- [PyHealth #1470](https://github.com/sunlabuiuc/PyHealth/pull/1470) Key the TUAB/TUEV metadata home cache by root
+- [PyHealth #1472](https://github.com/sunlabuiuc/PyHealth/pull/1472) Fix SleepStagingSleepEDF on nights without every stage; harden SleepEDFDataset metadata
+- [PyHealth #1474](https://github.com/sunlabuiuc/PyHealth/pull/1474) Log skipped TUH recordings and accept float rates in EEGAbnormalTUAB
+- [PyHealth #1476](https://github.com/sunlabuiuc/PyHealth/pull/1476) Add EEGNet (Lawhern et al., 2018) for EEG signal classification
+- [executorch #25077](https://github.com/pytorch/executorch/pull/25077) portable: return early from amax/amin on an empty input
+- [executorch #25081](https://github.com/pytorch/executorch/pull/25081) Do not elide views of control flow submodule inputs
+
+[… and 20 more](https://github.com/search?q=is%3Apr+author%3AAxelNoun+is%3Aopen+-user%3AAxelNoun&type=pullrequests)
 <!-- open:end -->
 
 ### Where my code is merged
