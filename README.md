@@ -44,17 +44,28 @@ I'm self-taught: oncology, then bioinformatics, then AI for proteins, and now ne
 #### Latest merges <sub>· live</sub>
 
 <!-- live:start -->
+- `2026-11-17` **[pytorch/executorch #25079](https://github.com/pytorch/executorch/pull/25079)**: \[XNNPACK\] Define a statically quantized bias once per consumer
 - `2026-11-17` **[pytorch/executorch #25078](https://github.com/pytorch/executorch/pull/25078)**: \[XNNPACK\] Run softmax in NCHW
 - `2026-11-16` **[catalystneuro/neuroconv #1914](https://github.com/catalystneuro/neuroconv/pull/1914)**: Re-enable Spike2 real-data tests on platforms with sonpy wheels
 - `2026-11-16` **[sunlabuiuc/PyHealth #1470](https://github.com/sunlabuiuc/PyHealth/pull/1470)**: Key the TUAB/TUEV metadata home cache by root
 - `2026-11-16` **[sunlabuiuc/PyHealth #1472](https://github.com/sunlabuiuc/PyHealth/pull/1472)**: Fix SleepStagingSleepEDF on nights without every stage; harden SleepEDFDataset metadata
-- `2026-11-13` **[neuromorphs/NIR #201](https://github.com/neuromorphs/NIR/pull/201)**: fix: Use full kernel shape in Conv2d output shape inference
 
 <sub>Refreshed daily by GitHub Actions · last run 2026-11-17</sub>
 <!-- live:end -->
 
 <!-- open:start -->
-Open and under review: [brian2 #1891](https://github.com/brian-team/brian2/pull/1891) (Cython Binomial sampler wrong for p > 0.5 and non-terminating on underflow), [HSSM #1414](https://github.com/lnccbrown/HSSM/pull/1414) (approved), [huggingface/course #1328](https://github.com/huggingface/course/pull/1328), [PyHealth #1202](https://github.com/sunlabuiuc/PyHealth/pull/1202) (knowledge-graph embeddings on the 2.0 pipeline, negatives drawn from training triples only), [PyHealth #1207](https://github.com/sunlabuiuc/PyHealth/pull/1207) (deterministic, collision-free task cache keys), [python-neo #1913](https://github.com/NeuralEnsemble/python-neo/pull/1913).
+**In review right now (31):**
+
+- [PyHealth #1520](https://github.com/sunlabuiuc/PyHealth/pull/1520) Add the HUP iEEG epilepsy dataset and SOZLocalizationHUP
+- [executorch #25077](https://github.com/pytorch/executorch/pull/25077) portable: return early from amax/amin on an empty input
+- [executorch #25080](https://github.com/pytorch/executorch/pull/25080) \[XNNPACK\] Do not delegate bilinear upsampling with a fractional scale factor
+- [PCNtoolkit #645](https://github.com/predictive-clinical-neuroscience/PCNtoolkit/pull/645) fix: account for offset uncertainty in BLR.transfer
+- [executorch #25076](https://github.com/pytorch/executorch/pull/25076) Use Python's sign convention in executorch_prim::mod
+- [PyHealth #1474](https://github.com/sunlabuiuc/PyHealth/pull/1474) Log skipped TUH recordings and accept float rates in EEGAbnormalTUAB
+- [PyHealth #1476](https://github.com/sunlabuiuc/PyHealth/pull/1476) Add EEGNet (Lawhern et al., 2018) for EEG signal classification
+- [executorch #25081](https://github.com/pytorch/executorch/pull/25081) Do not elide views of control flow submodule inputs
+
+[… and 23 more](https://github.com/search?q=is%3Apr+author%3AAxelNoun+is%3Aopen+-user%3AAxelNoun&type=pullrequests)
 <!-- open:end -->
 
 ### Where my code is merged
