@@ -44,17 +44,28 @@ I'm self-taught: oncology, then bioinformatics, then AI for proteins, and now ne
 #### Latest merges <sub>· live</sub>
 
 <!-- live:start -->
+- `2026-11-17` **[pytorch/executorch #25078](https://github.com/pytorch/executorch/pull/25078)**: \[XNNPACK\] Run softmax in NCHW
+- `2026-11-16` **[catalystneuro/neuroconv #1914](https://github.com/catalystneuro/neuroconv/pull/1914)**: Re-enable Spike2 real-data tests on platforms with sonpy wheels
 - `2026-11-16` **[sunlabuiuc/PyHealth #1470](https://github.com/sunlabuiuc/PyHealth/pull/1470)**: Key the TUAB/TUEV metadata home cache by root
 - `2026-11-16` **[sunlabuiuc/PyHealth #1472](https://github.com/sunlabuiuc/PyHealth/pull/1472)**: Fix SleepStagingSleepEDF on nights without every stage; harden SleepEDFDataset metadata
 - `2026-11-13` **[neuromorphs/NIR #201](https://github.com/neuromorphs/NIR/pull/201)**: fix: Use full kernel shape in Conv2d output shape inference
-- `2026-11-12` **[brian-team/brian2 #1928](https://github.com/brian-team/brian2/pull/1928)**: Fix `linspace` and `where` dropping units when a plain `0` is combined with a quantity
-- `2026-11-10` **[predictive-clinical-neuroscience/PCNtoolkit #623](https://github.com/predictive-clinical-neuroscience/PCNtoolkit/pull/623)**: fix: score compare_hbr_models on the fit data
 
-<sub>Refreshed daily by GitHub Actions · last run 2026-11-16</sub>
+<sub>Refreshed daily by GitHub Actions · last run 2026-11-17</sub>
 <!-- live:end -->
 
 <!-- open:start -->
-Open and under review: [brian2 #1891](https://github.com/brian-team/brian2/pull/1891) (Cython Binomial sampler wrong for p > 0.5 and non-terminating on underflow), [HSSM #1414](https://github.com/lnccbrown/HSSM/pull/1414) (approved), [huggingface/course #1328](https://github.com/huggingface/course/pull/1328), [PyHealth #1202](https://github.com/sunlabuiuc/PyHealth/pull/1202) (knowledge-graph embeddings on the 2.0 pipeline, negatives drawn from training triples only), [PyHealth #1207](https://github.com/sunlabuiuc/PyHealth/pull/1207) (deterministic, collision-free task cache keys), [python-neo #1913](https://github.com/NeuralEnsemble/python-neo/pull/1913).
+**In review right now (32):**
+
+- [executorch #25081](https://github.com/pytorch/executorch/pull/25081) Do not elide views of control flow submodule inputs
+- [PyHealth #1512](https://github.com/sunlabuiuc/PyHealth/pull/1512) Add the AHEPA dementia EEG dataset and DementiaClassificationAHEPA
+- [executorch #25076](https://github.com/pytorch/executorch/pull/25076) Use Python's sign convention in executorch_prim::mod
+- [executorch #25079](https://github.com/pytorch/executorch/pull/25079) \[XNNPACK\] Define a statically quantized bias once per consumer
+- [executorch #25080](https://github.com/pytorch/executorch/pull/25080) \[XNNPACK\] Do not delegate bilinear upsampling with a fractional scale factor
+- [executorch #25077](https://github.com/pytorch/executorch/pull/25077) portable: return early from amax/amin on an empty input
+- [PyHealth #1207](https://github.com/sunlabuiuc/PyHealth/pull/1207) fix(cache): make task fingerprints deterministic and collision-free
+- [PyHealth #1509](https://github.com/sunlabuiuc/PyHealth/pull/1509) Add the Helsinki neonatal EEG dataset and SeizureDetectionHelsinki
+
+[… and 24 more](https://github.com/search?q=is%3Apr+author%3AAxelNoun+is%3Aopen+-user%3AAxelNoun&type=pullrequests)
 <!-- open:end -->
 
 ### Where my code is merged
