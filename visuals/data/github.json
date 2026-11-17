@@ -171,9 +171,9 @@
    "repo": "catalystneuro/neuroconv",
    "number": 1914,
    "title": "Re-enable Spike2 real-data tests on platforms with sonpy wheels",
-   "state": "OPEN",
+   "state": "MERGED",
    "draft": false,
-   "merged": null,
+   "merged": "2026-11-16",
    "review": "APPROVED",
    "by_author": true
   },

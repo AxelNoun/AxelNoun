@@ -54,18 +54,7 @@ I'm self-taught: oncology, then bioinformatics, then AI for proteins, and now ne
 <!-- live:end -->
 
 <!-- open:start -->
-**In review right now (26):**
-
-- [PyHealth #1474](https://github.com/sunlabuiuc/PyHealth/pull/1474) Log skipped TUH recordings and accept float rates in EEGAbnormalTUAB
-- [PyHealth #1476](https://github.com/sunlabuiuc/PyHealth/pull/1476) Add EEGNet (Lawhern et al., 2018) for EEG signal classification
-- [PCNtoolkit #642](https://github.com/predictive-clinical-neuroscience/PCNtoolkit/pull/642) fix: skip migration warning for installed version
-- [PyHealth #1202](https://github.com/sunlabuiuc/PyHealth/pull/1202) fix(kg_emb): port kg_emb to the 2.0 dataset pipeline
-- [PyHealth #1207](https://github.com/sunlabuiuc/PyHealth/pull/1207) fix(cache): make task fingerprints deterministic and collision-free
-- [executorch #25077](https://github.com/pytorch/executorch/pull/25077) portable: return early from amax/amin on an empty input
-- [executorch #25081](https://github.com/pytorch/executorch/pull/25081) Do not elide views of control flow submodule inputs
-- [executorch #25076](https://github.com/pytorch/executorch/pull/25076) Use Python's sign convention in executorch_prim::mod
-
-[… and 18 more](https://github.com/search?q=is%3Apr+author%3AAxelNoun+is%3Aopen+-user%3AAxelNoun&type=pullrequests)
+Open and under review: [brian2 #1891](https://github.com/brian-team/brian2/pull/1891) (Cython Binomial sampler wrong for p > 0.5 and non-terminating on underflow), [HSSM #1414](https://github.com/lnccbrown/HSSM/pull/1414) (approved), [huggingface/course #1328](https://github.com/huggingface/course/pull/1328), [PyHealth #1202](https://github.com/sunlabuiuc/PyHealth/pull/1202) (knowledge-graph embeddings on the 2.0 pipeline, negatives drawn from training triples only), [PyHealth #1207](https://github.com/sunlabuiuc/PyHealth/pull/1207) (deterministic, collision-free task cache keys), [python-neo #1913](https://github.com/NeuralEnsemble/python-neo/pull/1913).
 <!-- open:end -->
 
 ### Where my code is merged
@@ -89,7 +78,7 @@ I'm self-taught: oncology, then bioinformatics, then AI for proteins, and now ne
 <!-- merged:start -->
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/merged-dark.png">
-  <img alt="Timeline of the merge dates of the pull requests listed below, one row per project, June to October 2026." src="assets/merged-light.png" width="100%">
+  <img alt="Timeline of the merge dates of the pull requests listed below, one row per project, June to November 2026." src="assets/merged-light.png" width="100%">
 </picture>
 
 | Project | What I fixed or built | Maintainer's words |
@@ -112,6 +101,7 @@ I'm self-taught: oncology, then bioinformatics, then AI for proteins, and now ne
 | [NeuralEnsemble/python-neo #1912](https://github.com/NeuralEnsemble/python-neo/pull/1912) | CI step stayed green when `git ls-remote` failed (exit status of `echo`); `pipefail`, emptiness check, error annotation; backed by log counts | approved by two maintainers |
 | [NeuralEnsemble/python-neo #1911](https://github.com/NeuralEnsemble/python-neo/pull/1911) | Python 3.9 dropped from a matrix that had failed weekly since February | approved |
 | [catalystneuro/neuroconv #1855](https://github.com/catalystneuro/neuroconv/pull/1855) | `spike2` extra had a PEP 508 marker that could never be satisfied; platform-aware test | "This is ready to go" |
+| [catalystneuro/neuroconv #1914](https://github.com/catalystneuro/neuroconv/pull/1914) | Re-enable Spike2 real-data tests on platforms with sonpy wheels | merged |
 | [fangwei123456/spikingjelly #692](https://github.com/fangwei123456/spikingjelly/pull/692) | Dead assertion on an attribute never defined in the repository's history | merged |
 | [ComputationalPsychiatry/pyhgf #448](https://github.com/ComputationalPsychiatry/pyhgf/pull/448) | Use all volatility and value children in the unbounded volatility update | merged |
 <!-- merged:end -->
