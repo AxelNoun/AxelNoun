@@ -54,7 +54,18 @@ I'm self-taught: oncology, then bioinformatics, then AI for proteins, and now ne
 <!-- live:end -->
 
 <!-- open:start -->
-Open and under review: [brian2 #1891](https://github.com/brian-team/brian2/pull/1891) (Cython Binomial sampler wrong for p > 0.5 and non-terminating on underflow), [HSSM #1414](https://github.com/lnccbrown/HSSM/pull/1414) (approved), [huggingface/course #1328](https://github.com/huggingface/course/pull/1328), [PyHealth #1202](https://github.com/sunlabuiuc/PyHealth/pull/1202) (knowledge-graph embeddings on the 2.0 pipeline, negatives drawn from training triples only), [PyHealth #1207](https://github.com/sunlabuiuc/PyHealth/pull/1207) (deterministic, collision-free task cache keys), [python-neo #1913](https://github.com/NeuralEnsemble/python-neo/pull/1913).
+**In review right now (31):**
+
+- [PyHealth #1509](https://github.com/sunlabuiuc/PyHealth/pull/1509) Add the Helsinki neonatal EEG dataset and SeizureDetectionHelsinki
+- [PyHealth #1512](https://github.com/sunlabuiuc/PyHealth/pull/1512) Add the AHEPA dementia EEG dataset and DementiaClassificationAHEPA
+- [PyHealth #1505](https://github.com/sunlabuiuc/PyHealth/pull/1505) Add the HMC sleep staging database and SleepStagingHMC
+- [PyHealth #1520](https://github.com/sunlabuiuc/PyHealth/pull/1520) Add the HUP iEEG epilepsy dataset and SOZLocalizationHUP
+- [executorch #25077](https://github.com/pytorch/executorch/pull/25077) portable: return early from amax/amin on an empty input
+- [executorch #25080](https://github.com/pytorch/executorch/pull/25080) \[XNNPACK\] Do not delegate bilinear upsampling with a fractional scale factor
+- [PCNtoolkit #645](https://github.com/predictive-clinical-neuroscience/PCNtoolkit/pull/645) fix: account for offset uncertainty in BLR.transfer
+- [executorch #25076](https://github.com/pytorch/executorch/pull/25076) Use Python's sign convention in executorch_prim::mod
+
+[… and 23 more](https://github.com/search?q=is%3Apr+author%3AAxelNoun+is%3Aopen+-user%3AAxelNoun&type=pullrequests)
 <!-- open:end -->
 
 ### Where my code is merged
