@@ -54,18 +54,7 @@ I'm self-taught: oncology, then bioinformatics, then AI for proteins, and now ne
 <!-- live:end -->
 
 <!-- open:start -->
-**In review right now (28):**
-
-- [flashinfer #9733](https://github.com/flashinfer-ai/flashinfer/pull/9733) perf(sampling): read fp16/bf16 logits without a float32 copy in sampling_from_logits
-- [executorch #25317](https://github.com/pytorch/executorch/pull/25317) Test the floordiv.int and mod.int division identity in prim ops
-- [PyHealth #1505](https://github.com/sunlabuiuc/PyHealth/pull/1505) Add the HMC sleep staging database and SleepStagingHMC
-- [PyHealth #1512](https://github.com/sunlabuiuc/PyHealth/pull/1512) Add the AHEPA dementia EEG dataset and DementiaClassificationAHEPA
-- [PyHealth #1476](https://github.com/sunlabuiuc/PyHealth/pull/1476) Add EEGNet (Lawhern et al., 2018) for EEG signal classification
-- [PyHealth #1474](https://github.com/sunlabuiuc/PyHealth/pull/1474) Log skipped TUH recordings and accept float rates in EEGAbnormalTUAB
-- [PyHealth #1207](https://github.com/sunlabuiuc/PyHealth/pull/1207) fix(cache): make task fingerprints deterministic and collision-free
-- [python-neo #1913](https://github.com/NeuralEnsemble/python-neo/pull/1913) Apply the sonpy platform marker to the ced and all extras
-
-[… and 20 more](https://github.com/search?q=is%3Apr+author%3AAxelNoun+is%3Aopen+-user%3AAxelNoun&type=pullrequests)
+Open and under review: [brian2 #1891](https://github.com/brian-team/brian2/pull/1891) (Cython Binomial sampler wrong for p > 0.5 and non-terminating on underflow), [HSSM #1414](https://github.com/lnccbrown/HSSM/pull/1414) (approved), [huggingface/course #1328](https://github.com/huggingface/course/pull/1328), [PyHealth #1202](https://github.com/sunlabuiuc/PyHealth/pull/1202) (knowledge-graph embeddings on the 2.0 pipeline, negatives drawn from training triples only), [PyHealth #1207](https://github.com/sunlabuiuc/PyHealth/pull/1207) (deterministic, collision-free task cache keys), [python-neo #1913](https://github.com/NeuralEnsemble/python-neo/pull/1913) (approved).
 <!-- open:end -->
 
 ### Where my code is merged

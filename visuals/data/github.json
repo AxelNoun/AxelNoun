@@ -75,7 +75,7 @@
    "state": "OPEN",
    "draft": false,
    "merged": null,
-   "review": null,
+   "review": "APPROVED",
    "by_author": true
   },
   {
