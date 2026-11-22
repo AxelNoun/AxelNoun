@@ -44,17 +44,17 @@ I'm self-taught: oncology, then bioinformatics, then AI for proteins, and now ne
 #### Latest merges <sub>· live</sub>
 
 <!-- live:start -->
+- `2026-11-21` **[sunlabuiuc/PyHealth #1474](https://github.com/sunlabuiuc/PyHealth/pull/1474)**: Log skipped TUH recordings and accept float rates in EEGAbnormalTUAB
+- `2026-11-21` **[sunlabuiuc/PyHealth #1476](https://github.com/sunlabuiuc/PyHealth/pull/1476)**: Add EEGNet (Lawhern et al., 2018) for EEG signal classification
+- `2026-11-21` **[sunlabuiuc/PyHealth #1512](https://github.com/sunlabuiuc/PyHealth/pull/1512)**: Add the AHEPA dementia EEG dataset and DementiaClassificationAHEPA
 - `2026-11-20` **[pytorch/executorch #25317](https://github.com/pytorch/executorch/pull/25317)**: Test the floordiv.int and mod.int division identity in prim ops
 - `2026-11-19` **[pytorch/executorch #25213](https://github.com/pytorch/executorch/pull/25213)**: Use Python's rounding in executorch_prim::floordiv.int
-- `2026-11-19` **[braindecode/braindecode #1655](https://github.com/braindecode/braindecode/pull/1655)**: FIX TUH: add_physician_reports no longer reads the _date.txt side file as the report
-- `2026-11-19` **[braindecode/braindecode #1686](https://github.com/braindecode/braindecode/pull/1686)**: FIX FilterBankLayer: apply minimum-phase FIR filters causally
-- `2026-11-19` **[predictive-clinical-neuroscience/PCNtoolkit #645](https://github.com/predictive-clinical-neuroscience/PCNtoolkit/pull/645)**: fix: account for offset uncertainty in BLR.transfer
 
-<sub>Refreshed daily by GitHub Actions · last run 2026-11-21</sub>
+<sub>Refreshed daily by GitHub Actions · last run 2026-11-22</sub>
 <!-- live:end -->
 
 <!-- open:start -->
-**In review right now (33):**
+**In review right now (30):**
 
 - [genn #773](https://github.com/genn-team/genn/pull/773) Add feature tests for additional input variables and derived parameters
 - [braindecode #1763](https://github.com/braindecode/braindecode/pull/1763) FIX create_fixed_length_windows: explicit error when the window exceeds the offset interval
@@ -62,10 +62,10 @@ I'm self-taught: oncology, then bioinformatics, then AI for proteins, and now ne
 - [spikingjelly #832](https://github.com/fangwei123456/spikingjelly/pull/832) fix(op_counter): cover ATen ops missing from FLOP and memory-access rules
 - [spikingjelly #833](https://github.com/fangwei123456/spikingjelly/pull/833) fix(op_counter): fix rules that crash or miscount in the FLOP, memory and AC counters
 - [PyHealth #1505](https://github.com/sunlabuiuc/PyHealth/pull/1505) Add the HMC sleep staging database and SleepStagingHMC
-- [PyHealth #1512](https://github.com/sunlabuiuc/PyHealth/pull/1512) Add the AHEPA dementia EEG dataset and DementiaClassificationAHEPA
-- [PyHealth #1476](https://github.com/sunlabuiuc/PyHealth/pull/1476) Add EEGNet (Lawhern et al., 2018) for EEG signal classification
+- [HSSM #1502](https://github.com/lnccbrown/HSSM/pull/1502) fix(utils): evaluate constrained responses in log_likelihood
+- [HSSM #1503](https://github.com/lnccbrown/HSSM/pull/1503) fix(dist): simulate fixed-vector parameters with their values
 
-[… and 25 more](https://github.com/search?q=is%3Apr+author%3AAxelNoun+is%3Aopen+-user%3AAxelNoun&type=pullrequests)
+[… and 22 more](https://github.com/search?q=is%3Apr+author%3AAxelNoun+is%3Aopen+-user%3AAxelNoun&type=pullrequests)
 <!-- open:end -->
 
 ### Where my code is merged
