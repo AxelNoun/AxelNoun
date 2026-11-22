@@ -54,18 +54,7 @@ I'm self-taught: oncology, then bioinformatics, then AI for proteins, and now ne
 <!-- live:end -->
 
 <!-- open:start -->
-**In review right now (29):**
-
-- [HSSM #1455](https://github.com/lnccbrown/HSSM/pull/1455) fix(hssm): reorder fixed-vector parameters with the rows _rearrange_data moves
-- [HSSM #1454](https://github.com/lnccbrown/HSSM/pull/1454) fix(rldm): give the angle LAN -1/1 choices for 0/1 responses
-- [genn #775](https://github.com/genn-team/genn/pull/775) Name missing and unexpected parameters and variables in validation errors
-- [genn #774](https://github.com/genn-team/genn/pull/774) PyGeNN: clearer errors for EGP shapes, sparse variable assignment and access before load
-- [genn #773](https://github.com/genn-team/genn/pull/773) Add feature tests for additional input variables and derived parameters
-- [spikingjelly #832](https://github.com/fangwei123456/spikingjelly/pull/832) fix(op_counter): cover ATen ops missing from FLOP and memory-access rules
-- [PyHealth #1505](https://github.com/sunlabuiuc/PyHealth/pull/1505) Add the HMC sleep staging database and SleepStagingHMC
-- [HSSM #1502](https://github.com/lnccbrown/HSSM/pull/1502) fix(utils): evaluate constrained responses in log_likelihood
-
-[… and 21 more](https://github.com/search?q=is%3Apr+author%3AAxelNoun+is%3Aopen+-user%3AAxelNoun&type=pullrequests)
+Open and under review: [brian2 #1891](https://github.com/brian-team/brian2/pull/1891) (Cython Binomial sampler wrong for p > 0.5 and non-terminating on underflow), [HSSM #1414](https://github.com/lnccbrown/HSSM/pull/1414) (approved), [huggingface/course #1328](https://github.com/huggingface/course/pull/1328), [PyHealth #1202](https://github.com/sunlabuiuc/PyHealth/pull/1202) (knowledge-graph embeddings on the 2.0 pipeline, negatives drawn from training triples only), [PyHealth #1207](https://github.com/sunlabuiuc/PyHealth/pull/1207) (deterministic, collision-free task cache keys), [python-neo #1913](https://github.com/NeuralEnsemble/python-neo/pull/1913) (approved).
 <!-- open:end -->
 
 ### Where my code is merged
