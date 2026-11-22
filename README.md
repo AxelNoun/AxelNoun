@@ -44,17 +44,28 @@ I'm self-taught: oncology, then bioinformatics, then AI for proteins, and now ne
 #### Latest merges <sub>· live</sub>
 
 <!-- live:start -->
+- `2026-11-22` **[fangwei123456/spikingjelly #833](https://github.com/fangwei123456/spikingjelly/pull/833)**: fix(op_counter): fix rules that crash or miscount in the FLOP, memory and AC counters
+- `2026-11-22` **[braindecode/braindecode #1763](https://github.com/braindecode/braindecode/pull/1763)**: FIX create_fixed_length_windows: explicit error when the window exceeds the offset interval
+- `2026-11-22` **[braindecode/braindecode #1762](https://github.com/braindecode/braindecode/pull/1762)**: FIX BaseConcatDataset.split: raise when the split column has missing values
 - `2026-11-21` **[sunlabuiuc/PyHealth #1474](https://github.com/sunlabuiuc/PyHealth/pull/1474)**: Log skipped TUH recordings and accept float rates in EEGAbnormalTUAB
 - `2026-11-21` **[sunlabuiuc/PyHealth #1476](https://github.com/sunlabuiuc/PyHealth/pull/1476)**: Add EEGNet (Lawhern et al., 2018) for EEG signal classification
-- `2026-11-21` **[sunlabuiuc/PyHealth #1512](https://github.com/sunlabuiuc/PyHealth/pull/1512)**: Add the AHEPA dementia EEG dataset and DementiaClassificationAHEPA
-- `2026-11-20` **[pytorch/executorch #25317](https://github.com/pytorch/executorch/pull/25317)**: Test the floordiv.int and mod.int division identity in prim ops
-- `2026-11-19` **[pytorch/executorch #25213](https://github.com/pytorch/executorch/pull/25213)**: Use Python's rounding in executorch_prim::floordiv.int
 
 <sub>Refreshed daily by GitHub Actions · last run 2026-11-22</sub>
 <!-- live:end -->
 
 <!-- open:start -->
-Open and under review: [brian2 #1891](https://github.com/brian-team/brian2/pull/1891) (Cython Binomial sampler wrong for p > 0.5 and non-terminating on underflow), [HSSM #1414](https://github.com/lnccbrown/HSSM/pull/1414) (approved), [huggingface/course #1328](https://github.com/huggingface/course/pull/1328), [PyHealth #1202](https://github.com/sunlabuiuc/PyHealth/pull/1202) (knowledge-graph embeddings on the 2.0 pipeline, negatives drawn from training triples only), [PyHealth #1207](https://github.com/sunlabuiuc/PyHealth/pull/1207) (deterministic, collision-free task cache keys), [python-neo #1913](https://github.com/NeuralEnsemble/python-neo/pull/1913) (approved).
+**In review right now (29):**
+
+- [genn #775](https://github.com/genn-team/genn/pull/775) Name missing and unexpected parameters and variables in validation errors
+- [genn #774](https://github.com/genn-team/genn/pull/774) PyGeNN: clearer errors for EGP shapes, sparse variable assignment and access before load
+- [genn #773](https://github.com/genn-team/genn/pull/773) Add feature tests for additional input variables and derived parameters
+- [spikingjelly #832](https://github.com/fangwei123456/spikingjelly/pull/832) fix(op_counter): cover ATen ops missing from FLOP and memory-access rules
+- [PyHealth #1505](https://github.com/sunlabuiuc/PyHealth/pull/1505) Add the HMC sleep staging database and SleepStagingHMC
+- [HSSM #1502](https://github.com/lnccbrown/HSSM/pull/1502) fix(utils): evaluate constrained responses in log_likelihood
+- [HSSM #1503](https://github.com/lnccbrown/HSSM/pull/1503) fix(dist): simulate fixed-vector parameters with their values
+- [ssm-simulators #430](https://github.com/lnccbrown/ssm-simulators/pull/430) Write uniform mixture rows in the one-hot layout when separate_response_channels=True
+
+[… and 21 more](https://github.com/search?q=is%3Apr+author%3AAxelNoun+is%3Aopen+-user%3AAxelNoun&type=pullrequests)
 <!-- open:end -->
 
 ### Where my code is merged
