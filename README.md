@@ -44,17 +44,28 @@ I'm self-taught: oncology, then bioinformatics, then AI for proteins, and now ne
 #### Latest merges <sub>· live</sub>
 
 <!-- live:start -->
+- `2026-11-24` **[genn-team/genn #778](https://github.com/genn-team/genn/pull/778)**: Fix FFI type of Int64
 - `2026-11-23` **[fangwei123456/spikingjelly #832](https://github.com/fangwei123456/spikingjelly/pull/832)**: fix(op_counter): cover ATen ops missing from FLOP and memory-access rules
 - `2026-11-22` **[fangwei123456/spikingjelly #833](https://github.com/fangwei123456/spikingjelly/pull/833)**: fix(op_counter): fix rules that crash or miscount in the FLOP, memory and AC counters
 - `2026-11-22` **[braindecode/braindecode #1763](https://github.com/braindecode/braindecode/pull/1763)**: FIX create_fixed_length_windows: explicit error when the window exceeds the offset interval
 - `2026-11-22` **[braindecode/braindecode #1762](https://github.com/braindecode/braindecode/pull/1762)**: FIX BaseConcatDataset.split: raise when the split column has missing values
-- `2026-11-21` **[sunlabuiuc/PyHealth #1474](https://github.com/sunlabuiuc/PyHealth/pull/1474)**: Log skipped TUH recordings and accept float rates in EEGAbnormalTUAB
 
 <sub>Refreshed daily by GitHub Actions · last run 2026-11-24</sub>
 <!-- live:end -->
 
 <!-- open:start -->
-Open and under review: [brian2 #1891](https://github.com/brian-team/brian2/pull/1891) (Cython Binomial sampler wrong for p > 0.5 and non-terminating on underflow), [HSSM #1414](https://github.com/lnccbrown/HSSM/pull/1414) (approved), [huggingface/course #1328](https://github.com/huggingface/course/pull/1328), [PyHealth #1202](https://github.com/sunlabuiuc/PyHealth/pull/1202) (knowledge-graph embeddings on the 2.0 pipeline, negatives drawn from training triples only), [PyHealth #1207](https://github.com/sunlabuiuc/PyHealth/pull/1207) (deterministic, collision-free task cache keys), [python-neo #1913](https://github.com/NeuralEnsemble/python-neo/pull/1913) (approved).
+**In review right now (42):**
+
+- [executorch #25674](https://github.com/pytorch/executorch/pull/25674) Serialize and enforce per-dim lower bounds and divisibility for DYNAMIC_BOUND inputs
+- [PyHealth #1505](https://github.com/sunlabuiuc/PyHealth/pull/1505) Add the HMC sleep staging database and SleepStagingHMC
+- [braindecode #1828](https://github.com/braindecode/braindecode/pull/1828) FIX NMT: match Labels.csv by record name without recording_ids too
+- [genn #777](https://github.com/genn-team/genn/pull/777) Reject duplicate custom update names
+- [braindecode #1827](https://github.com/braindecode/braindecode/pull/1827) FIX MOABBDataset: keep trials in place when first_samp is not 0
+- [PyHealth #1601](https://github.com/sunlabuiuc/PyHealth/pull/1601) Require 200 Hz when TUEV/TUAB compute the stft field
+- [PyHealth #1600](https://github.com/sunlabuiuc/PyHealth/pull/1600) Size TUEV event windows with round() so float resample rates work
+- [PyHealth #1507](https://github.com/sunlabuiuc/PyHealth/pull/1507) Stop float error in split ratios from changing split sizes
+
+[… and 34 more](https://github.com/search?q=is%3Apr+author%3AAxelNoun+is%3Aopen+-user%3AAxelNoun&type=pullrequests)
 <!-- open:end -->
 
 ### Where my code is merged
