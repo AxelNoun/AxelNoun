@@ -54,18 +54,7 @@ I'm self-taught: oncology, then bioinformatics, then AI for proteins, and now ne
 <!-- live:end -->
 
 <!-- open:start -->
-**In review right now (50):**
-
-- [HSSM #1454](https://github.com/lnccbrown/HSSM/pull/1454) fix(rldm): give the angle LAN -1/1 choices for 0/1 responses
-- [ssm-simulators #417](https://github.com/lnccbrown/ssm-simulators/pull/417) Fix racing_diffusion_model stopping rule on same-step crossings
-- [spikingjelly #835](https://github.com/fangwei123456/spikingjelly/pull/835) fix(nir_exchange): report unsupported modules in export_to_nir
-- [braindecode #1833](https://github.com/braindecode/braindecode/pull/1833) FIX EEGRegressor: compare squeezed predictions with their own target
-- [braindecode #1834](https://github.com/braindecode/braindecode/pull/1834) FIX create_fixed_length_windows: refuse offsets outside the recording
-- [PCNtoolkit #657](https://github.com/predictive-clinical-neuroscience/PCNtoolkit/pull/657) fix: correct HBR transfer of two priors
-- [braindecode #1832](https://github.com/braindecode/braindecode/pull/1832) FIX FilterBankLayer: default iir_params output to ba and keep the caller's dict
-- [genn #779](https://github.com/genn-team/genn/pull/779) Parenthesise call arguments when pretty printing
-
-[… and 42 more](https://github.com/search?q=is%3Apr+author%3AAxelNoun+is%3Aopen+-user%3AAxelNoun&type=pullrequests)
+Open and under review: [brian2 #1891](https://github.com/brian-team/brian2/pull/1891) (Cython Binomial sampler wrong for p > 0.5 and non-terminating on underflow), [HSSM #1414](https://github.com/lnccbrown/HSSM/pull/1414) (approved), [huggingface/course #1328](https://github.com/huggingface/course/pull/1328), [PyHealth #1202](https://github.com/sunlabuiuc/PyHealth/pull/1202) (knowledge-graph embeddings on the 2.0 pipeline, negatives drawn from training triples only), [PyHealth #1207](https://github.com/sunlabuiuc/PyHealth/pull/1207) (deterministic, collision-free task cache keys), [python-neo #1913](https://github.com/NeuralEnsemble/python-neo/pull/1913) (approved).
 <!-- open:end -->
 
 ### Where my code is merged
