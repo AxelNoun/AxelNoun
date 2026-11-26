@@ -50,11 +50,22 @@ I'm self-taught: oncology, then bioinformatics, then AI for proteins, and now ne
 - `2026-11-23` **[fangwei123456/spikingjelly #832](https://github.com/fangwei123456/spikingjelly/pull/832)**: fix(op_counter): cover ATen ops missing from FLOP and memory-access rules
 - `2026-11-22` **[fangwei123456/spikingjelly #833](https://github.com/fangwei123456/spikingjelly/pull/833)**: fix(op_counter): fix rules that crash or miscount in the FLOP, memory and AC counters
 
-<sub>Refreshed daily by GitHub Actions · last run 2026-11-25</sub>
+<sub>Refreshed daily by GitHub Actions · last run 2026-11-26</sub>
 <!-- live:end -->
 
 <!-- open:start -->
-Open and under review: [brian2 #1891](https://github.com/brian-team/brian2/pull/1891) (Cython Binomial sampler wrong for p > 0.5 and non-terminating on underflow), [HSSM #1414](https://github.com/lnccbrown/HSSM/pull/1414) (approved), [huggingface/course #1328](https://github.com/huggingface/course/pull/1328), [PyHealth #1202](https://github.com/sunlabuiuc/PyHealth/pull/1202) (knowledge-graph embeddings on the 2.0 pipeline, negatives drawn from training triples only), [PyHealth #1207](https://github.com/sunlabuiuc/PyHealth/pull/1207) (deterministic, collision-free task cache keys).
+**In review right now (48):**
+
+- [PyHealth #1207](https://github.com/sunlabuiuc/PyHealth/pull/1207) fix(cache): make task fingerprints deterministic and collision-free
+- [HSSM #1503](https://github.com/lnccbrown/HSSM/pull/1503) fix(dist): simulate fixed-vector parameters with their values
+- [HSSM #1502](https://github.com/lnccbrown/HSSM/pull/1502) fix(utils): evaluate constrained responses in log_likelihood
+- [HSSM #1450](https://github.com/lnccbrown/HSSM/pull/1450) fix(utils): find missing-RT rows by the rt column in _rearrange_data
+- [spikingjelly #835](https://github.com/fangwei123456/spikingjelly/pull/835) fix(nir_exchange): report unsupported modules in export_to_nir
+- [genn #779](https://github.com/genn-team/genn/pull/779) Parenthesise call arguments when pretty printing
+- [genn #777](https://github.com/genn-team/genn/pull/777) Reject duplicate custom update names
+- [genn #776](https://github.com/genn-team/genn/pull/776) Fix neuron_var_refs in create_current_source_model
+
+[… and 40 more](https://github.com/search?q=is%3Apr+author%3AAxelNoun+is%3Aopen+-user%3AAxelNoun&type=pullrequests)
 <!-- open:end -->
 
 ### Where my code is merged
