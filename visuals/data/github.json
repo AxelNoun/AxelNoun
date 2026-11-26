@@ -72,9 +72,9 @@
    "repo": "NeuralEnsemble/python-neo",
    "number": 1913,
    "title": "Apply the sonpy platform marker to the ced and all extras",
-   "state": "OPEN",
+   "state": "MERGED",
    "draft": false,
-   "merged": null,
+   "merged": "2026-11-25",
    "review": "APPROVED",
    "by_author": true
   },

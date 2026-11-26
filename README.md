@@ -54,18 +54,7 @@ I'm self-taught: oncology, then bioinformatics, then AI for proteins, and now ne
 <!-- live:end -->
 
 <!-- open:start -->
-**In review right now (48):**
-
-- [PyHealth #1207](https://github.com/sunlabuiuc/PyHealth/pull/1207) fix(cache): make task fingerprints deterministic and collision-free
-- [HSSM #1503](https://github.com/lnccbrown/HSSM/pull/1503) fix(dist): simulate fixed-vector parameters with their values
-- [HSSM #1502](https://github.com/lnccbrown/HSSM/pull/1502) fix(utils): evaluate constrained responses in log_likelihood
-- [HSSM #1450](https://github.com/lnccbrown/HSSM/pull/1450) fix(utils): find missing-RT rows by the rt column in _rearrange_data
-- [spikingjelly #835](https://github.com/fangwei123456/spikingjelly/pull/835) fix(nir_exchange): report unsupported modules in export_to_nir
-- [genn #779](https://github.com/genn-team/genn/pull/779) Parenthesise call arguments when pretty printing
-- [genn #777](https://github.com/genn-team/genn/pull/777) Reject duplicate custom update names
-- [genn #776](https://github.com/genn-team/genn/pull/776) Fix neuron_var_refs in create_current_source_model
-
-[… and 40 more](https://github.com/search?q=is%3Apr+author%3AAxelNoun+is%3Aopen+-user%3AAxelNoun&type=pullrequests)
+Open and under review: [brian2 #1891](https://github.com/brian-team/brian2/pull/1891) (Cython Binomial sampler wrong for p > 0.5 and non-terminating on underflow), [HSSM #1414](https://github.com/lnccbrown/HSSM/pull/1414) (approved), [huggingface/course #1328](https://github.com/huggingface/course/pull/1328), [PyHealth #1202](https://github.com/sunlabuiuc/PyHealth/pull/1202) (knowledge-graph embeddings on the 2.0 pipeline, negatives drawn from training triples only), [PyHealth #1207](https://github.com/sunlabuiuc/PyHealth/pull/1207) (deterministic, collision-free task cache keys).
 <!-- open:end -->
 
 ### Where my code is merged
@@ -111,6 +100,7 @@ I'm self-taught: oncology, then bioinformatics, then AI for proteins, and now ne
 | [NeuralEnsemble/python-neo #1891](https://github.com/NeuralEnsemble/python-neo/pull/1891) | `CedRawIO` broken by sonpy ≥ 1.9.12 (three import layouts by version and platform); CED tests re-enabled; test extra fixed | "Looks great. Thanks." — added to the neo 0.14.6 author list |
 | [NeuralEnsemble/python-neo #1912](https://github.com/NeuralEnsemble/python-neo/pull/1912) | CI step stayed green when `git ls-remote` failed (exit status of `echo`); `pipefail`, emptiness check, error annotation; backed by log counts | approved by two maintainers |
 | [NeuralEnsemble/python-neo #1911](https://github.com/NeuralEnsemble/python-neo/pull/1911) | Python 3.9 dropped from a matrix that had failed weekly since February | approved |
+| [NeuralEnsemble/python-neo #1913](https://github.com/NeuralEnsemble/python-neo/pull/1913) | Apply the sonpy platform marker to the ced and all extras | merged |
 | [catalystneuro/neuroconv #1855](https://github.com/catalystneuro/neuroconv/pull/1855) | `spike2` extra had a PEP 508 marker that could never be satisfied; platform-aware test | "This is ready to go" |
 | [catalystneuro/neuroconv #1914](https://github.com/catalystneuro/neuroconv/pull/1914) | Re-enable Spike2 real-data tests on platforms with sonpy wheels | merged |
 | [fangwei123456/spikingjelly #692](https://github.com/fangwei123456/spikingjelly/pull/692) | Dead assertion on an attribute never defined in the repository's history | merged |
