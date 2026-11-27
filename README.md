@@ -44,17 +44,28 @@ I'm self-taught: oncology, then bioinformatics, then AI for proteins, and now ne
 #### Latest merges <sub>· live</sub>
 
 <!-- live:start -->
-- `2026-11-26` **[fangwei123456/spikingjelly #835](https://github.com/fangwei123456/spikingjelly/pull/835)**: fix(nir_exchange): report unsupported modules in export_to_nir
-- `2026-11-25` **[NeuralEnsemble/python-neo #1913](https://github.com/NeuralEnsemble/python-neo/pull/1913)**: Apply the sonpy platform marker to the ced and all extras
-- `2026-11-25` **[sunlabuiuc/PyHealth #1505](https://github.com/sunlabuiuc/PyHealth/pull/1505)**: Add the HMC sleep staging database and SleepStagingHMC
-- `2026-11-24` **[genn-team/genn #778](https://github.com/genn-team/genn/pull/778)**: Fix FFI type of Int64
-- `2026-11-23` **[fangwei123456/spikingjelly #832](https://github.com/fangwei123456/spikingjelly/pull/832)**: fix(op_counter): cover ATen ops missing from FLOP and memory-access rules
+- `2026-11-27` **[sunlabuiuc/PyHealth #1601](https://github.com/sunlabuiuc/PyHealth/pull/1601)**: Require 200 Hz when TUEV/TUAB compute the stft field
+- `2026-11-27` **[sunlabuiuc/PyHealth #1600](https://github.com/sunlabuiuc/PyHealth/pull/1600)**: Size TUEV event windows with round() so float resample rates work
+- `2026-11-27` **[lnccbrown/ssm-simulators #430](https://github.com/lnccbrown/ssm-simulators/pull/430)**: Write uniform mixture rows in the one-hot layout when separate_response_channels=True
+- `2026-11-27` **[lnccbrown/ssm-simulators #431](https://github.com/lnccbrown/ssm-simulators/pull/431)**: Fix the sign in the angle and conflict_gamma boundary docstrings
+- `2026-11-27` **[lnccbrown/ssm-simulators #417](https://github.com/lnccbrown/ssm-simulators/pull/417)**: Fix racing_diffusion_model stopping rule on same-step crossings
 
-<sub>Refreshed daily by GitHub Actions · last run 2026-11-26</sub>
+<sub>Refreshed daily by GitHub Actions · last run 2026-11-27</sub>
 <!-- live:end -->
 
 <!-- open:start -->
-Open and under review: [brian2 #1891](https://github.com/brian-team/brian2/pull/1891) (Cython Binomial sampler wrong for p > 0.5 and non-terminating on underflow), [HSSM #1414](https://github.com/lnccbrown/HSSM/pull/1414) (approved), [huggingface/course #1328](https://github.com/huggingface/course/pull/1328), [PyHealth #1202](https://github.com/sunlabuiuc/PyHealth/pull/1202) (knowledge-graph embeddings on the 2.0 pipeline, negatives drawn from training triples only), [PyHealth #1207](https://github.com/sunlabuiuc/PyHealth/pull/1207) (deterministic, collision-free task cache keys).
+**In review right now (47):**
+
+- [spikingjelly #838](https://github.com/fangwei123456/spikingjelly/pull/838) test: skip native CUDA layout cases when the extension is not built
+- [PyHealth #1202](https://github.com/sunlabuiuc/PyHealth/pull/1202) fix(kg_emb): port kg_emb to the 2.0 dataset pipeline
+- [HSSM #1502](https://github.com/lnccbrown/HSSM/pull/1502) fix(utils): refuse Bambi's multi-column responses in log_likelihood
+- [HSSM #1454](https://github.com/lnccbrown/HSSM/pull/1454) fix(rldm): give the angle LAN -1/1 choices for 0/1 responses
+- [HSSM #1455](https://github.com/lnccbrown/HSSM/pull/1455) fix(hssm): reorder fixed-vector parameters with the rows _rearrange_data moves
+- [HSSM #1450](https://github.com/lnccbrown/HSSM/pull/1450) fix(utils): find missing-RT rows by the rt column in _rearrange_data
+- [HSSM #1448](https://github.com/lnccbrown/HSSM/pull/1448) fix(utils): index log-likelihood draws by position, not coordinate value
+- [HSSM #1503](https://github.com/lnccbrown/HSSM/pull/1503) fix(dist): simulate fixed-vector parameters with their values
+
+[… and 39 more](https://github.com/search?q=is%3Apr+author%3AAxelNoun+is%3Aopen+-user%3AAxelNoun&type=pullrequests)
 <!-- open:end -->
 
 ### Where my code is merged
