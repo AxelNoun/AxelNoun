@@ -54,18 +54,7 @@ I'm self-taught: oncology, then bioinformatics, then AI for proteins, and now ne
 <!-- live:end -->
 
 <!-- open:start -->
-**In review right now (41):**
-
-- [PyHealth #1207](https://github.com/sunlabuiuc/PyHealth/pull/1207) fix(cache): make task fingerprints deterministic and collision-free
-- [PyHealth #1507](https://github.com/sunlabuiuc/PyHealth/pull/1507) Stop float error in split ratios from changing split sizes
-- [HSSM #1503](https://github.com/lnccbrown/HSSM/pull/1503) fix(dist): simulate fixed-vector parameters with their values
-- [genn #776](https://github.com/genn-team/genn/pull/776) Fix neuron_var_refs in create_current_source_model
-- [genn #773](https://github.com/genn-team/genn/pull/773) Add feature tests for additional input variables and derived parameters
-- [genn #780](https://github.com/genn-team/genn/pull/780) Fix num_post in host code of custom connectivity updates
-- [spikingjelly #838](https://github.com/fangwei123456/spikingjelly/pull/838) test: skip native CUDA layout cases when the extension is not built
-- [PyHealth #1202](https://github.com/sunlabuiuc/PyHealth/pull/1202) fix(kg_emb): port kg_emb to the 2.0 dataset pipeline
-
-[… and 33 more](https://github.com/search?q=is%3Apr+author%3AAxelNoun+is%3Aopen+-user%3AAxelNoun&type=pullrequests)
+Open and under review: [brian2 #1891](https://github.com/brian-team/brian2/pull/1891) (Cython Binomial sampler wrong for p > 0.5 and non-terminating on underflow), [HSSM #1414](https://github.com/lnccbrown/HSSM/pull/1414) (approved), [huggingface/course #1328](https://github.com/huggingface/course/pull/1328), [PyHealth #1202](https://github.com/sunlabuiuc/PyHealth/pull/1202) (knowledge-graph embeddings on the 2.0 pipeline, negatives drawn from training triples only), [PyHealth #1207](https://github.com/sunlabuiuc/PyHealth/pull/1207) (deterministic, collision-free task cache keys).
 <!-- open:end -->
 
 ### Where my code is merged
