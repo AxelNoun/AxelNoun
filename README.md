@@ -54,18 +54,7 @@ I'm self-taught: oncology, then bioinformatics, then AI for proteins, and now ne
 <!-- live:end -->
 
 <!-- open:start -->
-**In review right now (47):**
-
-- [spikingjelly #838](https://github.com/fangwei123456/spikingjelly/pull/838) test: skip native CUDA layout cases when the extension is not built
-- [PyHealth #1202](https://github.com/sunlabuiuc/PyHealth/pull/1202) fix(kg_emb): port kg_emb to the 2.0 dataset pipeline
-- [HSSM #1502](https://github.com/lnccbrown/HSSM/pull/1502) fix(utils): refuse Bambi's multi-column responses in log_likelihood
-- [HSSM #1454](https://github.com/lnccbrown/HSSM/pull/1454) fix(rldm): give the angle LAN -1/1 choices for 0/1 responses
-- [HSSM #1455](https://github.com/lnccbrown/HSSM/pull/1455) fix(hssm): reorder fixed-vector parameters with the rows _rearrange_data moves
-- [HSSM #1450](https://github.com/lnccbrown/HSSM/pull/1450) fix(utils): find missing-RT rows by the rt column in _rearrange_data
-- [HSSM #1448](https://github.com/lnccbrown/HSSM/pull/1448) fix(utils): index log-likelihood draws by position, not coordinate value
-- [HSSM #1503](https://github.com/lnccbrown/HSSM/pull/1503) fix(dist): simulate fixed-vector parameters with their values
-
-[… and 39 more](https://github.com/search?q=is%3Apr+author%3AAxelNoun+is%3Aopen+-user%3AAxelNoun&type=pullrequests)
+Open and under review: [brian2 #1891](https://github.com/brian-team/brian2/pull/1891) (Cython Binomial sampler wrong for p > 0.5 and non-terminating on underflow), [HSSM #1414](https://github.com/lnccbrown/HSSM/pull/1414) (approved), [huggingface/course #1328](https://github.com/huggingface/course/pull/1328), [PyHealth #1202](https://github.com/sunlabuiuc/PyHealth/pull/1202) (knowledge-graph embeddings on the 2.0 pipeline, negatives drawn from training triples only), [PyHealth #1207](https://github.com/sunlabuiuc/PyHealth/pull/1207) (deterministic, collision-free task cache keys).
 <!-- open:end -->
 
 ### Where my code is merged
