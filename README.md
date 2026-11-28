@@ -54,18 +54,7 @@ I'm self-taught: oncology, then bioinformatics, then AI for proteins, and now ne
 <!-- live:end -->
 
 <!-- open:start -->
-**In review right now (46):**
-
-- [spikingjelly #842](https://github.com/fangwei123456/spikingjelly/pull/842) fix(examples): repair argument defaults, class counts and plots in classification examples
-- [spikingjelly #841](https://github.com/fangwei123456/spikingjelly/pull/841) fix(examples): make checkpoints and dataset caches loadable with torch.load weights_only default
-- [spikingjelly #840](https://github.com/fangwei123456/spikingjelly/pull/840) fix(neuron): build FlexSN Triton kernels on a first call under torch.compile
-- [PyHealth #1207](https://github.com/sunlabuiuc/PyHealth/pull/1207) fix(cache): make task fingerprints deterministic and collision-free
-- [flashinfer #9776](https://github.com/flashinfer-ai/flashinfer/pull/9776) fix(sampling): reject unaligned inputs instead of faulting with a misaligned address
-- [HSSM #1503](https://github.com/lnccbrown/HSSM/pull/1503) fix(dist): simulate fixed-vector parameters with their values
-- [openrag #1524](https://github.com/linagora/openrag/pull/1524) fix(chunking): keep the indentation and line breaks of code blocks
-- [openrag #1525](https://github.com/linagora/openrag/pull/1525) fix(chunking): count the replayed row before adding it to a table chunk
-
-[… and 38 more](https://github.com/search?q=is%3Apr+author%3AAxelNoun+is%3Aopen+-user%3AAxelNoun&type=pullrequests)
+Open and under review: [brian2 #1891](https://github.com/brian-team/brian2/pull/1891) (Cython Binomial sampler wrong for p > 0.5 and non-terminating on underflow), [HSSM #1414](https://github.com/lnccbrown/HSSM/pull/1414) (approved), [huggingface/course #1328](https://github.com/huggingface/course/pull/1328), [PyHealth #1202](https://github.com/sunlabuiuc/PyHealth/pull/1202) (knowledge-graph embeddings on the 2.0 pipeline, negatives drawn from training triples only), [PyHealth #1207](https://github.com/sunlabuiuc/PyHealth/pull/1207) (deterministic, collision-free task cache keys).
 <!-- open:end -->
 
 ### Where my code is merged
